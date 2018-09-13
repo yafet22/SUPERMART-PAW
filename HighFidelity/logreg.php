@@ -29,14 +29,14 @@
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <a href="index.html"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+              <a href="index.php"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
             </div>
             <div class="col-md-4">
 
             </div>
             <div class="col-md-4">
-              <a href="logreg.html"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
-              <a href="shopping-list.html"><img id="shop-chart" src="image/shop-chart.png" alt="shop-chart"></a>
+              <a href="logreg.php"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
+              <a href="shopping-list.php"><img id="shop-chart" src="image/shop-chart.png" alt="shop-chart"></a>
               <div id="user" class="desc">UserName</div>
             </div>
           </div>
@@ -204,10 +204,10 @@
                 </div>
                 <div class="row">
                   <div class="col-md-6">
-                    <button type="submit" class="btn btn-primary" style="display: block; margin: 0 auto;">Login</button>
+                    <button type="submit" class="btn btn-success" style="display: block; margin: 0 auto;">Login</button>
                   </div>
                   <div class="col-md-6">
-                      <a href="regis.php"><button type="button" class="btn btn-success" style="display: block; margin: 0 auto;">Daftar</button></a>
+                      <a href="regis.php"><button type="button" class="btn btn-primary" style="display: block; margin: 0 auto;">Daftar</button></a>
                   </div>
                 </div>
               </form>
@@ -326,7 +326,7 @@
 
       <!-- Copyright -->
       <div class="footer-copyright text-center py-3">© 2018 Copyright:
-        <a href="index.html"> Supermart.com</a> alright reserved.
+        <a href="index.php"> Supermart.com</a> alright reserved.
       </div>
       <!-- Copyright -->
 

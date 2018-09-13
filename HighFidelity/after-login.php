@@ -34,7 +34,7 @@
 
             </div>
             <div class="col-md-4">
-              <a href="logreg.html"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
+              <a href="logreg.php"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
               <img id="shop-chart" src="image/shop-chart.png" alt="shop-chart">
               <div class="desc"><a id="user" href="profile.php">
               <?php session_start(); 
@@ -441,7 +441,7 @@
 
       <!-- Copyright -->
       <div class="footer-copyright text-center py-3">© 2018 Copyright:
-        <a href="index.html"> Supermart.com</a> alright reserved.
+        <a href="index.php"> Supermart.com</a> alright reserved.
       </div>
       <!-- Copyright -->
 

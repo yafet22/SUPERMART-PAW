@@ -421,7 +421,7 @@
 
       <!-- Copyright -->
       <div class="footer-copyright text-center py-3">© 2018 Copyright:
-        <a href="index.html"> Supermart.com</a> alright reserved.
+        <a href="index.php"> Supermart.com</a> alright reserved.
       </div>
       <!-- Copyright -->
 

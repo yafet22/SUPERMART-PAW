@@ -28,14 +28,14 @@
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <a href="index.html"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+              <a href="index.php"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
             </div>
             <div class="col-md-4">
 
             </div>
             <div class="col-md-4">
-              <a href="logreg.html"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
-              <a href="shopping-list.html"><img id="shop-chart" src="image/shop-chart.png" alt="shop-chart"></a>
+              <a href="logreg.php"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
+              <a href="shopping-list.php"><img id="shop-chart" src="image/shop-chart.png" alt="shop-chart"></a>
               <div id="user" class="desc">UserName</div>
             </div>
           </div>
@@ -344,7 +344,7 @@
 
       <!-- Copyright -->
       <div class="footer-copyright text-center py-3">© 2018 Copyright:
-        <a href="index.html"> Supermart.com</a> alright reserved.
+        <a href="index.php"> Supermart.com</a> alright reserved.
       </div>
       <!-- Copyright -->
 

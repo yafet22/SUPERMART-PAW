@@ -21,12 +21,12 @@ function loginFunction() {
     }
 }
 
-function cancelFunction() {
+function backToIndex() {
     if (confirm("Anda yakin ingin membatalkan registrasi?")) {
-        location.href='index.html';
+        location.href="index.php";
         //Swindow.alert("yes");
     } else {
-        //location.href='regis.html';
+        //location.href='regis.php';
         //window.alert("no");
     }
 }
