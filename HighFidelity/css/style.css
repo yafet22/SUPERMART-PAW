@@ -1,0 +1,19 @@
+:root{
+    --blue_main:#22A7F0;
+}
+
+body{
+    background-color: #22A7F0 !important;
+}
+
+.slider{
+    background-color: white;
+}
+.innerslider{
+    width:80% !important;
+}
+
+.highlight{
+    width:80% !important;
+    padding: 25px 0px;
+}
