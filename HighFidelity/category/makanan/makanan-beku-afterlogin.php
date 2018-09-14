@@ -33,7 +33,7 @@
             <div class="col-md-4">
               <a href="../../logreg.php"><img id="user-logo" src="../../img/usernew.png" alt="user-logo"></a>
               <a href="../../shopping-list.php"><img id="shop-chart" src="../../image/shop-chart.png" alt="shop-chart"></a>
-              <div class="desc"><a id="user" href="profile.php">
+              <div class="desc"><a id="user" href="../../profile.php">
               <?php session_start(); 
               $text=$_SESSION['email'];
               $wordlimit=wordlimit($text);
@@ -119,63 +119,6 @@
         </div>
     </nav>
 
-    <!-- <nav id="sidebar">
-        <div class="container">
-            <div class="menu-sidebar">
-                <div class="menu-title">
-                    Makanan
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                    <li><a href="../makanan/makanan-ringan.html">Makanan Ringan</a></li>
-                    <li><a href="../makanan/makanan-beku.html">Makanan Beku</a></li>
-                    <li><a href="../makanan/makanan-pokok.html">Makanan Pokok</a></li>
-                </div>
-                <hr>
-                <div class="menu-title">
-                    Minuman
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                    <li><a href="../minuman/minuman-ringan.html">Minuman Ringan</a></li>
-                    <li><a href="../minuman/minuman-isotonik.html">Minuman Isotonik</a></li>
-                    <li><a href="../minuman/minuman-soda.html">Minuman Soda</a></li>
-                </div>
-                <hr>
-                <div class="menu-title">
-                    Kesehatan
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                  <li><a href="../kesehatan/perawatan-diri.html">Perawatan Diri</a></li>
-                  <li><a href="../kesehatan/perawatan-badan.html">Perawatan Badan</a></li>
-                  <li><a href="../kesehatan/perawatan-rambut.html">Perawatan Rambut</a></li>
-                  <li><a href="../kesehatan/perawatan-pria.html">Perawatan Pria</a></li>
-                  <li><a href="../kesehatan/obat-obatan.html">Obat - obatan</a></li>
-                </div>
-                <hr>
-                <div class="menu-title">
-                    Elektronik
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                  <li><a href="../elektronik/televisi.html">Televisi</a></li>
-                  <li><a href="../elektronik/aksesoris-komputer.html">Aksesoris Komputer</a></li>
-                  <li><a href="../elektronik/aksesoris-handphone.html">Aksesoris Handphone</a></li>
-                </div>
-                <hr>
-                <div class="menu-title">
-                    Peralatan Rumah Tangga
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                  <li><a href="../kebutuhan rumah tangga/peralatan-kebersihan.html">Peralatan Kebersihan</a></li>
-                  <li><a href="../kebutuhan rumah tangga/peralatan-makan.html">Peralatan Makan</a></li>
-                  <li><a href="../kebutuhan rumah tangga/peralatan-rumah-tangga.html">Peralatan Rumah Tangga</a></li>
-                </div>
-            </div>
-        </div>
-    </nav> -->
 
     <div class="hover"></div>
 

@@ -183,17 +183,17 @@
           </div>
           <div class="col-md-4">
           <?php
-                include 'koneksi.php';
-                $kode = $_GET['kode'];
-                $username = $_GET['nama'];
-            
-                $sql = "UPDATE user SET aktif = 'Y' WHERE kode = '".$kode."'";
-                $result=mysqli_query($conn,$sql);
-                if($result) {
-                    echo "Member dengan username <strong>".$username."</strong> telah diaktifkan";
-                } else {
-                    echo "Gagal diaktifkan";
-                }
+               include 'koneksi.php';
+               $kode = $_GET['kode'];
+               $email = $_GET['email'];
+               
+               $sql = "UPDATE user SET aktif = 'Y' WHERE kode = '".$kode."'";
+               $result=mysqli_query($conn,$sql);
+               if($result) {
+                   echo "<p class='text-center'>Member dengan email <strong>".$email."</strong> telah diaktifkan silahkan melakukan <a href='logreg.php'>login</a></p>";
+               } else {
+                   echo "Gagal diaktifkan";
+               }
             ?>
           </div>
           <div class="col-md-4">

@@ -1,5 +1,7 @@
 <?php
   include 'koneksi.php';
+  include 'mail.php';
+
 
   if(isset($_POST['tambah']))
   {
@@ -8,6 +10,8 @@
     $email = $_POST['email'];
     $pwd = md5($_POST['pwd']);
     $kode   = md5(uniqid(rand()));
+    $mail = new Mail();
+    $user='user';
 
     // cek apakah email sudah terdaftar
     $query = "SELECT email FROM user WHERE email='$email'";
@@ -18,23 +22,11 @@
     }
     else
     {
-      $sql = "INSERT into user VALUES (NULL,'$nama','user','$phone','$email','$pwd','$kode',NULL,NULL)";
-      
-          $to     = $_POST['email'];
-          $judul  = "Aktivasi Akun Anda";
-          $dari   = 'From: TUBES@web.com'."\r\n"
-                    .'MIME-Version: 1.0 \n'."\r\n"
-                    .'Content-type: text/html;charset=UTF-8' . "\r\n"; 
+      $sql = "INSERT into user VALUES (NULL,'$nama','$user','$phone','$email','$pwd','$kode','T',0)";
           
+          $mail->sendEmail($email, $kode);
   
-          $pesan  = "Klik link berikut untuk mengaktifkan akun: <br />";
-          // $pesan  .= "<a href='konfirm.php?email=".$_POST['email']."&kode=$kode&username=".$_POST['nama']."'>konfirm.php?email=".$_POST['email']."&kode=$kode</a>";
-          // $pesan .="<a href='konfirm.php'>cek</a>";
-          $pesan .="<a href='localhost/HighFidelity/konfirm.php?email=".$_POST['email']."&kode=$kode&nama=".$_POST['nama']."'>cek</a>";
-  
-          $kirim  = mail($to, $judul, $pesan, $dari);
-  
-          if($kirim AND $conn->query($sql)==TRUE)
+          if($conn->query($sql)==TRUE)
           {
               // echo "<p class='info'>Berhasil Dikirim</p>";
               echo "<script type='text/javascript'>alert('Berhasil membuat akun');location='logreg.php';</script>";

@@ -33,7 +33,7 @@
             <div class="col-md-4">
               <a href="../../logreg.php"><img id="user-logo" src="../../img/usernew.png" alt="user-logo"></a>
               <a href="../../shopping-list.php"><img id="shop-chart" src="../../image/shop-chart.png" alt="shop-chart"></a>
-              <div class="desc"><a id="user" href="profile.php">
+              <div class="desc"><a id="user" href=../../profile.php">
               <?php session_start(); 
               $text=$_SESSION['email'];
               $wordlimit=wordlimit($text);
