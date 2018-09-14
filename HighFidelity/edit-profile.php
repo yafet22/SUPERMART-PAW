@@ -28,13 +28,13 @@
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <a href="index.php"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+              <a href="after-login.php"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
             </div>
             <div class="col-md-4">
 
             </div>
             <div class="col-md-4">
-              <a href="logreg.php"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
+              <a href="logreg-afterlogin.php"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
               <a href="shopping-list.php"><img id="shop-chart" src="image/shop-chart.png" alt="shop-chart"></a>
               <div class="desc"><a id="user" href="profile.php">
               <?php session_start(); 
@@ -65,55 +65,55 @@
                     <div class="dropdown">
                         <li class="menu">Makanan</li>
                         <div class="menu-content">
-                            <li><a href="category/makanan/makanan-ringan.html">Makanan Ringan</a></li>
-                            <li><a href="category/makanan/makanan-beku.html">Makanan Beku</a></li>
-                            <li><a href="category/makanan/makanan-pokok.html">Makanan Pokok</a></li>
+                            <li><a href="category/makanan/makanan-ringan-afterlogin.php">Makanan Ringan</a></li>
+                            <li><a href="category/makanan/makanan-beku-afterlogin.php">Makanan Beku</a></li>
+                            <li><a href="category/makanan/makanan-pokok-afterlogin.php">Makanan Pokok</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Minuman</li>
                         <div class="menu-content">
-                            <li><a href="category/minuman/minuman-ringan.html">Minuman Ringan</a></li>
-                            <li><a href="category/minuman/minuman-isotonik.html">Minuman Isotonik</a></li>
-                            <li><a href="category/minuman/minuman-soda.html">Minuman Soda</a></li>
+                            <li><a href="category/minuman/minuman-ringan-afterlogin.php">Minuman Ringan</a></li>
+                            <li><a href="category/minuman/minuman-isotonik-afterlogin.php">Minuman Isotonik</a></li>
+                            <li><a href="category/minuman/minuman-soda-afterlogin.php">Minuman Soda</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Kesehatan</li>
                         <div class="menu-content">
-                            <li><a href="category/kesehatan/perawatan-diri.html">Perawatan Diri</a></li>
-                            <li><a href="category/kesehatan/perawatan-badan.html">Perawatan Badan</a></li>
-                            <li><a href="category/kesehatan/perawatan-rambut.html">Perawatan Rambut</a></li>
-                            <li><a href="category/kesehatan/perawatan-pria.html">Perawatan Pria</a></li>
-                            <li><a href="category/kesehatan/obat-obatan.html">Obat - obatan</a></li>
+                            <li><a href="category/kesehatan/perawatan-diri-afterlogin.php">Perawatan Diri</a></li>
+                            <li><a href="category/kesehatan/perawatan-badan-afterlogin.php">Perawatan Badan</a></li>
+                            <li><a href="category/kesehatan/perawatan-rambut-afterlogin.php">Perawatan Rambut</a></li>
+                            <li><a href="category/kesehatan/perawatan-pria-afterlogin.php">Perawatan Pria</a></li>
+                            <li><a href="category/kesehatan/obat-obatan-afterlogin.php">Obat - obatan</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Elektronik</li>
                         <div class="menu-content">
-                            <li><a href="category/elektronik/televisi.html">Televisi</a></li>
-                            <li><a href="category/elektronik/aksesoris-komputer.html">Aksesoris Komputer</a></li>
-                            <li><a href="category/elektronik/aksesoris-handphone.html">Aksesoris Handphone</a></li>
+                            <li><a href="category/elektronik/televisi-afterlogin.php">Televisi</a></li>
+                            <li><a href="category/elektronik/aksesoris-komputer-afterlogin.php">Aksesoris Komputer</a></li>
+                            <li><a href="category/elektronik/aksesoris-handphone-afterlogin.php">Aksesoris Handphone</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Kebutuhan Rumah Tangga</li>
                         <div class="menu-content">
-                            <li><a href="category/kebutuhan rumah tangga/peralatan-kebersihan.html">Peralatan Kebersihan</a></li>
-                            <li><a href="category/kebutuhan rumah tangga/peralatan-makan.html">Peralatan Makan</a></li>
-                            <li><a href="category/kebutuhan rumah tangga/peralatan-rumah-tangga.html">Peralatan Rumah Tangga</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-kebersihan-afterlogin.php">Peralatan Kebersihan</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-makan-afterlogin.php">Peralatan Makan</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-rumah-tangga-afterlogin.php">Peralatan Rumah Tangga</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Fashion</li>
                         <div class="menu-content">
-                            <li><a href="category/fashion/fashion-pria.html">Fashion Pria</a></li>
-                            <li><a href="category/fashion/fashion-wanita.html">Fashion Wanita</a></li>
+                            <li><a href="category/fashion/fashion-pria-afterlogin.php">Fashion Pria</a></li>
+                            <li><a href="category/fashion/fashion-wanita-afterlogin.php">Fashion Wanita</a></li>
                         </div>
                     </div>
                 </ul>
@@ -199,7 +199,7 @@
 
           </div>
           <div class="col-md-4">
-              <img id="loginform" src="img/user-logo.png" style="width:50%;">
+              
           </div>
           <div class="col-md-4">
 
@@ -212,8 +212,20 @@
 
           </div>
           <div class="col-md-4">
-              <form id="login" action="edit-proses.php" method="POST">
+              <form id="login" action="edit-proses.php" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="id" value="<?php echo $_SESSION['id']; ?>">
+                <div class="form-group">
+                  <div class="container">
+                      <div class="picture-container">
+                          <div class="picture">
+                              <?php 
+                                  echo '<img src="image/profile/'.$_SESSION['image_name'].'" class="picture-src" id="wizardPicturePreview" title="" />'; 
+                              ?>
+                              <input id="wizard-picture" type="file" name="file">
+                          </div>
+                          <h6 class="">Choose Picture</h6>
+                      </div>
+                </div>
                 <div class="form-group">
                   <label for="nama">Nama:</label>
                   <input type="name" class="form-control" id="nama" placeholder="Enter name" name="nama" value=" <?php echo $_SESSION['username'];?>">
@@ -239,7 +251,7 @@
                   <input type="password" class="form-control" id="c-pwd" placeholder="Enter password" name="c-pwd">
                 </div>
 
-                <button type="submit" class="btn btn-primary" name="simpan" value="simpan" style="display: block; margin: 0 auto;">FINISH EDIT</button>
+                <button type="submit" class="btn btn-primary" name="simpan" value="Upload" style="display: block; margin: 0 auto;">FINISH EDIT</button>
 
               </form>
           </div>
@@ -383,5 +395,23 @@
     </script>
     <script src="assets/bootstrap.js"></script>
     <script src="assets/script.js"></script>
+    <script>
+      $(document).ready(function(){
+      // Prepare the preview for profile picture
+          $("#wizard-picture").change(function(){
+              readURL(this);
+          });
+      });
+      function readURL(input) {
+          if (input.files && input.files[0]) {
+              var reader = new FileReader();
+
+              reader.onload = function (e) {
+                  $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
+              }
+              reader.readAsDataURL(input.files[0]);
+          }
+      }
+    </script>
 </body>
 </html>

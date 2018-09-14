@@ -27,78 +27,100 @@
 
 <body>
   <!--Untuk bagian header-->
-  <header id="header-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <a href="index.php"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
-        </div>
-        <div class="col-md-4">
+    <header id="header-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket">
+            </div>
+            <div class="col-md-4">
 
-        </div>
-        <div class="col-md-4">
-          <a href="logreg.php"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
-        </div>
-      </div>
-    </div>
-  </header>
+            </div>
+            <div class="col-md-4">
+              <a href="logreg.php"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
+              <img id="shop-chart" src="image/shop-chart.png" alt="shop-chart">
+              <div class="desc"><a id="user" href="profile.php">
+              <?php session_start(); 
+              $text=$_SESSION['email'];
+              $wordlimit=wordlimit($text);
+              echo $wordlimit;
 
-  <nav id="navbar">
+              function wordlimit($text,$limit=13){
+                  if(strlen($text)>$limit)
+                    $word=mb_substr($text,0,$limit-3)."...";
+                  else
+                    $word=$text;
+
+                    return $word;
+              }
+              ?>
+              </a>
+              </div>
+              
+            </div>
+          </div>
+
+    
+        </div>
+
+    </header>
+
+    <nav id="navbar">
         <div class="container">
             <div class="menu-wrapper">
                 <ul style="padding-left:0px;">
                     <div class="dropdown">
                         <li class="menu">Makanan</li>
                         <div class="menu-content">
-                            <li><a href="category/makanan/makanan-ringan.php">Makanan Ringan</a></li>
-                            <li><a href="category/makanan/makanan-beku.php">Makanan Beku</a></li>
-                            <li><a href="category/makanan/makanan-pokok.php">Makanan Pokok</a></li>
+                            <li><a href="category/makanan/makanan-ringan-afterlogin.php">Makanan Ringan</a></li>
+                            <li><a href="category/makanan/makanan-beku-afterlogin.php">Makanan Beku</a></li>
+                            <li><a href="category/makanan/makanan-pokok-afterlogin.php">Makanan Pokok</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Minuman</li>
                         <div class="menu-content">
-                            <li><a href="category/minuman/minuman-ringan.php">Minuman Ringan</a></li>
-                            <li><a href="category/minuman/minuman-isotonik.php">Minuman Isotonik</a></li>
-                            <li><a href="category/minuman/minuman-soda.php">Minuman Soda</a></li>
+                            <li><a href="category/minuman/minuman-ringan-afterlogin.php">Minuman Ringan</a></li>
+                            <li><a href="category/minuman/minuman-isotonik-afterlogin.php">Minuman Isotonik</a></li>
+                            <li><a href="category/minuman/minuman-soda-afterlogin.php">Minuman Soda</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Kesehatan</li>
                         <div class="menu-content">
-                            <li><a href="category/kesehatan/perawatan-diri.php">Perawatan Diri</a></li>
-                            <li><a href="category/kesehatan/perawatan-badan.php">Perawatan Badan</a></li>
-                            <li><a href="category/kesehatan/perawatan-rambut.php">Perawatan Rambut</a></li>
-                            <li><a href="category/kesehatan/perawatan-pria.php">Perawatan Pria</a></li>
-                            <li><a href="category/kesehatan/obat-obatan.php">Obat - obatan</a></li>
+                            <li><a href="category/kesehatan/perawatan-diri-afterlogin.php">Perawatan Diri</a></li>
+                            <li><a href="category/kesehatan/perawatan-badan-afterlogin.php">Perawatan Badan</a></li>
+                            <li><a href="category/kesehatan/perawatan-rambut-afterlogin.php">Perawatan Rambut</a></li>
+                            <li><a href="category/kesehatan/perawatan-pria-afterlogin.php">Perawatan Pria</a></li>
+                            <li><a href="category/kesehatan/obat-obatan-afterlogin.php">Obat - obatan</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Elektronik</li>
                         <div class="menu-content">
-                            <li><a href="category/elektronik/televisi.php">Televisi</a></li>
-                            <li><a href="category/elektronik/aksesoris-komputer.php">Aksesoris Komputer</a></li>
-                            <li><a href="category/elektronik/aksesoris-handphone.php">Aksesoris Handphone</a></li>
+                            <li><a href="category/elektronik/televisi-afterlogin.php">Televisi</a></li>
+                            <li><a href="category/elektronik/aksesoris-komputer-afterlogin.php">Aksesoris Komputer</a></li>
+                            <li><a href="category/elektronik/aksesoris-handphone-afterlogin.php">Aksesoris Handphone</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Kebutuhan Rumah Tangga</li>
                         <div class="menu-content">
-                            <li><a href="category/kebutuhan rumah tangga/peralatan-kebersihan.php">Peralatan Kebersihan</a></li>
-                            <li><a href="category/kebutuhan rumah tangga/peralatan-makan.php">Peralatan Makan</a></li>
-                            <li><a href="category/kebutuhan rumah tangga/peralatan-rumah-tangga.php">Peralatan Rumah Tangga</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-kebersihan-afterlogin.php">Peralatan Kebersihan</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-makan-afterlogin.php">Peralatan Makan</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-rumah-tangga-afterlogin.php">Peralatan Rumah Tangga</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Fashion</li>
                         <div class="menu-content">
-                            <li><a href="category/fashion/fashion-pria.php">Fashion Pria</a></li>
-                            <li><a href="category/fashion/fashion-wanita.php">Fashion Wanita</a></li>
+                            <li><a href="category/fashion/fashion-pria-afterlogin.php">Fashion Pria</a></li>
+                            <li><a href="category/fashion/fashion-wanita-afterlogin.php">Fashion Wanita</a></li>
                         </div>
                     </div>
                 </ul>

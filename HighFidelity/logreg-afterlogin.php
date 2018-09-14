@@ -19,6 +19,7 @@
     <script src="assets/bootstrap.js"></script>
     <script src="assets/mdb.js"></script>
     <script src="js/jquery.min.js"></script>
+    <script src="js/login_auth.js"></script>
 
     <title>IMK Supermarket</title>
 </head>
@@ -28,14 +29,14 @@
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <a href="index.php"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+              <img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket">
             </div>
             <div class="col-md-4">
 
             </div>
             <div class="col-md-4">
               <a href="logreg-afterlogin.php"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
-              <a href="shopping-list.php"><img id="shop-chart" src="image/shop-chart.png" alt="shop-chart"></a>
+              <img id="shop-chart" src="image/shop-chart.png" alt="shop-chart">
               <div class="desc"><a id="user" href="profile.php">
               <?php session_start(); 
               $text=$_SESSION['email'];
@@ -53,9 +54,13 @@
               ?>
               </a>
               </div>
+              
             </div>
           </div>
+
+    
         </div>
+
     </header>
 
     <nav id="navbar">
@@ -187,47 +192,47 @@
 
     <section class="login">
       <div class="container title_hightlight">
-        <h2 class="font-weight-bold">PROFILE</h2>
+        <h2 class="font-weight-bold">LOGIN</h2>
       </div>
       <br>
+      <div class="container logologin">
+        <div class="row">
+          <div class="col-md-4">
+
+          </div>
+          <div class="col-md-4">
+              <img id="loginform" src="img/user-logo.png" style="width:50%;">
+          </div>
+          <div class="col-md-4">
+          </div>
+        </div>
+      </div>
       <div class="container formlogin">
         <div class="row">
           <div class="col-md-4">
 
           </div>
           <div class="col-md-4">
-            <div class="card hovercard">
-              <div class="cardheader">
-
+              <form id="Login" action="login-proses.php" method="POST">
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" id="inputemail" placeholder="Enter email" name="email" >
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Password:</label>
+                  <input type="password" class="form-control" id="inputpwd" placeholder="Enter password" name="pwd" >
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <button type="submit" class="btn btn-success" style="display: block; margin: 0 auto;">Login</button>
+                  </div>
+                  <div class="col-md-6">
+                      <a href="regis-afterlogin.php"><button type="button" class="btn btn-primary" style="display: block; margin: 0 auto;">Daftar</button></a>
+                  </div>
+                </div>
+              </form>
               </div>
-              <div class="avatar">
-                  <?php 
-                        echo '<img src="image/profile/'.$_SESSION['image_name'].'" class="img-display" />'; 
-                  ?>
-                  <!-- <img id="loginform" src="image/" style="width:100%;"> -->
               </div>
-              <div class="info">
-                  <div class="title">
-                      <?php 
-                        echo $_SESSION['username'];
-                       ?>
-                    </div>
-                  <div class="desc">
-                        <?php 
-                        echo $_SESSION['telp'];
-                       ?>
-                    </div>
-                  <div class="desc">
-                       <?php 
-                        echo $_SESSION['email'];
-                       ?>
-                    </div>
-              </div>
-              <div class="bottom">
-                      <a href="edit-profile.php"><button type="submit" class="btn btn-primary" style="display: block; margin: 0 auto;">Edit Profile</button></a>
-                      <a href="logout-proses.php"><button type="submit" class="btn btn-danger" style="display: block; margin: 0 auto;">Log-out</button></a>
-              </div>
-            </div>
           </div>
           <div class="col-md-4">
 

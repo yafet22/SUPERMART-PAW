@@ -19,6 +19,7 @@
       $_SESSION['id'] = $data['id'];
       $_SESSION['s'] = $data['session'];
       $_SESSION['role'] = $data['role'];
+      $_SESSION['image_name'] = $data['image_name'];
       if($data['role']=='admin')
       {
         echo "<script type='text/javascript'>alert('Anda Login Sebagai Admin');location='index-admin.php';</script>";

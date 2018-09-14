@@ -34,7 +34,7 @@
 
             </div>
             <div class="col-md-4">
-              <a href="logreg.php"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
+              <a href="logreg-afterlogin.php"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
               <img id="shop-chart" src="image/shop-chart.png" alt="shop-chart">
               <div class="desc"><a id="user" href="profile.php">
               <?php session_start(); 

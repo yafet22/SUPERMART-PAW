@@ -22,18 +22,34 @@
     }
     else
     {
-      $sql = "INSERT into user VALUES (NULL,'$nama','$user','$phone','$email','$pwd','$kode','T',0)";
+          $fileName = $_FILES['file']['name']; //get the file name
+          $fileSize = $_FILES['file']['size']; //get the size
+          $fileError = $_FILES['file']['error']; //get the error when upload
+          if($fileSize > 0 || $fileError == 0){ //check if the file is corrupt or error
+              $move = move_uploaded_file($_FILES['file']['tmp_name'], 'image/profile/'.$fileName); //save image to the folder
+              if($move){
+              // echo "<h3>Success! </h3>";
+
+              // $q = "INSERT into tb_image VALUES('','$fileName','image/$fileName')"; //insert image property to database
+              // $result = mysql_query($q);
+              $sql = "INSERT into user VALUES (NULL,'$nama','$user','$phone','$email','$pwd','$kode','T',0,'$fileName')";
           
-          $mail->sendEmail($email, $kode);
-  
-          if($conn->query($sql)==TRUE)
-          {
-              // echo "<p class='info'>Berhasil Dikirim</p>";
-              echo "<script type='text/javascript'>alert('Berhasil membuat akun');location='logreg.php';</script>";
-          }
-          else
-          {
-              echo "<script type='text/javascript'>alert('Gagal Membuat Akun');location='regis.php';</script>";
+              $mail->sendEmail($email, $kode);
+      
+              if($conn->query($sql)==TRUE)
+              {
+                  // echo "<p class='info'>Berhasil Dikirim</p>";
+                  echo "<script type='text/javascript'>alert('Berhasil membuat akun');location='logreg.php';</script>";
+              }
+              else
+              {
+                  echo "<script type='text/javascript'>alert('Gagal Membuat Akun');location='regis.php';</script>";
+              }
+              
+             }
+          } 
+          else{
+              echo "<h3>Failed! </h3>";
           }
     }
  
