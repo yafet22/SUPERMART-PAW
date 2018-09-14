@@ -6,7 +6,7 @@
    <body>
 
       <?php
-         echo md5("admin");
+         echo md5("cek");
          echo "<h1>Hello, PHP-7!</h1>";
          $_SESSION['cek'][0]='ce';
          $_SESSION['cek'][1]='ce1';

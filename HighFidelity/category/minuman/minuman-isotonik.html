@@ -23,35 +23,11 @@
     <!--Untuk bagian header-->
     <header id="header-section">
         <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-              <a href="after-login.php"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+            <a href="../../index.html"><img src="../../img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+            <div class="img-wrapper float-right mt-1">
+                <img src="../../img/menu.png" id="menu-icon-phone" alt="icon-menu"style="width: 70px">
             </div>
-            <div class="col-md-4">
 
-            </div>
-            <div class="col-md-4">
-              <a href="logreg.html"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
-              <a href="shopping-list.html"><img id="shop-chart" src="image/shop-chart.png" alt="shop-chart"></a>
-              <div class="desc"><a id="user" href="profile.php">
-              <?php session_start(); 
-              $text=$_SESSION['email'];
-              $wordlimit=wordlimit($text);
-              echo $wordlimit;
-
-              function wordlimit($text,$limit=13){
-                  if(strlen($text)>$limit)
-                    $word=mb_substr($text,0,$limit-3)."...";
-                  else
-                    $word=$text;
-
-                    return $word;
-              }
-              ?>
-              </a>
-              </div>
-            </div>
-          </div>
         </div>
     </header>
 
@@ -184,12 +160,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3 order-first mt-2">
-                <li class="list-group-item bg-primary">
-                    <a href="minuman-ringan.html" class="text-light">Minuman Ringan</a>
+                <li class="list-group-item">
+                    <a href="minuman-ringan.html" class="text-dark">Minuman Ringan</a>
                 </li>
 
-                <li class="list-group-item">
-                    <a href="minuman-isotonik.html" class="text-dark">Minuman Isotonik</a>
+                <li class="list-group-item bg-primary">
+                    <a href="minuman-isotonik.html" class="text-light">Minuman Isotonik</a>
                 </li>
 
                 <li class="list-group-item">
@@ -200,65 +176,65 @@
             <div class="col-md-9 order-last mt-2">
                 <div class="row">
                     <div class="card col-md-3 mx-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Ultramilk.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Ultra Milk Coklat</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ultraProduk">
+                        <img src="../../img/Edited/Minuman Isotonik/100 plus.jpg" alt="foto-bahan" class="img-display">
+                        <p class="text-center lead">100 Plus</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#100PlusProduk">
                             Info
                         </button>
                     </div>
 
                     <div class="card col-md-3 mx-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Indomilk.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Indomilk</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#indomilkProduk">
+                        <img src="../../img/Edited/Minuman Isotonik/Pocari Sweat.jpg" alt="foto-bahan" class="img-display">
+                        <p class="text-center lead">Pocari Sweat</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pocariProduk">
                             Info
                         </button>
                     </div>
 
                     <div class="card col-md-3 mx-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Indomilk Kaleng.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Indomilk Kaleng</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#kalengProduk">
+                        <img src="../../img/Edited/Minuman Isotonik/Aquarius.jpg" alt="foto-bahan" class="img-display">
+                        <p class="text-center lead">Aquarius</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#aquariusProduk">
                             Info
                         </button>
                     </div>
 
                     <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Cimory.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Cimory</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cimoryProduk">
+                        <img src="../../img/Edited/Minuman Isotonik/Mizone.jpg" alt="foto-bahan" class="img-display">
+                        <p class="text-center lead">Mizone</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mizoneProduk">
                             Info
                         </button>
                     </div>
 
                     <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Makanan Ringan/Indomilk buah.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Indomilk Pisang</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#indomilkPisang">
+                        <img src="../../img/Edited/Minuman Isotonik/ISOPlus.jpg" alt="foto-bahan" class="img-display">
+                        <p class="text-center lead">Isoplus</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#isoplusProduk">
                             Info
                         </button>
                     </div>
 
                     <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Kratingdaeng.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Kratingdaeng</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#kratingdaengProduk">
+                        <img src="../../img/Edited/Minuman Isotonik/Hydro Coco.jpg" alt="foto-bahan" class="img-display">
+                        <p class="text-center lead">Hydro Coco</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#hydroProduk">
                             Info
                         </button>
                     </div>
 
                     <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/marjan.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Sirup Marjan</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#marjanProduk">
+                        <img src="../../img/Edited/Minuman Isotonik/Gatorade.jpg" alt="foto-bahan" class="img-display">
+                        <p class="text-center lead">Gatorade</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#gatoradeProduk">
                             Info
                         </button>
                     </div>
 
                     <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/teh botol.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Teh Botol</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tehBotolProduk">
+                        <img src="../../img/Edited/Minuman Isotonik/Vita Zone.jpg" alt="foto-bahan" class="img-display">
+                        <p class="text-center lead">Vita Zone</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#vitazoneProduk">
                             Info
                         </button>
                     </div>
@@ -376,11 +352,11 @@
 
     </footer>
     <div class="wrapper">
-        <div class="modal fade" id="ultraProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="isoplusProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Ultra Milk Coklat</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Isoplus</h5>
 
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -389,14 +365,14 @@
 
                     <div class="modal-body">
                         <div class="wrapper">
-                            <img src="../../img/Edited/Minuman Ringan/Ultramilk.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
+                            <img src="../../img/Edited/Minuman Isotonik/ISOPlus.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
                         </div>
 
                         <div class="info-wrapper">
                             <ul>
-                                <li><b>Harga</b> : Rp 6.000</li>
+                                <li><b>Harga</b> : Rp 8.000</li>
                                 <li><b>Stok</b>  : Available</li>
-                                <li><b>Deskripsi</b>  : Minuman Susu rasa coklat.</li>
+                                <li><b>Deskripsi</b>  : Minuman Isotonik pengganti cairan tubuh.</li>
                             </ul>
                         </div>
                     </div>
@@ -408,11 +384,11 @@
             </div>
         </div>
 
-        <div class="modal fade" id="indomilkPisang" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="pocariProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Ultra Milk Coklat</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Pocari Sweat</h5>
 
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -421,14 +397,14 @@
 
                     <div class="modal-body">
                         <div class="wrapper">
-                            <img src="../../img/Edited/Makanan Ringan/Indomilk buah.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
+                            <img src="../../img/Edited/Minuman Isotonik/Pocari Sweat.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
                         </div>
 
                         <div class="info-wrapper">
                             <ul>
-                                <li><b>Harga</b> : Rp 4.000</li>
+                                <li><b>Harga</b> : Rp 16.000</li>
                                 <li><b>Stok</b>  : Available</li>
-                                <li><b>Deskripsi</b>  : Minuman Susu rasa pisang.</li>
+                                <li><b>Deskripsi</b>  : Minuman Isotonik yang tepat untuk pengganti cairan tubuh.</li>
                             </ul>
                         </div>
                     </div>
@@ -440,11 +416,11 @@
             </div>
         </div>
 
-        <div class="modal fade" id="kratingdaengProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="aquariusProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Kratingdaeng</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Aquarius</h5>
 
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -453,14 +429,14 @@
 
                     <div class="modal-body">
                         <div class="wrapper">
-                            <img src="../../img/Edited/Minuman Ringan/Kratingdaeng.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
+                            <img src="../../img/Edited/Minuman Isotonik/Aquarius.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
                         </div>
 
                         <div class="info-wrapper">
                             <ul>
-                                <li><b>Harga</b> : Rp 10.000</li>
+                                <li><b>Harga</b> : Rp 7.000</li>
                                 <li><b>Stok</b>  : Available</li>
-                                <li><b>Deskripsi</b>  : Minuman Energi.</li>
+                                <li><b>Deskripsi</b>  : Minuman Isotonik pengganti cairan tubuh.</li>
                             </ul>
                         </div>
                     </div>
@@ -472,11 +448,11 @@
             </div>
         </div>
 
-        <div class="modal fade" id="marjanProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="mizoneProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Sirup Marjan</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Mizone</h5>
 
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -485,14 +461,14 @@
 
                     <div class="modal-body">
                         <div class="wrapper">
-                            <img src="../../img/Edited/Minuman Ringan/marjan.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
+                            <img src="../../img/Edited/Minuman Isotonik/Mizone.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
                         </div>
 
                         <div class="info-wrapper">
                             <ul>
-                                <li><b>Harga</b> : Rp 18.000</li>
+                                <li><b>Harga</b> : Rp 6.500</li>
                                 <li><b>Stok</b>  : Available</li>
-                                <li><b>Deskripsi</b>  : Sirup rasa cocopandan.</li>
+                                <li><b>Deskripsi</b>  : Minuman Isotonik pengganti cairan tubuh yang memiliki beragam rasa.</li>
                             </ul>
                         </div>
                     </div>
@@ -504,11 +480,11 @@
             </div>
         </div>
 
-        <div class="modal fade" id="tehBotolProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="hydroProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Teh Botol</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Hydro Coco</h5>
 
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -517,14 +493,14 @@
 
                     <div class="modal-body">
                         <div class="wrapper">
-                            <img src="../../img/Edited/Minuman Ringan/teh botol.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
+                            <img src="../../img/Edited/Minuman Isotonik/Hydro Coco.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
                         </div>
 
                         <div class="info-wrapper">
                             <ul>
-                                <li><b>Harga</b> : Rp 6.000</li>
-                                <li><b>Stok</b>  : Available</li>
-                                <li><b>Deskripsi</b>  : Teh Kemasan rasa Teh Melati.</li>
+                                <li><b>Harga</b> : Rp 7.000</li>
+                                <li><b>Stok</b>  : Non Available</li>
+                                <li><b>Deskripsi</b>  : Minuman Isotonik pengganti cairan tubuh dengan rasa kelapa.</li>
                             </ul>
                         </div>
                     </div>
@@ -536,11 +512,11 @@
             </div>
         </div>
 
-        <div class="modal fade" id="indomilkProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="gatoradeProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Indomilk</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Gatorade</h5>
 
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -549,14 +525,14 @@
 
                     <div class="modal-body">
                         <div class="wrapper">
-                            <img src="../../img/Edited/Minuman Ringan/Indomilk.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
+                            <img src="../../img/Edited/Minuman Isotonik/Gatorade.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
                         </div>
 
                         <div class="info-wrapper">
                             <ul>
-                                <li><b>Harga</b> : Rp 6.000</li>
+                                <li><b>Harga</b> : Rp 12.000</li>
                                 <li><b>Stok</b>  : Available</li>
-                                <li><b>Deskripsi</b>  : Minuman Susu rasa vanilla.</li>
+                                <li><b>Deskripsi</b>  : Minuman Isotonik pengganti cairan tubuh saat berolahraga.</li>
                             </ul>
                         </div>
                     </div>
@@ -568,11 +544,11 @@
             </div>
         </div>
 
-        <div class="modal fade" id="kalengProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="100PlusProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Indomilk Kaleng</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">100 Plus</h5>
 
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -581,14 +557,14 @@
 
                     <div class="modal-body">
                         <div class="wrapper">
-                            <img src="../../img/Edited/Minuman Ringan/Indomilk Kaleng.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
+                            <img src="../../img/Edited/Minuman Isotonik/100 plus.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
                         </div>
 
                         <div class="info-wrapper">
                             <ul>
-                                <li><b>Harga</b> : Rp 6.000</li>
-                                <li><b>Stok</b>  : Available</li>
-                                <li><b>Deskripsi</b>  : Susu Kental Manis dengan kaleng.</li>
+                                <li><b>Harga</b> : Rp 8.000</li>
+                                <li><b>Stok</b>  : Not Available</li>
+                                <li><b>Deskripsi</b>  : Minuman Isotonik pengganti cairan tubuh.</li>
                             </ul>
                         </div>
                     </div>
@@ -600,11 +576,11 @@
             </div>
         </div>
 
-        <div class="modal fade" id="cimoryProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="vitazoneProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Cimory</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Vitazone</h5>
 
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -613,14 +589,14 @@
 
                     <div class="modal-body">
                         <div class="wrapper">
-                            <img src="../../img/Edited/Minuman Ringan/Cimory.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
+                            <img src="../../img/Edited/Minuman Isotonik/Vita Zone.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
                         </div>
 
                         <div class="info-wrapper">
                             <ul>
-                                <li><b>Harga</b> : Rp 10.000</li>
+                                <li><b>Harga</b> : Rp 5.000</li>
                                 <li><b>Stok</b>  : Available</li>
-                                <li><b>Deskripsi</b>  : Minuman Susu rasa coklat.</li>
+                                <li><b>Deskripsi</b>  : Minuman Isotonik pengganti cairan tubuh dengan rasa Orange.</li>
                             </ul>
                         </div>
                     </div>
@@ -631,29 +607,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="modal fade" id="bearBrandProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Bear Brand</h5>
-
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-
-                    <div class="modal-body">
-
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
     <!--Load javascript-->
     <script src="../../assets/bootstrap.js"></script>

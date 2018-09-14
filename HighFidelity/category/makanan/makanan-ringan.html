@@ -23,35 +23,11 @@
     <!--Untuk bagian header-->
     <header id="header-section">
         <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-              <a href="after-login.php"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+            <a href="../../index.html"><img src="../../img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+            <div class="img-wrapper float-right mt-1">
+                <img src="../../img/menu.png" id="menu-icon-phone" alt="icon-menu"style="width: 70px">
             </div>
-            <div class="col-md-4">
 
-            </div>
-            <div class="col-md-4">
-              <a href="logreg.html"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
-              <a href="shopping-list.html"><img id="shop-chart" src="image/shop-chart.png" alt="shop-chart"></a>
-              <div class="desc"><a id="user" href="profile.php">
-              <?php session_start(); 
-              $text=$_SESSION['email'];
-              $wordlimit=wordlimit($text);
-              echo $wordlimit;
-
-              function wordlimit($text,$limit=13){
-                  if(strlen($text)>$limit)
-                    $word=mb_substr($text,0,$limit-3)."...";
-                  else
-                    $word=$text;
-
-                    return $word;
-              }
-              ?>
-              </a>
-              </div>
-            </div>
-          </div>
         </div>
     </header>
 
@@ -176,89 +152,103 @@
             </div>
         </div>
     </nav>
-
     <div class="hover"></div>
 
-    <!-- Button trigger modal    -->
-
+    <!-- Card disamping card makanan -->
     <div class="container">
         <div class="row">
             <div class="col-md-3 order-first mt-2">
                 <li class="list-group-item bg-primary">
-                    <a href="minuman-ringan.html" class="text-light">Minuman Ringan</a>
+                    <a href="makanan-ringan.html" class="text-light">Makanan Ringan</a>
                 </li>
 
                 <li class="list-group-item">
-                    <a href="minuman-isotonik.html" class="text-dark">Minuman Isotonik</a>
+                    <a href="makanan-beku.html" class="text-dark">Makanan Beku</a>
                 </li>
 
                 <li class="list-group-item">
-                    <a href="minuman-soda.html" class="text-dark">Minuman Soda</a>
+                    <a href="makanan-pokok.html" class="text-dark">Makanan Pokok</a>
                 </li>
             </div>
 
             <div class="col-md-9 order-last mt-2">
                 <div class="row">
                     <div class="card col-md-3 mx-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Ultramilk.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Ultra Milk Coklat</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ultraProduk">
+                        <img src="../../img/Edited/Makanan Ringan/Astor.jpg" alt="foto-bahan" class="img-display">
+                        <p class="text-center lead">Astor Coklat</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#astorProduk">
                             Info
                         </button>
                     </div>
 
                     <div class="card col-md-3 mx-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Indomilk.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Indomilk</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#indomilkProduk">
+                        <img src="../../img/Edited/Makanan Ringan/Chitato.jpg" alt="foto-bahan" class="img-display">
+                        <p class="text-center lead">Chitato</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#chitatoProduk">
                             Info
                         </button>
                     </div>
 
                     <div class="card col-md-3 mx-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Indomilk Kaleng.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Indomilk Kaleng</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#kalengProduk">
+                        <img src="../../img/Edited/Makanan Ringan/Goodtime.jpg" alt="foto-bahan" class="img-display">
+                        <p class="text-center lead">Goodtime Choco Chip</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#goodtimeProduk">
                             Info
                         </button>
                     </div>
 
                     <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Cimory.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Cimory</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cimoryProduk">
+                        <img src="../../img/Edited/Makanan Ringan/Khong Guan.jpg" alt="foto-bahan" class="img-display">
+                        <p class="text-center lead">Khong Guan</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#khongProduk">
                             Info
                         </button>
                     </div>
 
                     <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Makanan Ringan/Indomilk buah.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Indomilk Pisang</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#indomilkPisang">
+                        <img src="../../img/Edited/Makanan Ringan/KitKat.jpg" alt="foto-bahan" class="img-display">
+                        <p class="text-center lead">Kitkat Coklat</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#kitkatProduk">
                             Info
                         </button>
                     </div>
 
                     <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Kratingdaeng.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Kratingdaeng</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#kratingdaengProduk">
+                        <img src="../../img/Edited/Makanan Ringan/Oreo.jpg" alt="foto-bahan" class="img-display">
+                        <p class="text-center lead">Oreo</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#oreoProduk">
                             Info
                         </button>
                     </div>
 
                     <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/marjan.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Sirup Marjan</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#marjanProduk">
+                        <img src="../../img/Edited/Makanan Ringan/Roma Sari Gandum.jpg" alt="foto-bahan" class="img-display">
+                        <p class="text-center lead">Roma Sari Gandum</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#romaProduk">
                             Info
                         </button>
                     </div>
 
                     <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/teh botol.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Teh Botol</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tehBotolProduk">
+                        <img src="../../img/Edited/Makanan Ringan/Tango.jpg" alt="foto-bahan" class="img-display">
+                        <p class="text-center lead">Tango Coklat</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tangoProduk">
+                            Info
+                        </button>
+                    </div>
+
+                    <div class="card col-md-3 mx-1 my-1 p-3">
+                        <img src="../../img/Edited/Makanan Ringan/Yupi.jpg" alt="foto-bahan" class="img-display">
+                        <p class="text-center lead">Yupi</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#yupiProduk">
+                            Info
+                        </button>
+                    </div>
+
+                    <div class="card col-md-3 mx-1 my-1 p-3">
+                        <img src="../../img/Edited/Makanan Ringan/Lays.jpg" alt="foto-bahan" class="img-display">
+                        <p class="text-center lead">Lays</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#laysProduk">
                             Info
                         </button>
                     </div>
@@ -376,11 +366,12 @@
 
     </footer>
     <div class="wrapper">
-        <div class="modal fade" id="ultraProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+
+        <div class="modal fade" id="astorProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Ultra Milk Coklat</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Astor Coklat</h5>
 
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -389,16 +380,17 @@
 
                     <div class="modal-body">
                         <div class="wrapper">
-                            <img src="../../img/Edited/Minuman Ringan/Ultramilk.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
+                            <img src="../../img/Edited/Makanan Ringan/Astor.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
                         </div>
 
                         <div class="info-wrapper">
                             <ul>
-                                <li><b>Harga</b> : Rp 6.000</li>
+                                <li><b>Harga</b> : Rp 22.000</li>
                                 <li><b>Stok</b>  : Available</li>
-                                <li><b>Deskripsi</b>  : Minuman Susu rasa coklat.</li>
+                                <li><b>Deskripsi</b>  : Makanan ringan yang memiliki rasa coklat.</li>
                             </ul>
                         </div>
+
                     </div>
 
                     <div class="modal-footer">
@@ -408,11 +400,11 @@
             </div>
         </div>
 
-        <div class="modal fade" id="indomilkPisang" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="laysProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Ultra Milk Coklat</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Lays</h5>
 
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -421,16 +413,17 @@
 
                     <div class="modal-body">
                         <div class="wrapper">
-                            <img src="../../img/Edited/Makanan Ringan/Indomilk buah.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
+                            <img src="../../img/Edited/Makanan Ringan/Lays.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
                         </div>
 
                         <div class="info-wrapper">
                             <ul>
-                                <li><b>Harga</b> : Rp 4.000</li>
+                                <li><b>Harga</b> : Rp 8.000</li>
                                 <li><b>Stok</b>  : Available</li>
-                                <li><b>Deskripsi</b>  : Minuman Susu rasa pisang.</li>
+                                <li><b>Deskripsi</b>  : Makanan ringan berbahan dasar kentang.</li>
                             </ul>
                         </div>
+
                     </div>
 
                     <div class="modal-footer">
@@ -440,11 +433,11 @@
             </div>
         </div>
 
-        <div class="modal fade" id="kratingdaengProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="chitatoProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Kratingdaeng</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Chitato</h5>
 
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -453,16 +446,17 @@
 
                     <div class="modal-body">
                         <div class="wrapper">
-                            <img src="../../img/Edited/Minuman Ringan/Kratingdaeng.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
+                            <img src="../../img/Edited/Makanan Ringan/Chitato.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
                         </div>
 
                         <div class="info-wrapper">
                             <ul>
-                                <li><b>Harga</b> : Rp 10.000</li>
-                                <li><b>Stok</b>  : Available</li>
-                                <li><b>Deskripsi</b>  : Minuman Energi.</li>
+                                <li><b>Harga</b> : Rp 8.750</li>
+                                <li><b>Stok</b>  : Not Available</li>
+                                <li><b>Deskripsi</b>  : Makanan ringan dari kentang.</li>
                             </ul>
                         </div>
+
                     </div>
 
                     <div class="modal-footer">
@@ -472,11 +466,11 @@
             </div>
         </div>
 
-        <div class="modal fade" id="marjanProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="goodtimeProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Sirup Marjan</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Goodtime Choco Chip</h5>
 
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -485,16 +479,83 @@
 
                     <div class="modal-body">
                         <div class="wrapper">
-                            <img src="../../img/Edited/Minuman Ringan/marjan.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
+                            <img src="../../img/Edited/Makanan Ringan/Goodtime.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
+                        </div>
+
+                        <div class="info-wrapper">
+                            <ul>
+                                <li><b>Harga</b> : Rp 11.000</li>
+                                <li><b>Stok</b>  : Available</li>
+                                <li><b>Deskripsi</b>  : Makanan ringan yang manis disertai dengan Choco Chip.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="khongProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Khong Guan</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="wrapper">
+                            <img src="../../img/Edited/Makanan Ringan/Khong Guan.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
+                        </div>
+
+                        <div class="info-wrapper">
+                            <ul>
+                                <li><b>Harga</b> : Rp 8.000</li>
+                                <li><b>Stok</b>  : Not Available</li>
+                                <li><b>Deskripsi</b>  : Makanan ringan berbagai macam bentuk dan rasa dalam satu kaleng.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="kitkatProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Kitkat Coklat</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="wrapper">
+                            <img src="../../img/Edited/Makanan Ringan/KitKat.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
                         </div>
 
                         <div class="info-wrapper">
                             <ul>
                                 <li><b>Harga</b> : Rp 18.000</li>
                                 <li><b>Stok</b>  : Available</li>
-                                <li><b>Deskripsi</b>  : Sirup rasa cocopandan.</li>
+                                <li><b>Deskripsi</b>  : Makanan Ringan dengan wafer serta dilapisi coklat.</li>
                             </ul>
                         </div>
+
                     </div>
 
                     <div class="modal-footer">
@@ -504,11 +565,11 @@
             </div>
         </div>
 
-        <div class="modal fade" id="tehBotolProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="oreoProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Teh Botol</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Oreo</h5>
 
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -517,16 +578,50 @@
 
                     <div class="modal-body">
                         <div class="wrapper">
-                            <img src="../../img/Edited/Minuman Ringan/teh botol.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
+                            <img src="../../img/Edited/Makanan Ringan/Oreo.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
+                        </div>
+
+                        <div class="info-wrapper">
+                            <ul>
+                                <li><b>Harga</b> : Rp 9.500</li>
+                                <li><b>Stok</b>  : Available</li>
+                                <li><b>Deskripsi</b>  : Makanan ringan dengan vanilla yang dilapisi dengan biskuit coklat.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="romaProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Roma Sari Gandum</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="wrapper">
+                            <img src="../../img/Edited/Makanan Ringan/Roma Sari Gandum.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
                         </div>
 
                         <div class="info-wrapper">
                             <ul>
                                 <li><b>Harga</b> : Rp 6.000</li>
                                 <li><b>Stok</b>  : Available</li>
-                                <li><b>Deskripsi</b>  : Teh Kemasan rasa Teh Melati.</li>
+                                <li><b>Deskripsi</b>  : Makanan ringan dengan coklat yang dilapisi biskuit gandum.</li>
                             </ul>
                         </div>
+
                     </div>
 
                     <div class="modal-footer">
@@ -536,11 +631,11 @@
             </div>
         </div>
 
-        <div class="modal fade" id="indomilkProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="tangoProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Indomilk</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Tango Coklat</h5>
 
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -549,16 +644,16 @@
 
                     <div class="modal-body">
                         <div class="wrapper">
-                            <img src="../../img/Edited/Minuman Ringan/Indomilk.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
+                            <img src="../../img/Edited/Makanan Ringan/Tango.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
                         </div>
 
                         <div class="info-wrapper">
                             <ul>
-                                <li><b>Harga</b> : Rp 6.000</li>
-                                <li><b>Stok</b>  : Available</li>
-                                <li><b>Deskripsi</b>  : Minuman Susu rasa vanilla.</li>
+                                <li><b>Harga</b> : Rp 17.000</li>
+                                <li><b>Stok</b>  : Not Available</li>
                             </ul>
                         </div>
+
                     </div>
 
                     <div class="modal-footer">
@@ -568,11 +663,11 @@
             </div>
         </div>
 
-        <div class="modal fade" id="kalengProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="yupiProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Indomilk Kaleng</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Yupi</h5>
 
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -581,69 +676,16 @@
 
                     <div class="modal-body">
                         <div class="wrapper">
-                            <img src="../../img/Edited/Minuman Ringan/Indomilk Kaleng.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
+                            <img src="../../img/Edited/Makanan Ringan/Yupi.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
                         </div>
 
                         <div class="info-wrapper">
                             <ul>
-                                <li><b>Harga</b> : Rp 6.000</li>
+                                <li><b>Harga</b> : Rp 1.500</li>
                                 <li><b>Stok</b>  : Available</li>
-                                <li><b>Deskripsi</b>  : Susu Kental Manis dengan kaleng.</li>
+                                <li><b>Deskripsi</b>  : Makanan ringan dengan rasa coklat.</li>
                             </ul>
                         </div>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="cimoryProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Cimory</h5>
-
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-
-                    <div class="modal-body">
-                        <div class="wrapper">
-                            <img src="../../img/Edited/Minuman Ringan/Cimory.jpg" alt="foto-bahan" class="img-info mx-auto d-block">
-                        </div>
-
-                        <div class="info-wrapper">
-                            <ul>
-                                <li><b>Harga</b> : Rp 10.000</li>
-                                <li><b>Stok</b>  : Available</li>
-                                <li><b>Deskripsi</b>  : Minuman Susu rasa coklat.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="bearBrandProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Bear Brand</h5>
-
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-
-                    <div class="modal-body">
 
                     </div>
 
@@ -653,6 +695,7 @@
                 </div>
             </div>
         </div>
+
 
     </div>
     <!--Load javascript-->

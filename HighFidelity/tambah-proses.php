@@ -1,7 +1,5 @@
 <?php
   include 'koneksi.php';
-  include 'mail.php';
-
 
   if(isset($_POST['tambah']))
   {
@@ -10,8 +8,6 @@
     $email = $_POST['email'];
     $pwd = md5($_POST['pwd']);
     $kode   = md5(uniqid(rand()));
-    $mail = new Mail();
-    $user='user';
 
     // cek apakah email sudah terdaftar
     $query = "SELECT email FROM user WHERE email='$email'";
@@ -22,34 +18,31 @@
     }
     else
     {
-          $fileName = $_FILES['file']['name']; //get the file name
-          $fileSize = $_FILES['file']['size']; //get the size
-          $fileError = $_FILES['file']['error']; //get the error when upload
-          if($fileSize > 0 || $fileError == 0){ //check if the file is corrupt or error
-              $move = move_uploaded_file($_FILES['file']['tmp_name'], 'image/profile/'.$fileName); //save image to the folder
-              if($move){
-              // echo "<h3>Success! </h3>";
-
-              // $q = "INSERT into tb_image VALUES('','$fileName','image/$fileName')"; //insert image property to database
-              // $result = mysql_query($q);
-              $sql = "INSERT into user VALUES (NULL,'$nama','$user','$phone','$email','$pwd','$kode','T',0,'$fileName')";
-          
-              $mail->sendEmail($email, $kode);
+      $sql = "INSERT into user VALUES (NULL,'$nama','$phone','$email','$pwd','$kode',NULL,NULL)";
       
-              if($conn->query($sql)==TRUE)
-              {
-                  // echo "<p class='info'>Berhasil Dikirim</p>";
-                  echo "<script type='text/javascript'>alert('Berhasil membuat akun');location='logreg.php';</script>";
-              }
-              else
-              {
-                  echo "<script type='text/javascript'>alert('Gagal Membuat Akun');location='regis.php';</script>";
-              }
-              
-             }
-          } 
-          else{
-              echo "<h3>Failed! </h3>";
+          $to     = $_POST['email'];
+          $judul  = "Aktivasi Akun Anda";
+          $dari   = 'From: TUBES@web.com'."\r\n"
+                    .'MIME-Version: 1.0 \n'."\r\n"
+                    .'Content-type: text/html;charset=UTF-8' . "\r\n"; 
+          
+  
+          $pesan  = "Klik link berikut untuk mengaktifkan akun: <br />";
+          // $pesan  .= "<a href='konfirm.php?email=".$_POST['email']."&kode=$kode&username=".$_POST['nama']."'>konfirm.php?email=".$_POST['email']."&kode=$kode</a>";
+          // $pesan .="<a href='konfirm.php'>cek</a>";
+          $pesan .="<a href='localhost/HighFidelity/konfirm.php?email=".$_POST['email']."&kode=$kode&nama=".$_POST['nama']."'>cek</a>";
+  
+          //$kirim  = mail($to, $judul, $pesan, $dari);
+  
+          //if($kirim AND $conn->query($sql)==TRUE)
+          if($conn->query($sql)==TRUE)
+          {
+              // echo "<p class='info'>Berhasil Dikirim</p>";
+              echo "<script type='text/javascript'>alert('Berhasil membuat akun');location='logreg.php';</script>";
+          }
+          else
+          {
+              echo "<script type='text/javascript'>alert('Gagal Membuat Akun');location='regis.php';</script>";
           }
     }
  

@@ -1,4 +1,4 @@
-function loginFunction() {
+function regisAuth() {
     var Regex= /^[a-z0-9][a-z0-9_\.-]{0,}[a-z0-9]@[a-z0-9][a-z0-9_\.-]{0,}[a-z0-9][\.][a-z0-9]{2,4}$/;
     var sMsg = "";
 
@@ -10,13 +10,18 @@ function loginFunction() {
         sMsg +=("\n* Anda Belum Megisikan Password");
     }
 
+    else if(document.getElementById("pwd").value !== document.getElementById("c-pwd")) {
+        sMsg +=("\n* Password anda tidak sama!");
+    }
+
     if(sMsg !=""){
         alert("Peringatan:\n" +sMsg);
+        location.href="regis.php"
         return false;
     }
 
     else {
-        alert("Berhasil Input data");
+        // alert("Berhasil Input data");
         return true;
     }
 }
