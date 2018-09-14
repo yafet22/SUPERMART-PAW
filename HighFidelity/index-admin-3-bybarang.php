@@ -8,17 +8,21 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
+    <script src="assets/jquery.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="assets/popper.js"></script>
+    <script src="assets/bootstrap.js"></script>
+    <script src="assets/mdb.js"></script>
+    
+    
+
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/bootstrap.min.css">
     <link rel="stylesheet" href="style/bootstrap.css">
     <link rel="stylesheet" href="style/mdb.css">
     <link rel="stylesheet" href="webfonts/font-awesome-4.7.0/css/font-awesome.min.css">
-
-    <script src="assets/jquery.js"></script>
-    <script src="assets/popper.js"></script>
-    <script src="assets/bootstrap.js"></script>
-    <script src="assets/mdb.js"></script>
-    <script src="js/jquery.min.js"></script>
 
     <title>IMK Supermarket</title>
 </head>
@@ -106,72 +110,11 @@
         </div>
     </nav>
 
-    <nav id="sidebar">
-        <div class="container">
-            <div class="menu-sidebar">
-                <div class="menu-title">
-                    Makanan
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                    <li><a href="category/makanan/makanan-ringan.html">Makanan Ringan</a></li>
-                    <li><a href="category/makanan/makanan-beku.html">Makanan Beku</a></li>
-                    <li><a href="category/makanan/makanan-pokok.html">Makanan Pokok</a></li>
-                </div>
-                <hr>
-                <div class="menu-title">
-                    Minuman
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                    <li><a href="category/minuman/minuman-ringan.html">Minuman Ringan</a></li>
-                    <li><a href="category/minuman/minuman-isotonik.html">Minuman Isotonik</a></li>
-                    <li><a href="category/minuman/minuman-soda.html">Minuman Soda</a></li>
-                </div>
-                <hr>
-                <div class="menu-title">
-                    Kesehatan
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                  <li><a href="category/kesehatan/perawatan-diri.html">Perawatan Diri</a></li>
-                  <li><a href="category/kesehatan/perawatan-badan.html">Perawatan Badan</a></li>
-                  <li><a href="category/kesehatan/perawatan-rambut.html">Perawatan Rambut</a></li>
-                  <li><a href="category/kesehatan/perawatan-pria.html">Perawatan Pria</a></li>
-                  <li><a href="category/kesehatan/obat-obatan.html">Obat - obatan</a></li>
-                </div>
-                <hr>
-                <div class="menu-title">
-                    Elektronik
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                  <li><a href="category/elektronik/televisi.html">Televisi</a></li>
-                  <li><a href="category/elektronik/aksesoris-komputer.html">Aksesoris Komputer</a></li>
-                  <li><a href="category/elektronik/aksesoris-handphone.html">Aksesoris Handphone</a></li>
-                </div>
-                <hr>
-                <div class="menu-title">
-                    Peralatan Rumah Tangga
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                  <li><a href="category/kebutuhan rumah tangga/peralatan-kebersihan.html">Peralatan Kebersihan</a></li>
-                  <li><a href="category/kebutuhan rumah tangga/peralatan-makan.html">Peralatan Makan</a></li>
-                  <li><a href="category/kebutuhan rumah tangga/peralatan-rumah-tangga.html">Peralatan Rumah Tangga</a></li>
-                </div>
-            </div>
-        </div>
-    </nav>
-
     <div class="hover">
 
     </div>
 
     <!--Bagian Isi-->
-
-
-
 
     <section class="kategori">
       <div class="container title_hightlight">
@@ -185,39 +128,49 @@
                     <a href="index-admin.php" class="text-dark">Data Barang</a>
                 </li>
 
-                <li class="list-group-item bg-primary">
-                    <a href="index-admin-2.php" class="text-light">Data User</a>
+                <li class="list-group-item">
+                    <a href="index-admin-2.php" class="text-dark">Data User</a>
                 </li>
 
-                <li class="list-group-item">
-                    <a href="index-admin-3.php" class="text-dark">Data Transaksi</a>
+                <li class="list-group-item  bg-primary">
+                    <a href="index-admin-3.php" class="text-light">Data Transaksi</a>
                 </li>
         </div>
-          <div class="col-md-9 order-first mt-2">
+          <div class="col-md-9 order-first mt-2">   
           <nav class="navbar navbar-expand-lg navbar-light bg-primary ">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" style="color:white;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Search By
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="index-admin-3.php">By ID Transaksi</a>
+                    <a class="dropdown-item" href="index-admin-3-byuser.php">By ID User</a>
+                    <a class="dropdown-item" href="index-admin-3-bybarang.php">By ID Barang</a>
+                </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2 " type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Username" aria-label="Search">
+                <input class="form-control mr-sm-2" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by ID Barang" aria-label="Search">
                 </form>
             </div>
             </nav>
-            <table id="tableadmin2" class="table table-bordered" cellpadding="5" cellspacing="0" width="100%">
+            <table id=tableadmin3 class="table table-bordered" cellpadding="5" cellspacing="0" width="100%">
                 <tr style="background-color:#4285f4;color:white;text-align:center;">
                     <th class="font-weight-bold">No</th>
-                    <th class="font-weight-bold">Username</th>
-                    <th class="font-weight-bold">Telp</th>
-                    <th class="font-weight-bold">Email</th>
-                    <th class="font-weight-bold">Status Aktif</th>
-                    <th> </th>
+                    <th class="font-weight-bold">Id-Transaksi</th>
+                    <th class="font-weight-bold">Id-Pembeli</th>
+                    <th class="font-weight-bold">Id-Barang</th>
+                    <th class="font-weight-bold">Nama-Barang</th>
+                    <th class="font-weight-bold">Jumlah-Barang</th>
+                    <th class="font-weight-bold">Total Harga</th>
+                    <!-- <th> </th> -->
                 </tr>
 
                 <?php
                 include('koneksi.php');
 
-                $query ="SELECT * FROM user ORDER BY id ASC";
+                $query ="SELECT * FROM transaksi ORDER BY idtransaksi ASC";
                 $result=mysqli_query($conn,$query);
 
                 if(mysqli_num_rows($result) == 0){
@@ -225,21 +178,45 @@
 
                 }else{
                     $no = 1;
+                    $total = 0;
                     while($data = mysqli_fetch_assoc($result)){
 
                         echo '<tr style="text-align:center;">';
                         echo '<td>'.$no.'</td>';
-                        echo '<td>'.$data['username'].'</td>';
-                        echo '<td>'.$data['telp'].'</td>';
-                        echo '<td>'.$data['email'].'</td>';
-                        echo '<td>'.$data['aktif'].'</td>';
-                        echo '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#show" data-id="'.$data['id'].'">
-                        Edit</button><a href="hapus-user.php?id='.$data['id'].'""><button type="button" class="btn btn-warning">Hapus</button></a></td>';
+                        echo '<td>'.$data['idtransaksi'].'</td>';
+                        echo '<td>'.$data['idpembeli'].'</td>';
+                        echo '<td>'.$data['idbarang'].'</td>';
+                        echo '<td>'.$data['namabarang'].'</td>';
+                        echo '<td>'.$data['jumlahbarang'].'</td>';
+                        echo '<td>'.$data['totalharga'].'</td>';  
+                        // echo '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#show" data-id="'.$data['id'].'">
+                        // Edit</button><a href="hapus-user.php?id='.$data['id'].'""><button type="button" class="btn btn-warning">Hapus</button></a></td>';
                         // echo '<td><a href="edit-user.php?id='.$data['id'].'" data-toggle="modal" data-target="#edituser" style="color:blue;">Edit</a> / <a href="hapus-user.php?id='.$data['id'].'" style="color:blue;" onclick="return confirm(\'Yakin?\')">Hapus</a></td>';
                         echo '</tr>';
                         $no++;
+                        $total=$total+$data['totalharga'];
 
                     }
+                        // echo'<table id=tableadmin class="table" cellpadding="5" cellspacing="0" width="100%">';
+                        // echo'<tr>';
+                        // echo'<th>Total Pendapatan</th>';
+                        // echo'<th></th>';
+                        // echo'<th></th>';
+                        // echo'<th></th>';
+                        // echo'<th></th>';
+                        // echo'<th></th>';
+                        // echo'<th>'.$total.'</th>';
+                        // echo'</tr>';
+
+                        echo '<tr style="text-align:center;">';
+                        echo '<td>Total Pendapatan</td>';
+                        echo '<td> </td>';
+                        echo '<td> </td>';
+                        echo '<td> </td>';
+                        echo '<td> </td>';
+                        echo '<td> </td>';
+                        echo '<td>'.$total.'</td>';  
+                        echo '</tr>';
 
                 }
                 ?>
@@ -437,8 +414,6 @@
       // Get the element with id="defaultOpen" and click on it
       document.getElementById("defaultOpen").click();
     </script>
-    <script src="assets/bootstrap.js"></script>
-    <script src="assets/script.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){
         $('#show').on('show.bs.modal', function (e) {
@@ -464,12 +439,12 @@
     var input, filter, table, tr, td, i;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
-    table = document.getElementById("tableadmin2");
+    table = document.getElementById("tableadmin3");
     tr = table.getElementsByTagName("tr");
 
     // Loop through all table rows, and hide those who don't match the search query
     for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[1];
+        td = tr[i].getElementsByTagName("td")[3];
         if (td) {
         if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
             tr[i].style.display = "";

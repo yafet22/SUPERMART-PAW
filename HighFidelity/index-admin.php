@@ -194,9 +194,20 @@
                 </li>
         </div>
           <div class="col-md-9 order-first mt-2">
+          <nav class="navbar navbar-expand-lg navbar-light bg-primary ">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2 " type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Nama Barang" aria-label="Search">
+                </form>
+            </div>
+            </nav>
             <table id=tableadmin class="table table-bordered" cellpadding="5" cellspacing="0" width="100%">
                 <tr style="background-color:#4285f4;color:white;text-align:center;">
                     <th class="font-weight-bold">No</th>
+                    <th class="font-weight-bold">Id Barang</th>
                     <th class="font-weight-bold">Nama Barang</th>
                     <th class="font-weight-bold">Kategori</th>
                     <th class="font-weight-bold">Harga</th>
@@ -220,6 +231,7 @@
 
                         echo '<tr style="text-align:center;">';
                         echo '<td>'.$no.'</td>';
+                        echo '<td>'.$data['idbarang'].'</td>';
                         echo '<td>'.$data['namabarang'].'</td>';
                         echo '<td>'.$data['kategori'].'</td>';
                         echo '<td>'.$data['harga'].'</td>';
@@ -411,5 +423,27 @@
          });
     });
   </script>
+  <script>
+    function myFunction() {
+    // Declare variables
+    var input, filter, table, tr, td, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("tableadmin");
+    tr = table.getElementsByTagName("tr");
+
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[2];
+        if (td) {
+        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+        } else {
+            tr[i].style.display = "none";
+        }
+        }
+    }
+    }
+    </script>
 </body>
 </html>
