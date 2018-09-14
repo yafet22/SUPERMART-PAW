@@ -36,10 +36,24 @@ body{
   width: 10px;
 }
 
+#header-section #admin{
+    text-align: right;
+    color: white;
+    font-size: 20px;
+    position:relative;
+    top: 22px;
+    right: -210px;
+    width: 10px;
+  }
+
 
 #header-section #user:hover{
 color: grey;
 }
+
+#header-section #admin:hover{
+    color: grey;
+    }
 
 #header-section #shop-chart{
     width: 40px;

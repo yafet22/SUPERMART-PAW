@@ -18,6 +18,12 @@
       $_SESSION['telp'] = $data['telp'];
       $_SESSION['id'] = $data['id'];
       $_SESSION['s'] = $data['session'];
-      echo "<script type='text/javascript'>alert('Selamat Datang');location='after-login.php';</script>";
+      $_SESSION['role'] = $data['role'];
+      if($data['role']=='admin')
+      {
+        echo "<script type='text/javascript'>alert('Anda Login Sebagai Admin');location='index-admin.php';</script>";
+      }
+      else
+        echo "<script type='text/javascript'>alert('Selamat Datang');location='after-login.php';</script>";
    }
 ?>

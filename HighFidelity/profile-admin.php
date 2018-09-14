@@ -19,27 +19,30 @@
     <script src="assets/bootstrap.js"></script>
     <script src="assets/mdb.js"></script>
     <script src="js/jquery.min.js"></script>
-    <script src="js/login_auth.js"></script>
 
     <title>IMK Supermarket</title>
 </head>
+<?php session_start(); ?>
 <body>
     <!--Untuk bagian header-->
     <header id="header-section">
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <a href="index.php"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+              <a href="index-admin.php"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
             </div>
             <div class="col-md-4">
 
             </div>
             <div class="col-md-4">
               <a href="logreg.php"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
+              <div class="desc"><a id="admin" href="profile-admin.php">ADMIN
+              </a>
+              </div>
             </div>
           </div>
         </div>
-    </header>
+    </header>>
 
     <nav id="navbar">
         <div class="container">
@@ -170,47 +173,44 @@
 
     <section class="login">
       <div class="container title_hightlight">
-        <h2 class="font-weight-bold">LOGIN</h2>
+        <h2 class="font-weight-bold">PROFILE</h2>
       </div>
       <br>
-      <div class="container logologin">
-        <div class="row">
-          <div class="col-md-4">
-
-          </div>
-          <div class="col-md-4">
-              <img id="loginform" src="img/user-logo.png" style="width:50%;">
-          </div>
-          <div class="col-md-4">
-          </div>
-        </div>
-      </div>
       <div class="container formlogin">
         <div class="row">
           <div class="col-md-4">
 
           </div>
           <div class="col-md-4">
-              <form id="Login" action="login-proses.php" method="POST">
-                <div class="form-group">
-                  <label for="email">Email:</label>
-                  <input type="email" class="form-control" id="inputemail" placeholder="Enter email" name="email" >
-                </div>
-                <div class="form-group">
-                  <label for="pwd">Password:</label>
-                  <input type="password" class="form-control" id="inputpwd" placeholder="Enter password" name="pwd" >
-                </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <button type="submit" class="btn btn-success" style="display: block; margin: 0 auto;">Login</button>
-                  </div>
-                  <div class="col-md-6">
-                      <a href="regis.php"><button type="button" class="btn btn-primary" style="display: block; margin: 0 auto;">Daftar</button></a>
-                  </div>
-                </div>
-              </form>
+            <div class="card hovercard">
+              <div class="cardheader">
+
               </div>
+              <div class="avatar">
+                  <img id="loginform" src="img/user-logo.png" style="width:100%;">
               </div>
+              <div class="info">
+                  <div class="title">
+                      <?php 
+                        echo $_SESSION['username'];
+                       ?>
+                    </div>
+                  <div class="desc">
+                        <?php 
+                        echo $_SESSION['telp'];
+                       ?>
+                    </div>
+                  <div class="desc">
+                       <?php 
+                        echo $_SESSION['email'];
+                       ?>
+                    </div>
+              </div>
+              <div class="bottom">
+                    <a href="edit-profile-admin.php"><button type="submit" class="btn btn-primary" style="display: block; margin: 0 auto;">Edit Profile</button></a>
+                    <a href="logout-proses.php"><button type="submit" class="btn btn-danger" style="display: block; margin: 0 auto;">Log-out</button></a>
+              </div>
+            </div>
           </div>
           <div class="col-md-4">
 

@@ -19,27 +19,30 @@
     <script src="assets/bootstrap.js"></script>
     <script src="assets/mdb.js"></script>
     <script src="js/jquery.min.js"></script>
-    <script src="js/login_auth.js"></script>
 
     <title>IMK Supermarket</title>
 </head>
+<?php session_start(); ?>
 <body>
     <!--Untuk bagian header-->
     <header id="header-section">
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <a href="index.php"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+              <a href="index-admin.php"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
             </div>
             <div class="col-md-4">
 
             </div>
             <div class="col-md-4">
               <a href="logreg.php"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
+              <div class="desc"><a id="admin" href="profile-admin.php">ADMIN
+              </a>
+              </div>
             </div>
           </div>
         </div>
-    </header>
+    </header>>
 
     <nav id="navbar">
         <div class="container">
@@ -168,9 +171,12 @@
 
     <!--Bagian Isi-->
 
-    <section class="login">
+
+
+
+    <section class="kategori">
       <div class="container title_hightlight">
-        <h2 class="font-weight-bold">LOGIN</h2>
+        <h2 class="font-weight-bold">EDIT PROFILE</h2>
       </div>
       <br>
       <div class="container logologin">
@@ -182,6 +188,7 @@
               <img id="loginform" src="img/user-logo.png" style="width:50%;">
           </div>
           <div class="col-md-4">
+
           </div>
         </div>
       </div>
@@ -191,33 +198,42 @@
 
           </div>
           <div class="col-md-4">
-              <form id="Login" action="login-proses.php" method="POST">
+              <form id="login" action="edit-proses.php" method="POST">
+                <input type="hidden" name="id" value="<?php echo $_SESSION['id']; ?>">
+                <div class="form-group">
+                  <label for="nama">Nama:</label>
+                  <input type="name" class="form-control" id="nama" placeholder="Enter name" name="nama" value=" <?php echo $_SESSION['username'];?>">
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone:</label>
+                  <input type="phone" class="form-control" id="phone" placeholder="Enter phone number" name="phone" value=" <?php echo $_SESSION['telp'];?>">
+                </div>
                 <div class="form-group">
                   <label for="email">Email:</label>
-                  <input type="email" class="form-control" id="inputemail" placeholder="Enter email" name="email" >
+                  <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" value=" <?php echo $_SESSION['email'];?>">
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Recent Password:</label>
+                  <input type="password" class="form-control" id="oldpwd" placeholder="Enter password" name="pwd">
                 </div>
                 <div class="form-group">
                   <label for="pwd">Password:</label>
-                  <input type="password" class="form-control" id="inputpwd" placeholder="Enter password" name="pwd" >
+                  <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="new-pwd">
                 </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <button type="submit" class="btn btn-success" style="display: block; margin: 0 auto;">Login</button>
-                  </div>
-                  <div class="col-md-6">
-                      <a href="regis.php"><button type="button" class="btn btn-primary" style="display: block; margin: 0 auto;">Daftar</button></a>
-                  </div>
+                <div class="form-group">
+                  <label for="pwd">Confirm Password:</label>
+                  <input type="password" class="form-control" id="c-pwd" placeholder="Enter password" name="c-pwd">
                 </div>
+
+                <button type="submit" class="btn btn-primary" name="simpan" value="simpan" style="display: block; margin: 0 auto;">FINISH EDIT</button>
+
               </form>
-              </div>
-              </div>
           </div>
           <div class="col-md-4">
 
           </div>
         </div>
       </div>
-
     </section>
 
     <!-- Footer -->
@@ -250,16 +266,16 @@
 
             <ul class="list-unstyled">
               <div class="row">
-                <li style="padding-left:16px;"><p><a href="../makanan/makanan-ringan.html">Makanan</a></p></li>
-                <li style="padding-left:16px;"><p><a href="../minuman/minuman-ringan.html">Minuman</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/makanan/makanan-ringan.html">Makanan</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/minuman/minuman-ringan.html">Minuman</a></p></li>
               </div>
               <div class="row">
-                <li style="padding-left:16px;"><p><a href="../kesehatan/perawatan-diri.html">Kesehatan</a></p></li>
-                <li style="padding-left:16px;"><p><a href="../elektronik/televisi.html">Elektronik</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/kesehatan/perawatan-diri.html">Kesehatan</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/elektronik/televisi.html">Elektronik</a></p></li>
               </div>
 
-              <li><p><a href="../kebutuhan rumah tangga/peralatan-kebersihan.html">Kebutuhan Rumah Tangga</a></p></li>
-              <li><p><a href="../fashion/fashion-pria.html">Fashion</a></p></li>
+              <li><p><a href="category/kebutuhan rumah tangga/peralatan-kebersihan.html">Kebutuhan Rumah Tangga</a></p></li>
+              <li><p><a href="category/fashion/fashion-pria.html">Fashion</a></p></li>
             </ul>
 
           </div>
@@ -329,7 +345,6 @@
       <!-- Copyright -->
 
     </footer>
-
 
     <!-- Footer -->
     <!-- Button trigger modal    -->

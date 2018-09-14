@@ -221,9 +221,8 @@
                     </div>
               </div>
               <div class="bottom">
-                  <form class="" action="">
-                      <button type="submit" class="btn btn-primary" action="edit-profile.php" formaction="edit-profile.php" style="display: block; margin: 0 auto;">Edit Profile</button>
-                  </form>
+                      <a href="edit-profile.php"><button type="submit" class="btn btn-primary" style="display: block; margin: 0 auto;">Edit Profile</button></a>
+                      <a href="logout-proses.php"><button type="submit" class="btn btn-danger" style="display: block; margin: 0 auto;">Log-out</button></a>
               </div>
             </div>
           </div>

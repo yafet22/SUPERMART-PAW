@@ -18,7 +18,7 @@
     }
     else
     {
-      $sql = "INSERT into user VALUES (NULL,'$nama','$phone','$email','$pwd','$kode',NULL,NULL)";
+      $sql = "INSERT into user VALUES (NULL,'$nama','user','$phone','$email','$pwd','$kode',NULL,NULL)";
       
           $to     = $_POST['email'];
           $judul  = "Aktivasi Akun Anda";
