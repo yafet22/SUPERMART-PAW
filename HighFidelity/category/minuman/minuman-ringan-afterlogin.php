@@ -25,14 +25,14 @@
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <a href="after-login.php"><img id="logo" src="../../img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+              <a href="../../after-login.php"><img id="logo" src="../../img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
             </div>
             <div class="col-md-4">
 
             </div>
             <div class="col-md-4">
-              <a href="logreg.html"><img id="user-logo" src="../../img/usernew.png" alt="user-logo"></a>
-              <a href="shopping-list.html"><img id="shop-chart" src="../../image/shop-chart.png" alt="shop-chart"></a>
+              <a href="../../logreg.php"><img id="user-logo" src="../../img/usernew.png" alt="user-logo"></a>
+              <a href="../../shopping-list.php"><img id="shop-chart" src="../../image/shop-chart.png" alt="shop-chart"></a>
               <div class="desc"><a id="user" href="profile.php">
               <?php session_start(); 
               $text=$_SESSION['email'];
@@ -62,55 +62,55 @@
                     <div class="dropdown">
                         <li class="menu">Makanan</li>
                         <div class="menu-content">
-                            <li><a href="../makanan/makanan-ringan.html">Makanan Ringan</a></li>
-                            <li><a href="../makanan/makanan-beku.html">Makanan Beku</a></li>
-                            <li><a href="../makanan/makanan-pokok.html">Makanan Pokok</a></li>
+                            <li><a href="../makanan/makanan-ringan-afterlogin.php">Makanan Ringan</a></li>
+                            <li><a href="../makanan/makanan-beku-afterlogin.php">Makanan Beku</a></li>
+                            <li><a href="../makanan/makanan-pokok-afterlogin.php">Makanan Pokok</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Minuman</li>
                         <div class="menu-content">
-                            <li><a href="../minuman/minuman-ringan.html">Minuman Ringan</a></li>
-                            <li><a href="../minuman/minuman-isotonik.html">Minuman Isotonik</a></li>
-                            <li><a href="../minuman/minuman-soda.html">Minuman Soda</a></li>
+                            <li><a href="../minuman/minuman-ringan-afterlogin.php">Minuman Ringan</a></li>
+                            <li><a href="../minuman/minuman-isotonik-afterlogin.php">Minuman Isotonik</a></li>
+                            <li><a href="../minuman/minuman-soda-afterlogin.php">Minuman Soda</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Kesehatan</li>
                         <div class="menu-content">
-                            <li><a href="../kesehatan/perawatan-diri.html">Perawatan Diri</a></li>
-                            <li><a href="../kesehatan/perawatan-badan.html">Perawatan Badan</a></li>
-                            <li><a href="../kesehatan/perawatan-rambut.html">Perawatan Rambut</a></li>
-                            <li><a href="../kesehatan/perawatan-pria.html">Perawatan Pria</a></li>
-                            <li><a href="../kesehatan/obat-obatan.html">Obat - obatan</a></li>
+                            <li><a href="../kesehatan/perawatan-diri-afterlogin.php">Perawatan Diri</a></li>
+                            <li><a href="../kesehatan/perawatan-badan-afterlogin.php">Perawatan Badan</a></li>
+                            <li><a href="../kesehatan/perawatan-rambut-afterlogin.php">Perawatan Rambut</a></li>
+                            <li><a href="../kesehatan/perawatan-pria-afterlogin.php">Perawatan Pria</a></li>
+                            <li><a href="../kesehatan/obat-obatan-afterlogin.php">Obat - obatan</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Elektronik</li>
                         <div class="menu-content">
-                            <li><a href="../elektronik/televisi.html">Televisi</a></li>
-                            <li><a href="../elektronik/aksesoris-komputer.html">Aksesoris Komputer</a></li>
-                            <li><a href="../elektronik/aksesoris-handphone.html">Aksesoris Handphone</a></li>
+                            <li><a href="../elektronik/televisi-afterlogin.php">Televisi</a></li>
+                            <li><a href="../elektronik/aksesoris-komputer-afterlogin.php">Aksesoris Komputer</a></li>
+                            <li><a href="../elektronik/aksesoris-handphone-afterlogin.php">Aksesoris Handphone</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Kebutuhan Rumah Tangga</li>
                         <div class="menu-content">
-                            <li><a href="../kebutuhan rumah tangga/peralatan-kebersihan.html">Peralatan Kebersihan</a></li>
-                            <li><a href="../kebutuhan rumah tangga/peralatan-makan.html">Peralatan Makan</a></li>
-                            <li><a href="../kebutuhan rumah tangga/peralatan-rumah-tangga.html">Peralatan Rumah Tangga</a></li>
+                            <li><a href="../kebutuhan rumah tangga/peralatan-kebersihan-afterlogin.php">Peralatan Kebersihan</a></li>
+                            <li><a href="../kebutuhan rumah tangga/peralatan-makan-afterlogin.php">Peralatan Makan</a></li>
+                            <li><a href="../kebutuhan rumah tangga/peralatan-rumah-tangga-afterlogin.php">Peralatan Rumah Tangga</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Fashion</li>
                         <div class="menu-content">
-                            <li><a href="../fashion/fashion-pria.html">Fashion Pria</a></li>
-                            <li><a href="../fashion/fashion-wanita.html">Fashion Wanita</a></li>
+                            <li><a href="../fashion/fashion-pria-afterlogin.php">Fashion Pria</a></li>
+                            <li><a href="../fashion/fashion-wanita-afterlogin.php">Fashion Wanita</a></li>
                         </div>
                     </div>
 
@@ -185,15 +185,15 @@
         <div class="row">
             <div class="col-md-3 order-first mt-2">
                 <li class="list-group-item bg-primary">
-                    <a href="minuman-ringan.html" class="text-light">Minuman Ringan</a>
+                    <a href="minuman-ringan-afterlogin.php" class="text-light">Minuman Ringan</a>
                 </li>
 
                 <li class="list-group-item">
-                    <a href="minuman-isotonik.html" class="text-dark">Minuman Isotonik</a>
+                    <a href="minuman-isotonik-afterlogin.php" class="text-dark">Minuman Isotonik</a>
                 </li>
 
                 <li class="list-group-item">
-                    <a href="minuman-soda.html" class="text-dark">Minuman Soda</a>
+                    <a href="minuman-soda-afterlogin.php" class="text-dark">Minuman Soda</a>
                 </li>
             </div>
 
@@ -203,7 +203,7 @@
 
                     include('../../koneksi.php');
 
-                    $sql = "SELECT * FROM barang ORDER BY idbarang ASC";
+                    $sql = "SELECT * FROM barang WHERE kategori='MinumanRingan' ORDER BY idbarang ASC";
                     $result=mysqli_query($conn,$sql);
 
                     if(mysqli_num_rows($result) == 0){
@@ -406,7 +406,7 @@
 
             include('../../koneksi.php');
 
-            $sql = "SELECT * FROM barang ORDER BY idbarang ASC";
+            $sql = "SELECT * FROM barang WHERE kategori='MinumanRingan' ORDER BY idbarang ASC";
             $result=mysqli_query($conn,$sql);
 
             if(mysqli_num_rows($result) == 0){

@@ -32,7 +32,7 @@
             </div>
             <div class="col-md-4">
               <a href="../../logreg.php"><img id="user-logo" src="../../img/usernew.png" alt="user-logo"></a>
-              <a href="../../shopping-list.php"><img id="shop-chart" src="../../image/shop-chart.png" alt="shop-chart"></a>
+              <a href="../../shopping-list.html"><img id="shop-chart" src="../../image/shop-chart.png" alt="shop-chart"></a>
               <div class="desc"><a id="user" href="profile.php">
               <?php session_start(); 
               $text=$_SESSION['email'];
@@ -119,7 +119,7 @@
         </div>
     </nav>
 
-    <!-- <nav id="sidebar">
+    <nav id="sidebar">
         <div class="container">
             <div class="menu-sidebar">
                 <div class="menu-title">
@@ -127,7 +127,7 @@
                 </div>
                 <hr>
                 <div class="menu-content-sidebar">
-                    <li><a href="../makanan/makanan-ringan.html">Makanan Ringan</a></li>
+                    <li><a href="../makanan/makanan-ringan.php">Makanan Ringan</a></li>
                     <li><a href="../makanan/makanan-beku.html">Makanan Beku</a></li>
                     <li><a href="../makanan/makanan-pokok.html">Makanan Pokok</a></li>
                 </div>
@@ -175,7 +175,7 @@
                 </div>
             </div>
         </div>
-    </nav> -->
+    </nav>
 
     <div class="hover"></div>
 
@@ -184,16 +184,24 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3 order-first mt-2">
+                <li class="list-group-item">
+                    <a href="perawatan-diri-admin.php" class="text-dark">Perawatan Diri</a>
+                </li>
+
+                <li class="list-group-item">
+                    <a href="perawatan-badan-admin.php" class="text-dark">Perawatan Badan</a>
+                </li>
+
                 <li class="list-group-item bg-primary">
-                    <a href="minuman-ringan-admin.php" class="text-light">Minuman Ringan</a>
+                    <a href="perawatan-rambut-admin.php" class="text-light">Perawatan Rambut</a>
                 </li>
 
                 <li class="list-group-item">
-                    <a href="minuman-isotonik-admin.php" class="text-dark">Minuman Isotonik</a>
+                    <a href="perawatan-pria-admin.php" class="text-dark">Perawatan Pria</a>
                 </li>
 
                 <li class="list-group-item">
-                    <a href="minuman-soda-admin.php" class="text-dark">Minuman Soda</a>
+                    <a href="obat-obatan-admin.php" class="text-dark">Obat-obatan</a>
                 </li>
                 <br>
                 <button type="button" class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#inputbarang">
@@ -207,7 +215,7 @@
 
                     include('../../koneksi.php');
 
-                    $sql = "SELECT * FROM barang WHERE kategori='MinumanRingan' ORDER BY idbarang ASC";
+                    $sql = "SELECT * FROM barang WHERE kategori='PerawatanRambut' ORDER BY idbarang ASC";
                     $result=mysqli_query($conn,$sql);
 
                     if(mysqli_num_rows($result) == 0){
@@ -408,7 +416,7 @@
 
             include('../../koneksi.php');
 
-            $sql = "SELECT * FROM barang WHERE kategori='MinumanRingan' ORDER BY idbarang ASC";
+            $sql = "SELECT * FROM barang WHERE kategori='PerawatanRambut' ORDER BY idbarang ASC";
             $result=mysqli_query($conn,$sql);
 
             if(mysqli_num_rows($result) == 0){
@@ -461,7 +469,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="kbarang">Kategori: </label>
-                                <input type="text" class="form-control" id="kbarang" placeholder="Enter kategori barang" name="kbarang" value="MinumanRingan">
+                                <input type="text" class="form-control" id="kbarang" placeholder="Enter kategori barang" name="kbarang" value="PerawatanRambut">
                             </div>
                             <div class="form-group">
                                 <label for="hbarang">Harga: </label>
@@ -499,62 +507,7 @@
             </div>
         </div>
 
-         <!-- <div class="modal fade" id="editbarang" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Edit Barang</h5>
-
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-
-                    <div class="modal-body">
-                        <form id="input" action="../../editbarang-proses.php" method="POST" enctype="multipart/form-data">
-                            <input type="hidden" name="id" value="<?php echo $_SESSION['id']; ?>">
-                            <div class="form-group">
-                                <label for="nbarangr">Nama Barang: </label>
-                                <input type="text" class="form-control" id="nbarang" placeholder="Enter name barang" name="nbarang" value="<?php echo $_SESSION['nama']; ?>" >
-                            </div>
-                            <div class="form-group">
-                                <label for="kbarang">Kategori: </label>
-                                <input type="text" class="form-control" id="kbarang" placeholder="Enter kategori barang" name="kbarang" value="Minuman">
-                            </div>
-                            <div class="form-group">
-                                <label for="hbarang">Harga: </label>
-                                <input type="text" class="form-control" id="hbarang" placeholder="Enter harga barang" name="hbarang" value="<?php echo $_SESSION['harga']; ?>">
-                            </div>
-                            <div class="form-group">
-                                <label for="sbarang">Stock: </label>
-                                <input type="text" class="form-control" id="sbarang" placeholder="Enter stock barang" name="sbarang" value="<?php echo $_SESSION['stock']; ?>">
-                            </div>
-                            <div class="form-group">
-                                <label for="desc">Deskripsi: </label>
-                                <textarea class="form-control" rows="3" id="desc" placeholder="Enter deskripsi barang" name="desc" ><?php echo $_SESSION['deskripsi']; ?></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label>Upload Image</label>
-                                <div class="input-group">
-                                    <span class="input-group-btn">
-                                        <span class="btn btn-default btn-file">
-                                            Browse… <input type="file" id="imgEdt" name="picture">
-                                        </span>
-                                    </span>
-                                    <input type="text"  class="form-control" readonly>
-                                </div>
-                                <img id='img-upload'/>
-                            </div>
-                            <button type="submit" value="Upload" class="btn btn-primary" name="simpan">Save </button>
-                        </form>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+       
 
         <!-- Modal start here -->
         <div class="modal fade" id="editbarang" role="dialog">

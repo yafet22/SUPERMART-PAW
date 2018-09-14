@@ -25,7 +25,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <a href="../../after-login.php"><img id="logo" src="../../img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+              <a href="after-login.php"><img id="logo" src="../../img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
             </div>
             <div class="col-md-4">
 
@@ -55,7 +55,7 @@
         </div>
     </header>
 
-    <nav id="navbar">
+     <nav id="navbar">
         <div class="container">
             <div class="menu-wrapper">
                 <ul style="padding-left:0px;">
@@ -119,7 +119,7 @@
         </div>
     </nav>
 
-    <!-- <nav id="sidebar">
+    <nav id="sidebar">
         <div class="container">
             <div class="menu-sidebar">
                 <div class="menu-title">
@@ -175,7 +175,7 @@
                 </div>
             </div>
         </div>
-    </nav> -->
+    </nav>
 
     <div class="hover"></div>
 
@@ -184,16 +184,16 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3 order-first mt-2">
-                <li class="list-group-item bg-primary">
-                    <a href="minuman-ringan-admin.php" class="text-light">Minuman Ringan</a>
+                <li class="list-group-item">
+                    <a href="minuman-ringan-admin.php" class="text-dark">Minuman Ringan</a>
                 </li>
 
                 <li class="list-group-item">
                     <a href="minuman-isotonik-admin.php" class="text-dark">Minuman Isotonik</a>
                 </li>
 
-                <li class="list-group-item">
-                    <a href="minuman-soda-admin.php" class="text-dark">Minuman Soda</a>
+                <li class="list-group-item bg-primary">
+                    <a href="minuman-soda-admin.php" class="text-light">Minuman Soda</a>
                 </li>
                 <br>
                 <button type="button" class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#inputbarang">
@@ -207,7 +207,7 @@
 
                     include('../../koneksi.php');
 
-                    $sql = "SELECT * FROM barang WHERE kategori='MinumanRingan' ORDER BY idbarang ASC";
+                    $sql = "SELECT * FROM barang WHERE kategori='MinumanSoda' ORDER BY idbarang ASC";
                     $result=mysqli_query($conn,$sql);
 
                     if(mysqli_num_rows($result) == 0){
@@ -408,7 +408,7 @@
 
             include('../../koneksi.php');
 
-            $sql = "SELECT * FROM barang WHERE kategori='MinumanRingan' ORDER BY idbarang ASC";
+            $sql = "SELECT * FROM barang WHERE kategori='MinumanSoda' ORDER BY idbarang ASC";
             $result=mysqli_query($conn,$sql);
 
             if(mysqli_num_rows($result) == 0){
@@ -461,7 +461,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="kbarang">Kategori: </label>
-                                <input type="text" class="form-control" id="kbarang" placeholder="Enter kategori barang" name="kbarang" value="MinumanRingan">
+                                <input type="text" class="form-control" id="kbarang" placeholder="Enter kategori barang" name="kbarang" value="MinumanSoda">
                             </div>
                             <div class="form-group">
                                 <label for="hbarang">Harga: </label>

@@ -32,7 +32,7 @@
             </div>
             <div class="col-md-4">
               <a href="../../logreg.php"><img id="user-logo" src="../../img/usernew.png" alt="user-logo"></a>
-              <a href="../../shopping-list.php"><img id="shop-chart" src="../../image/shop-chart.png" alt="shop-chart"></a>
+              <a href="../../shopping-list.html"><img id="shop-chart" src="../../image/shop-chart.png" alt="shop-chart"></a>
               <div class="desc"><a id="user" href="profile.php">
               <?php session_start(); 
               $text=$_SESSION['email'];
@@ -119,7 +119,7 @@
         </div>
     </nav>
 
-    <!-- <nav id="sidebar">
+    <nav id="sidebar">
         <div class="container">
             <div class="menu-sidebar">
                 <div class="menu-title">
@@ -127,7 +127,7 @@
                 </div>
                 <hr>
                 <div class="menu-content-sidebar">
-                    <li><a href="../makanan/makanan-ringan.html">Makanan Ringan</a></li>
+                    <li><a href="../makanan/makanan-ringan.php">Makanan Ringan</a></li>
                     <li><a href="../makanan/makanan-beku.html">Makanan Beku</a></li>
                     <li><a href="../makanan/makanan-pokok.html">Makanan Pokok</a></li>
                 </div>
@@ -175,7 +175,7 @@
                 </div>
             </div>
         </div>
-    </nav> -->
+    </nav>
 
     <div class="hover"></div>
 
@@ -184,16 +184,16 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3 order-first mt-2">
-                <li class="list-group-item bg-primary">
-                    <a href="minuman-ringan-admin.php" class="text-light">Minuman Ringan</a>
+                 <li class="list-group-item bg-primary ">
+                    <a href="makanan-ringan-admin.php" class="text-light">Makanan Ringan</a>
                 </li>
 
                 <li class="list-group-item">
-                    <a href="minuman-isotonik-admin.php" class="text-dark">Minuman Isotonik</a>
+                    <a href="makanan-beku-admin.php" class="text-dark">Makanan Beku</a>
                 </li>
 
                 <li class="list-group-item">
-                    <a href="minuman-soda-admin.php" class="text-dark">Minuman Soda</a>
+                    <a href="makanan-pokok-admin.php" class="text-dark">Makanan Pokok</a>
                 </li>
                 <br>
                 <button type="button" class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#inputbarang">
@@ -207,7 +207,7 @@
 
                     include('../../koneksi.php');
 
-                    $sql = "SELECT * FROM barang WHERE kategori='MinumanRingan' ORDER BY idbarang ASC";
+                    $sql = "SELECT * FROM barang WHERE kategori='MakananRingan' ORDER BY idbarang ASC";
                     $result=mysqli_query($conn,$sql);
 
                     if(mysqli_num_rows($result) == 0){
@@ -408,7 +408,7 @@
 
             include('../../koneksi.php');
 
-            $sql = "SELECT * FROM barang WHERE kategori='MinumanRingan' ORDER BY idbarang ASC";
+            $sql = "SELECT * FROM barang WHERE kategori='MakananRingan' ORDER BY idbarang ASC";
             $result=mysqli_query($conn,$sql);
 
             if(mysqli_num_rows($result) == 0){
@@ -461,7 +461,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="kbarang">Kategori: </label>
-                                <input type="text" class="form-control" id="kbarang" placeholder="Enter kategori barang" name="kbarang" value="MinumanRingan">
+                                <input type="text" class="form-control" id="kbarang" placeholder="Enter kategori barang" name="kbarang" value="MakananRingan">
                             </div>
                             <div class="form-group">
                                 <label for="hbarang">Harga: </label>

@@ -62,55 +62,55 @@
                     <div class="dropdown">
                         <li class="menu">Makanan</li>
                         <div class="menu-content">
-                            <li><a href="../makanan/makanan-ringan-admin.php">Makanan Ringan</a></li>
-                            <li><a href="../makanan/makanan-beku-admin.php">Makanan Beku</a></li>
-                            <li><a href="../makanan/makanan-pokok-admin.php">Makanan Pokok</a></li>
+                            <li><a href="../makanan/makanan-ringan-afterlogin.php">Makanan Ringan</a></li>
+                            <li><a href="../makanan/makanan-beku-afterlogin.php">Makanan Beku</a></li>
+                            <li><a href="../makanan/makanan-pokok-afterlogin.php">Makanan Pokok</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Minuman</li>
                         <div class="menu-content">
-                            <li><a href="../minuman/minuman-ringan-admin.php">Minuman Ringan</a></li>
-                            <li><a href="../minuman/minuman-isotonik-admin.php">Minuman Isotonik</a></li>
-                            <li><a href="../minuman/minuman-soda-admin.php">Minuman Soda</a></li>
+                            <li><a href="../minuman/minuman-ringan-afterlogin.php">Minuman Ringan</a></li>
+                            <li><a href="../minuman/minuman-isotonik-afterlogin.php">Minuman Isotonik</a></li>
+                            <li><a href="../minuman/minuman-soda-afterlogin.php">Minuman Soda</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Kesehatan</li>
                         <div class="menu-content">
-                            <li><a href="../kesehatan/perawatan-diri-admin.php">Perawatan Diri</a></li>
-                            <li><a href="../kesehatan/perawatan-badan-admin.php">Perawatan Badan</a></li>
-                            <li><a href="../kesehatan/perawatan-rambut-admin.php">Perawatan Rambut</a></li>
-                            <li><a href="../kesehatan/perawatan-pria-admin.php">Perawatan Pria</a></li>
-                            <li><a href="../kesehatan/obat-obatan-admin.php">Obat - obatan</a></li>
+                            <li><a href="../kesehatan/perawatan-diri-afterlogin.php">Perawatan Diri</a></li>
+                            <li><a href="../kesehatan/perawatan-badan-afterlogin.php">Perawatan Badan</a></li>
+                            <li><a href="../kesehatan/perawatan-rambut-afterlogin.php">Perawatan Rambut</a></li>
+                            <li><a href="../kesehatan/perawatan-pria-afterlogin.php">Perawatan Pria</a></li>
+                            <li><a href="../kesehatan/obat-obatan-afterlogin.php">Obat - obatan</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Elektronik</li>
                         <div class="menu-content">
-                            <li><a href="../elektronik/televisi-admin.php">Televisi</a></li>
-                            <li><a href="../elektronik/aksesoris-komputer-admin.php">Aksesoris Komputer</a></li>
-                            <li><a href="../elektronik/aksesoris-handphone-admin.php">Aksesoris Handphone</a></li>
+                            <li><a href="../elektronik/televisi-afterlogin.php">Televisi</a></li>
+                            <li><a href="../elektronik/aksesoris-komputer-afterlogin.php">Aksesoris Komputer</a></li>
+                            <li><a href="../elektronik/aksesoris-handphone-afterlogin.php">Aksesoris Handphone</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Kebutuhan Rumah Tangga</li>
                         <div class="menu-content">
-                            <li><a href="../kebutuhan rumah tangga/peralatan-kebersihan-admin.php">Peralatan Kebersihan</a></li>
-                            <li><a href="../kebutuhan rumah tangga/peralatan-makan-admin.php">Peralatan Makan</a></li>
-                            <li><a href="../kebutuhan rumah tangga/peralatan-rumah-tangga-admin.php">Peralatan Rumah Tangga</a></li>
+                            <li><a href="../kebutuhan rumah tangga/peralatan-kebersihan-afterlogin.php">Peralatan Kebersihan</a></li>
+                            <li><a href="../kebutuhan rumah tangga/peralatan-makan-afterlogin.php">Peralatan Makan</a></li>
+                            <li><a href="../kebutuhan rumah tangga/peralatan-rumah-tangga-afterlogin.php">Peralatan Rumah Tangga</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Fashion</li>
                         <div class="menu-content">
-                            <li><a href="../fashion/fashion-pria-admin.php">Fashion Pria</a></li>
-                            <li><a href="../fashion/fashion-wanita-admin.php">Fashion Wanita</a></li>
+                            <li><a href="../fashion/fashion-pria-afterlogin.php">Fashion Pria</a></li>
+                            <li><a href="../fashion/fashion-wanita-afterlogin.php">Fashion Wanita</a></li>
                         </div>
                     </div>
 
@@ -184,21 +184,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3 order-first mt-2">
+                <li class="list-group-item">
+                    <a href="fashion-pria-afterlogin.php" class="text-dark">Fashion Pria</a>
+                </li>
+
                 <li class="list-group-item bg-primary">
-                    <a href="minuman-ringan-admin.php" class="text-light">Minuman Ringan</a>
+                    <a href="fashion-wanita-afterlogin.php" class="text-light">Fashion Wanita</a>
                 </li>
-
-                <li class="list-group-item">
-                    <a href="minuman-isotonik-admin.php" class="text-dark">Minuman Isotonik</a>
-                </li>
-
-                <li class="list-group-item">
-                    <a href="minuman-soda-admin.php" class="text-dark">Minuman Soda</a>
-                </li>
-                <br>
-                <button type="button" class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#inputbarang">
-                    Input Barang     
-                </button>
             </div>
 
             <div class="col-md-9 order-last mt-2">
@@ -207,7 +199,7 @@
 
                     include('../../koneksi.php');
 
-                    $sql = "SELECT * FROM barang WHERE kategori='MinumanRingan' ORDER BY idbarang ASC";
+                    $sql = "SELECT * FROM barang WHERE kategori='FashionWanita' ORDER BY idbarang ASC";
                     $result=mysqli_query($conn,$sql);
 
                     if(mysqli_num_rows($result) == 0){
@@ -217,6 +209,8 @@
                         $no = 1;
                         while($data = mysqli_fetch_assoc($result)){
                             echo '<div class="card col-md-3 mx-1 p-3">';
+                            // echo '<img src="'.base64_encode($data['foto']).'" alt="foto-bahan" class="img-display">';
+                            // echo '<img src="data:image/jpeg;base64,'.base64_encode($data['foto'] ).'" class="img-display"/>';
                             echo '<img src="../../image/'.$data['image_name'].'" class="img-display" />'; 
                             echo '<p class="text-center lead">'.$data['namabarang'].'</p>';
                             echo '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#'.$data['idbarang'].'">Info</button>';
@@ -288,7 +282,7 @@
                         <p class="text-center lead">Teh Botol</p>
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tehBotolProduk">
                             Info
-                       </button>
+                        </button>
                     </div> -->
                 </div>
             </div>
@@ -408,7 +402,7 @@
 
             include('../../koneksi.php');
 
-            $sql = "SELECT * FROM barang WHERE kategori='MinumanRingan' ORDER BY idbarang ASC";
+            $sql = "SELECT * FROM barang WHERE kategori='FashionWanita' ORDER BY idbarang ASC";
             $result=mysqli_query($conn,$sql);
 
             if(mysqli_num_rows($result) == 0){
@@ -427,248 +421,27 @@
                     echo '<div class="modal-body">';
                     echo '<div class="wrapper"><img src="../../image/'.$data['image_name'].'" alt="foto-bahan" class="img-info mx-auto d-block"></div>';
                     echo '<div class="info-wrapper"><ul><li><b>Harga</b> : '.$data['harga'].'</li><li><b>Stok</b>  : '.$data['stock'].'</li><li><b>Deskripsi</b>  : '.$data['deskripsi'].'</li> </ul></div>';
+                    echo ' <form id="jumlah" action="../../input-transaksi-proses.php?iduser='.$_SESSION['id'].'&idbarang='.$data['idbarang'].'&namabarang='.$data['namabarang'].'&harga='.$data['harga'].'" method="POST">
+                    <div class="form-group">';
+                    echo '<input type="name" class="form-control" id="jumlah" placeholder="Jumlah beli" name="jumlah" required></div>';
+                    echo '<button type="submit" value="tambah" name="tambah" class="btn btn-warning" >Masukan chart</button>';
+                    echo '</form>';
                     echo '</div>';
-                    echo '<div class="modal-footer"><button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editbarang" data-id="'.$data['idbarang'].'">Edit barang</button><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div>';
+                    echo '<div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>';
                     echo '</div>';
                     echo '</div>';
                     echo '</div>';
                     $no++;
-                    $_SESSION['id']=$data['idbarang'];
-                    $_SESSION['nama']=$data['namabarang'];
-                    $_SESSION['harga']=$data['harga'];
-                    $_SESSION['stock']=$data['stock'];
-                    $_SESSION['deskripsi']=$data['deskripsi'];
                 }
 
             }
         ?>
-        <div class="modal fade" id="inputbarang" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Input Barang</h5>
 
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-
-                    <div class="modal-body">
-                        <form id="input" action="../../inputbarang-proses.php" method="POST" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <label for="nbarangr">Nama Barang: </label>
-                                <input type="text" class="form-control" id="nbarang" placeholder="Enter name barang" name="nbarang">
-                            </div>
-                            <div class="form-group">
-                                <label for="kbarang">Kategori: </label>
-                                <input type="text" class="form-control" id="kbarang" placeholder="Enter kategori barang" name="kbarang" value="MinumanRingan">
-                            </div>
-                            <div class="form-group">
-                                <label for="hbarang">Harga: </label>
-                                <input type="text" class="form-control" id="hbarang" placeholder="Enter harga barang" name="hbarang">
-                            </div>
-                            <div class="form-group">
-                                <label for="sbarang">Stock: </label>
-                                <input type="text" class="form-control" id="sbarang" placeholder="Enter stock barang" name="sbarang">
-                            </div>
-                            <div class="form-group">
-                                <label for="desc">Deskripsi: </label>
-                                <textarea class="form-control" rows="3" id="desc" placeholder="Enter deskripsi barang" name="desc"></textarea>
-                                <!-- <input type="text" class="form-control" id="desc" placeholder="Enter deskripsi barang" name="desc"> -->
-                            </div>
-                            <div class="form-group">
-                                <label>Upload Image</label>
-                                <div class="input-group">
-                                    <span class="input-group-btn">
-                                        <span class="btn btn-default btn-file">
-                                            Browse… <input type="file" id="imgInp" name="file">
-                                        </span>
-                                    </span>
-                                    <input type="text"  class="form-control" readonly>
-                                </div>
-                                <img id='img-upload'/>
-                            </div>
-                            <button type="submit" value="Upload" class="btn btn-primary" name="tambah">Save </button>
-                        </form>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-         <!-- <div class="modal fade" id="editbarang" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Edit Barang</h5>
-
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-
-                    <div class="modal-body">
-                        <form id="input" action="../../editbarang-proses.php" method="POST" enctype="multipart/form-data">
-                            <input type="hidden" name="id" value="<?php echo $_SESSION['id']; ?>">
-                            <div class="form-group">
-                                <label for="nbarangr">Nama Barang: </label>
-                                <input type="text" class="form-control" id="nbarang" placeholder="Enter name barang" name="nbarang" value="<?php echo $_SESSION['nama']; ?>" >
-                            </div>
-                            <div class="form-group">
-                                <label for="kbarang">Kategori: </label>
-                                <input type="text" class="form-control" id="kbarang" placeholder="Enter kategori barang" name="kbarang" value="Minuman">
-                            </div>
-                            <div class="form-group">
-                                <label for="hbarang">Harga: </label>
-                                <input type="text" class="form-control" id="hbarang" placeholder="Enter harga barang" name="hbarang" value="<?php echo $_SESSION['harga']; ?>">
-                            </div>
-                            <div class="form-group">
-                                <label for="sbarang">Stock: </label>
-                                <input type="text" class="form-control" id="sbarang" placeholder="Enter stock barang" name="sbarang" value="<?php echo $_SESSION['stock']; ?>">
-                            </div>
-                            <div class="form-group">
-                                <label for="desc">Deskripsi: </label>
-                                <textarea class="form-control" rows="3" id="desc" placeholder="Enter deskripsi barang" name="desc" ><?php echo $_SESSION['deskripsi']; ?></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label>Upload Image</label>
-                                <div class="input-group">
-                                    <span class="input-group-btn">
-                                        <span class="btn btn-default btn-file">
-                                            Browse… <input type="file" id="imgEdt" name="picture">
-                                        </span>
-                                    </span>
-                                    <input type="text"  class="form-control" readonly>
-                                </div>
-                                <img id='img-upload'/>
-                            </div>
-                            <button type="submit" value="Upload" class="btn btn-primary" name="simpan">Save </button>
-                        </form>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- Modal start here -->
-        <div class="modal fade" id="editbarang" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Edit Barang</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="modal-data"></div>
-                        </div>
-                    </div>
-            </div>
-        </div>
-        <!-- End of Modal -->
     </div>
     <!--Load javascript-->
-    <script>
-        $(document).ready( function() {
-    	$(document).on('change', '.btn-file :file', function() {
-		var input = $(this),
-			label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-		input.trigger('fileselect', [label]);
-		});
-
-		$('.btn-file :file').on('fileselect', function(event, label) {
-		    
-		    var input = $(this).parents('.input-group').find(':text'),
-		        log = label;
-		    
-		    if( input.length ) {
-		        input.val(log);
-		    } else {
-		        if( log ) alert(log);
-		    }
-	    
-		});
-		function readURL(input) {
-		    if (input.files && input.files[0]) {
-		        var reader = new FileReader();
-		        
-		        reader.onload = function (e) {
-		            $('#img-upload').attr('src', e.target.result);
-		        }
-		        
-		        reader.readAsDataURL(input.files[0]);
-		    }
-		}
-
-		$("#imgInp").change(function(){
-		    readURL(this);
-		}); 	
-	});
-    </script>
-    <script>
-        $(document).ready( function() {
-    	$(document).on('change', '.btn-file :file', function() {
-		var input = $(this),
-			label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-		input.trigger('fileselect', [label]);
-		});
-
-		$('.btn-file :file').on('fileselect', function(event, label) {
-		    
-		    var input = $(this).parents('.input-group').find(':text'),
-		        log = label;
-		    
-		    if( input.length ) {
-		        input.val(log);
-		    } else {
-		        if( log ) alert(log);
-		    }
-	    
-		});
-		function readURL(input) {
-		    if (input.files && input.files[0]) {
-		        var reader = new FileReader();
-		        
-		        reader.onload = function (e) {
-		            $('#img-up').attr('src', e.target.result);
-		        }
-		        
-		        reader.readAsDataURL(input.files[0]);
-		    }
-		}
-
-		$("#imgEdt").change(function(){
-		    readURL(this);
-		}); 	
-	});
-    </script>
     <script src="../../assets/bootstrap.js"></script>
     <script src="../../assets/script.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function(){
-        $('#editbarang').on('show.bs.modal', function (e) {
-            var getDetail = $(e.relatedTarget).data('id');
-            /* fungsi AJAX untuk melakukan fetch data */
-            $.ajax({
-                type : 'post',
-                url : '../../detaileditbarang.php',
-                /* detail per identifier ditampung pada berkas detail.php yang berada di folder application/view */
-                data :  'getDetail='+ getDetail,
-                /* memanggil fungsi getDetail dan mengirimkannya */
-                success : function(data){
-                $('.modal-data').html(data);
-                /* menampilkan data dalam bentuk dokumen HTML */
-                }
-            });
-         });
-    });
-  </script>
 </body>
 </html>

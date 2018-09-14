@@ -35,8 +35,6 @@
             </div>
             <div class="col-md-4">
               <a href="logreg.php"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
-              <a href="shopping-list.php"><img id="shop-chart" src="image/shop-chart.png" alt="shop-chart"></a>
-              <div id="user" class="desc">UserName</div>
             </div>
           </div>
         </div>
@@ -58,7 +56,7 @@
                     <div class="dropdown">
                         <li class="menu">Minuman</li>
                         <div class="menu-content">
-                            <li><a href="category/minuman/minuman-ringan.html">Minuman Ringan</a></li>
+                            <li><a href="category/minuman/minuman-ringan.php">Minuman Ringan</a></li>
                             <li><a href="category/minuman/minuman-isotonik.html">Minuman Isotonik</a></li>
                             <li><a href="category/minuman/minuman-soda.html">Minuman Soda</a></li>
                         </div>
