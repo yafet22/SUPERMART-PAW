@@ -25,7 +25,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <a href="../../after-login.php"><img id="logo" src="../../img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+            <a href="../../index.php"><img id="logo" src="../../img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
             </div>
             <div class="col-md-4">
 
