@@ -25,29 +25,14 @@
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <a href="after-login.php"><img id="logo" src="../../img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+              <a href="../../index-admin.php"><img id="logo" src="../../img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
             </div>
             <div class="col-md-4">
 
             </div>
             <div class="col-md-4">
               <a href="../../logreg.php"><img id="user-logo" src="../../img/usernew.png" alt="user-logo"></a>
-              <a href="../../shopping-list.php"><img id="shop-chart" src="../../image/shop-chart.png" alt="shop-chart"></a>
-              <div class="desc"><a id="user" href="profile.php">
-              <?php session_start(); 
-              $text=$_SESSION['email'];
-              $wordlimit=wordlimit($text);
-              echo $wordlimit;
-
-              function wordlimit($text,$limit=13){
-                  if(strlen($text)>$limit)
-                    $word=mb_substr($text,0,$limit-3)."...";
-                  else
-                    $word=$text;
-
-                    return $word;
-              }
-              ?>
+              <div class="desc"><a id="admin" href="../../profile-admin.php">ADMIN
               </a>
               </div>
             </div>
