@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,32 +30,45 @@
       {
         // echo " <p><center>Anda Belum Login.<br>Klik Link Dibawah ini Untuk Login.<br><a href=login.php>Disini</a></center></p>";
         // exit;
-        echo "<script type='text/javascript'>location='../../belum-login.php';</script>";
-      }
-      else if($_SESSION['role']!='admin')
-      {
-        echo "<script type='text/javascript'>location='../../bukan-admin.php';</script>";
+        echo "<script type='text/javascript'>location='belum-login.php';</script>";
       }
     ?>
     <!--Untuk bagian header-->
-    <header id="header-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-              <a href="index-admin.php"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
-            </div>
-            <div class="col-md-4">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-            </div>
-            <div class="col-md-4">
-              <a href="logreg.php"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
-              <div class="desc"><a id="admin" href="profile-admin.php">ADMIN
-              </a>
-              </div>
-            </div>
-          </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
         </div>
-    </header>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
 
     <nav id="navbar">
         <div class="container">
@@ -63,55 +77,55 @@
                     <div class="dropdown">
                         <li class="menu">Makanan</li>
                         <div class="menu-content">
-                            <li><a href="category/makanan/makanan-ringan-admin.php">Makanan Ringan</a></li>
-                            <li><a href="category/makanan/makanan-beku-admin.php">Makanan Beku</a></li>
-                            <li><a href="category/makanan/makanan-pokok-admin.php">Makanan Pokok</a></li>
+                            <li><a href="category/makanan/makanan-ringan-afterlogin.php">Makanan Ringan</a></li>
+                            <li><a href="category/makanan/makanan-beku-afterlogin.php">Makanan Beku</a></li>
+                            <li><a href="category/makanan/makanan-pokok-afterlogin.php">Makanan Pokok</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Minuman</li>
                         <div class="menu-content">
-                            <li><a href="category/minuman/minuman-ringan-admin.php">Minuman Ringan</a></li>
-                            <li><a href="category/minuman/minuman-isotonik-admin.php">Minuman Isotonik</a></li>
-                            <li><a href="category/minuman/minuman-soda-admin.php">Minuman Soda</a></li>
+                            <li><a href="category/minuman/minuman-ringan-afterlogin.php">Minuman Ringan</a></li>
+                            <li><a href="category/minuman/minuman-isotonik-afterlogin.php">Minuman Isotonik</a></li>
+                            <li><a href="category/minuman/minuman-soda-afterlogin.php">Minuman Soda</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Kesehatan</li>
                         <div class="menu-content">
-                            <li><a href="category/kesehatan/perawatan-diri-admin.php">Perawatan Diri</a></li>
-                            <li><a href="category/kesehatan/perawatan-badan-admin.php">Perawatan Badan</a></li>
-                            <li><a href="category/kesehatan/perawatan-rambut-admin.php">Perawatan Rambut</a></li>
-                            <li><a href="category/kesehatan/perawatan-pria-admin.php">Perawatan Pria</a></li>
-                            <li><a href="category/kesehatan/obat-obatan-admin.php">Obat - obatan</a></li>
+                            <li><a href="category/kesehatan/perawatan-diri-afterlogin.php">Perawatan Diri</a></li>
+                            <li><a href="category/kesehatan/perawatan-badan-afterlogin.php">Perawatan Badan</a></li>
+                            <li><a href="category/kesehatan/perawatan-rambut-afterlogin.php">Perawatan Rambut</a></li>
+                            <li><a href="category/kesehatan/perawatan-pria-afterlogin.php">Perawatan Pria</a></li>
+                            <li><a href="category/kesehatan/obat-obatan-afterlogin.php">Obat - obatan</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Elektronik</li>
                         <div class="menu-content">
-                            <li><a href="category/elektronik/televisi-admin.php">Televisi</a></li>
-                            <li><a href="category/elektronik/aksesoris-komputer-admin.php">Aksesoris Komputer</a></li>
-                            <li><a href="category/elektronik/aksesoris-handphone-admin.php">Aksesoris Handphone</a></li>
+                            <li><a href="category/elektronik/televisi-afterlogin.php">Televisi</a></li>
+                            <li><a href="category/elektronik/aksesoris-komputer-afterlogin.php">Aksesoris Komputer</a></li>
+                            <li><a href="category/elektronik/aksesoris-handphone-afterlogin.php">Aksesoris Handphone</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Kebutuhan Rumah Tangga</li>
                         <div class="menu-content">
-                            <li><a href="category/kebutuhan rumah tangga/peralatan-kebersihan-admin.php">Peralatan Kebersihan</a></li>
-                            <li><a href="category/kebutuhan rumah tangga/peralatan-makan-admin.php">Peralatan Makan</a></li>
-                            <li><a href="category/kebutuhan rumah tangga/peralatan-rumah-tangga-admin.php">Peralatan Rumah Tangga</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-kebersihan-afterlogin.php">Peralatan Kebersihan</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-makan-afterlogin.php">Peralatan Makan</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-rumah-tangga-afterlogin.php">Peralatan Rumah Tangga</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Fashion</li>
                         <div class="menu-content">
-                            <li><a href="category/fashion/fashion-pria-admin.php">Fashion Pria</a></li>
-                            <li><a href="category/fashion/fashion-wanita-admin.php">Fashion Wanita</a></li>
+                            <li><a href="category/fashion/fashion-pria-afterlogin.php">Fashion Pria</a></li>
+                            <li><a href="category/fashion/fashion-wanita-afterlogin.php">Fashion Wanita</a></li>
                         </div>
                     </div>
                 </ul>
@@ -182,81 +196,150 @@
     </div>
 
     <!--Bagian Isi-->
+    <section class="top">
+        <div class="container slider">
+            <div class="container innerslider">
+                <div id="sliderinti" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                    <li data-target="#sliderinti" data-slide-to="0" class="active"></li>
+                    <li data-target="#sliderinti" data-slide-to="1"></li>
+                    <li data-target="#sliderinti" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/slider1.jpg" style="width:100%;">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/slider2.jpg" style="width:100%;">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/slider3.jpg" style="width:100%;">
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#sliderinti" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#sliderinti" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+            </div>
+            <div class="container highlight">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="img/slider2.jpg" style="width:100%;">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/slider3.jpg" style="width:100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
 
 
     <section class="kategori">
       <div class="container title_hightlight">
-        <h2 class="font-weight-bold">DATA USER</h2>
+        <h2 class="font-weight-bold">HIGHLIGHT</h2>
       </div>
-      <br>
-      <div class="container shop list">
+      <div class="container minuman tipe">
         <div class="row">
-         <div class="col-md-3 order-first mt-2">
-                <li class="list-group-item">
-                    <a href="index-admin.php" class="text-dark">Data Barang</a>
-                </li>
-
-                <li class="list-group-item bg-primary">
-                    <a href="index-admin-2.php" class="text-light">Data User</a>
-                </li>
-
-                <li class="list-group-item">
-                    <a href="index-admin-3.php" class="text-dark">Data Transaksi</a>
-                </li>
+          <div class="col-md-3">
+              <img src="img/minuman.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/minuman1.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/minuman2.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/minuman1.jpg" style="width:100%;">
+          </div>
         </div>
-          <div class="col-md-9 order-first mt-2">
-          <nav class="navbar navbar-expand-lg navbar-light bg-primary ">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2 " type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Username" aria-label="Search">
-                </form>
-            </div>
-            </nav>
-            <table id="tableadmin2" class="table table-bordered" cellpadding="5" cellspacing="0" width="100%">
-                <tr style="background-color:#4285f4;color:white;text-align:center;">
-                    <th class="font-weight-bold">No</th>
-                    <th class="font-weight-bold">Username</th>
-                    <th class="font-weight-bold">Telp</th>
-                    <th class="font-weight-bold">Email</th>
-                    <th class="font-weight-bold">Status Aktif</th>
-                    <th> </th>
-                </tr>
-
-                <?php
-                include('koneksi.php');
-
-                $query ="SELECT * FROM user ORDER BY id ASC";
-                $result=mysqli_query($conn,$query);
-
-                if(mysqli_num_rows($result) == 0){
-                    echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
-
-                }else{
-                    $no = 1;
-                    while($data = mysqli_fetch_assoc($result)){
-
-                        echo '<tr style="text-align:center;">';
-                        echo '<td>'.$no.'</td>';
-                        echo '<td>'.$data['username'].'</td>';
-                        echo '<td>'.$data['telp'].'</td>';
-                        echo '<td>'.$data['email'].'</td>';
-                        echo '<td>'.$data['aktif'].'</td>';
-                        echo '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#show" data-id="'.$data['id'].'">
-                        Edit</button><a href="hapus-user.php?id='.$data['id'].'""><button type="button" class="btn btn-warning">Hapus</button></a></td>';
-                        // echo '<td><a href="edit-user.php?id='.$data['id'].'" data-toggle="modal" data-target="#edituser" style="color:blue;">Edit</a> / <a href="hapus-user.php?id='.$data['id'].'" style="color:blue;" onclick="return confirm(\'Yakin?\')">Hapus</a></td>';
-                        echo '</tr>';
-                        $no++;
-
-                    }
-
-                }
-                ?>
-            </table>
+      </div>
+      <div class="container makanan tipe">
+        <div class="row">
+          <div class="col-md-3">
+              <img src="img/makanan1.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/makanan1.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/makanan1.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/makanan.jpg" style="width:100%;">
+          </div>
+        </div>
+      </div>
+      <div class="container kesehatan tipe">
+        <div class="row">
+          <div class="col-md-3">
+              <img src="img/kesehatan.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/kesehatan1.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/kesehatan2.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/kesehatan3.jpg" style="width:100%;">
+          </div>
+        </div>
+      </div>
+      <div class="container elektronik tipe">
+        <div class="row">
+          <div class="col-md-3">
+              <img src="img/elektronik1.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/elektronik1.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/elektronik1.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/elektronik.jpg" style="width:100%;">
+          </div>
+        </div>
+      </div>
+      <div class="container rumahtangga tipe">
+        <div class="row">
+          <div class="col-md-3">
+              <img src="img/rumahtangga.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/rumahtangga1.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/rumahtangga2.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/rumahtangga3.jpg" style="width:100%;">
+          </div>
+        </div>
+      </div>
+      <div class="container fashion tipe">
+        <div class="row">
+          <div class="col-md-3">
+              <img src="img/fashion3.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/fashion2.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/fashion1.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/fashion.jpg" style="width:100%;">
           </div>
         </div>
       </div>
@@ -371,63 +454,6 @@
       <!-- Copyright -->
 
     </footer>
-    <div class="wrapper">
-        <!-- <div class="modal fade" id="edituser" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Input Barang</h5>
-
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form id="input" action="../../inputbarang-proses.php" method="POST" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <label for="nama">Nama : </label>
-                                <input type="text" class="form-control" id="nama" placeholder="Enter nama user" name="nama">
-                            </div>
-                            <div class="form-group">
-                                <label for="telp">Telp : </label>
-                                <input type="text" class="form-control" id="telp" placeholder="Enter telepon user" name="telp" value="<?php $_SESSION['id']; ?>">
-                            </div>
-                            <div class="form-group">
-                                <label for="hbarang">Email: </label>
-                                <input type="text" class="form-control" id="email" placeholder="Enter harga barang" name="email">
-                            </div>
-                            <div class="form-group">
-                                <label for="sbarang">Status Aktif: </label>
-                                <input type="text" class="form-control" id="aktif" placeholder="Enter stock barang" name="aktif">
-                            </div>
-                            <button type="submit" value="Tambah" class="btn btn-primary" name="tambah">Save </button>
-                        </form>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Modal start here -->
-        <div class="modal fade" id="show" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Edit User</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="modal-data"></div>
-                        </div>
-                    </div>
-            </div>
-        </div>
-        <!-- End of Modal -->
-    </div>
 
     <!-- Footer -->
     <!-- Button trigger modal    -->
@@ -452,46 +478,5 @@
     </script>
     <script src="assets/bootstrap.js"></script>
     <script src="assets/script.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function(){
-        $('#show').on('show.bs.modal', function (e) {
-            var getDetail = $(e.relatedTarget).data('id');
-            /* fungsi AJAX untuk melakukan fetch data */
-            $.ajax({
-                type : 'post',
-                url : 'detail.php',
-                /* detail per identifier ditampung pada berkas detail.php yang berada di folder application/view */
-                data :  'getDetail='+ getDetail,
-                /* memanggil fungsi getDetail dan mengirimkannya */
-                success : function(data){
-                $('.modal-data').html(data);
-                /* menampilkan data dalam bentuk dokumen HTML */
-                }
-            });
-         });
-    });
-  </script>
-  <script>
-    function myFunction() {
-    // Declare variables
-    var input, filter, table, tr, td, i;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("tableadmin2");
-    tr = table.getElementsByTagName("tr");
-
-    // Loop through all table rows, and hide those who don't match the search query
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[1];
-        if (td) {
-        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            tr[i].style.display = "";
-        } else {
-            tr[i].style.display = "none";
-        }
-        }
-    }
-    }
-    </script>
 </body>
 </html>

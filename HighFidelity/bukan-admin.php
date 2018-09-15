@@ -8,39 +8,41 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <script src="assets/jquery.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="assets/popper.js"></script>
+    <script src="assets/bootstrap.js"></script>
+    <script src="assets/mdb.js"></script>
+    
+    
+
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/bootstrap.min.css">
     <link rel="stylesheet" href="style/bootstrap.css">
     <link rel="stylesheet" href="style/mdb.css">
     <link rel="stylesheet" href="webfonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
-    <script src="assets/jquery.js"></script>
-    <script src="assets/popper.js"></script>
-    <script src="assets/bootstrap.js"></script>
-    <script src="assets/mdb.js"></script>
-    <script src="js/jquery.min.js"></script>
-
     <title>Supermarket</title>
 </head>
+<?php session_start(); ?>
 <body>
     <!--Untuk bagian header-->
     <header id="header-section">
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <a href="after-login.php"><img id="logo" src="../../img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+              <img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket">
             </div>
             <div class="col-md-4">
 
             </div>
             <div class="col-md-4">
-              <a href="logreg.php"><img id="user-logo" src="../../img/usernew.png" alt="user-logo"></a>
-              <a href="shopping-list.php"><img id="shop-chart" src="../../image/shop-chart.png" alt="shop-chart"></a>
+              <a href="logreg-afterlogin.php"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
+              <img id="shop-chart" src="image/shop-chart.png" alt="shop-chart">
               <div class="desc"><a id="user" href="profile.php">
-              <?php session_start(); 
+              <?php 
               $text=$_SESSION['email'];
-              $id=$_SESSION['id'];
-              $s=$_SESSION['s'];
               $wordlimit=wordlimit($text);
               echo $wordlimit;
 
@@ -55,9 +57,13 @@
               ?>
               </a>
               </div>
+              
             </div>
           </div>
+
+    
         </div>
+
     </header>
 
     <nav id="navbar">
@@ -67,55 +73,55 @@
                     <div class="dropdown">
                         <li class="menu">Makanan</li>
                         <div class="menu-content">
-                            <li><a href="category/makanan/makanan-ringan.php">Makanan Ringan</a></li>
-                            <li><a href="category/makanan/makanan-beku.php">Makanan Beku</a></li>
-                            <li><a href="category/makanan/makanan-pokok.php">Makanan Pokok</a></li>
+                            <li><a href="category/makanan/makanan-ringan-afterlogin.php">Makanan Ringan</a></li>
+                            <li><a href="category/makanan/makanan-beku-afterlogin.php">Makanan Beku</a></li>
+                            <li><a href="category/makanan/makanan-pokok-afterlogin.php">Makanan Pokok</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Minuman</li>
                         <div class="menu-content">
-                            <li><a href="category/minuman/minuman-ringan.php">Minuman Ringan</a></li>
-                            <li><a href="category/minuman/minuman-isotonik.php">Minuman Isotonik</a></li>
-                            <li><a href="category/minuman/minuman-soda.php">Minuman Soda</a></li>
+                            <li><a href="category/minuman/minuman-ringan-afterlogin.php">Minuman Ringan</a></li>
+                            <li><a href="category/minuman/minuman-isotonik-afterlogin.php">Minuman Isotonik</a></li>
+                            <li><a href="category/minuman/minuman-soda-afterlogin.php">Minuman Soda</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Kesehatan</li>
                         <div class="menu-content">
-                            <li><a href="category/kesehatan/perawatan-diri.php">Perawatan Diri</a></li>
-                            <li><a href="category/kesehatan/perawatan-badan.php">Perawatan Badan</a></li>
-                            <li><a href="category/kesehatan/perawatan-rambut.php">Perawatan Rambut</a></li>
-                            <li><a href="category/kesehatan/perawatan-pria.php">Perawatan Pria</a></li>
-                            <li><a href="category/kesehatan/obat-obatan.php">Obat - obatan</a></li>
+                            <li><a href="category/kesehatan/perawatan-diri-afterlogin.php">Perawatan Diri</a></li>
+                            <li><a href="category/kesehatan/perawatan-badan-afterlogin.php">Perawatan Badan</a></li>
+                            <li><a href="category/kesehatan/perawatan-rambut-afterlogin.php">Perawatan Rambut</a></li>
+                            <li><a href="category/kesehatan/perawatan-pria-afterlogin.php">Perawatan Pria</a></li>
+                            <li><a href="category/kesehatan/obat-obatan-afterlogin.php">Obat - obatan</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Elektronik</li>
                         <div class="menu-content">
-                            <li><a href="category/elektronik/televisi.php">Televisi</a></li>
-                            <li><a href="category/elektronik/aksesoris-komputer.php">Aksesoris Komputer</a></li>
-                            <li><a href="category/elektronik/aksesoris-handphone.php">Aksesoris Handphone</a></li>
+                            <li><a href="category/elektronik/televisi-afterlogin.php">Televisi</a></li>
+                            <li><a href="category/elektronik/aksesoris-komputer-afterlogin.php">Aksesoris Komputer</a></li>
+                            <li><a href="category/elektronik/aksesoris-handphone-afterlogin.php">Aksesoris Handphone</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Kebutuhan Rumah Tangga</li>
                         <div class="menu-content">
-                            <li><a href="category/kebutuhan rumah tangga/peralatan-kebersihan.php">Peralatan Kebersihan</a></li>
-                            <li><a href="category/kebutuhan rumah tangga/peralatan-makan.php">Peralatan Makan</a></li>
-                            <li><a href="category/kebutuhan rumah tangga/peralatan-rumah-tangga.php">Peralatan Rumah Tangga</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-kebersihan-afterlogin.php">Peralatan Kebersihan</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-makan-afterlogin.php">Peralatan Makan</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-rumah-tangga-afterlogin.php">Peralatan Rumah Tangga</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Fashion</li>
                         <div class="menu-content">
-                            <li><a href="category/fashion/fashion-pria.php">Fashion Pria</a></li>
-                            <li><a href="category/fashion/fashion-wanita.php">Fashion Wanita</a></li>
+                            <li><a href="category/fashion/fashion-pria-afterlogin.php">Fashion Pria</a></li>
+                            <li><a href="category/fashion/fashion-wanita-afterlogin.php">Fashion Wanita</a></li>
                         </div>
                     </div>
                 </ul>
@@ -187,93 +193,33 @@
 
     <!--Bagian Isi-->
 
-
-
-
-    <section class="kategori">
+    <section class="login">
       <div class="container title_hightlight">
-        <h2 class="font-weight-bold">SHOPPING LIST</h2>
+        <h2 class="font-weight-bold">ANDA BUKAN ADMIN</h2>
       </div>
       <br>
-      <div class="container shop list">
+      <br>
+      <br>
+      <br>
+      <div class="container confirm">
         <div class="row">
           <div class="col-md-3">
-            <div style="width:75%" class="card hovercard">
-              <div class="cardheader">
-
-              </div>
-              <div class="avatar">
-                  <img id="loginform" src="img/user-logo.png" style="width:100%;">
-              </div>
-              <div class="info">
-                  <div class="title" style="font-size:16px"><?php echo $text; ?></div>
-                  <div class="desc">This is your shopping list</div>
-              </div>
-              <div class="bottom">
-                  <button type="button" class="btn btn-primary btn-block" onclick="javascript:history.back()"  >Continue Shopping</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-9">
-            <h2 class="font-weight-bold" style="text-align: center;">Happy Shopping</h2>
-            <table id=tableadmin class="table table-bordered" cellpadding="5" cellspacing="0" width="100%">
-                <tr style="background-color:#4285f4;color:white;text-align:center;">
-                    <th class="font-weight-bold">No</th>
-                    <th class="font-weight-bold">Id Barang</th>
-                    <th class="font-weight-bold">Nama Barang</th>
-                    <th class="font-weight-bold">Jumlah barang</th>
-                    <th class="font-weight-bold">Harga</th>
-                    <th> </th>
-                </tr>
-
-                <?php
-                include('koneksi.php');
-
-                $query ="SELECT * FROM transaksi where idpembeli = '$id' and sessionpembeli = '$s' ";
-                $result=mysqli_query($conn,$query);
-
-                if(mysqli_num_rows($result) == 0){
           
-                    echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
+          </div>  
+          <div class="col-md-6" style="text-align:center">
+            <?php
+               echo " <p><center>Anda Bukan Admin<br>Klik Link Dibawah ini Untuk Kembali Ke Halaman Depan<br><a href=after-login.php>Disini</a></center></p>";
+            ?>
+          </div>
+          <div class="col-md-3">
 
-                }else{
-                    $no = 1;
-                    while($data = mysqli_fetch_assoc($result)){
-
-                        echo '<tr style="text-align:center;">';
-                        echo '<td>'.$no.'</td>';
-                        echo '<td>'.$data['idbarang'].'</td>';
-                        echo '<td>'.$data['namabarang'].'</td>';
-                        echo '<td>'.$data['jumlahbarang'].'</td>';
-                        echo '<td>'.$data['totalharga'].'</td>';
-                        echo '<td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#showtransaksi" data-id="'.$data['idtransaksi'].'">
-                        Edit</button><a href="hapus-transaksi.php?id='.$data['idtransaksi'].'&jumlah='.$data['jumlahbarang'].'&idbarang='.$data['idbarang'].'" onclick="return confirm(\'Yakin?\')"><button type="button" class="btn btn-danger btn-sm">Hapus</button></a></td>';
-                        echo '</tr>';
-                        $_SESSION['idtransaksi'][$no]=$data['idtransaksi'];
-                        $_SESSION['idbarang'][$no]=$data['idbarang'];
-                        $_SESSION['jumlahbarang'][$no]=$data['jumlahbarang'];
-                        $_SESSION['max']=$no;
-                        $no++;
-
-                    }
-
-                }
-                ?>
-            </table>
-            <br>
-            <br>
-            <br>
-            <div class="row">
-                <div class="col-md-6">
-                    <a href="beli-proses.php?"><button type="button" class="btn btn-success" style="display: block; margin: 0 auto;">FINISH BUY</button></a>
-                </div>
-                <div class="col-md-6">
-                    <a href="cancel-buy.php"><button type="button" class="btn btn-danger" style="display: block; margin: 0 auto;">CANCEL ALL</button></a>
-                </div>
-            </div>
           </div>
         </div>
       </div>
+      <br>
+      <br>
+      <br>
+      <br>
     </section>
 
     <!-- Footer -->
@@ -306,16 +252,16 @@
 
             <ul class="list-unstyled">
               <div class="row">
-                <li style="padding-left:16px;"><p><a href="category/makanan/makanan-ringan.php">Makanan</a></p></li>
-                <li style="padding-left:16px;"><p><a href="category/minuman/minuman-ringan.php">Minuman</a></p></li>
+                <li style="padding-left:16px;"><p><a href="../makanan/makanan-ringan-afterlogin.php">Makanan</a></p></li>
+                <li style="padding-left:16px;"><p><a href="../minuman/minuman-ringan-afterlogin.php">Minuman</a></p></li>
               </div>
               <div class="row">
-                <li style="padding-left:16px;"><p><a href="category/kesehatan/perawatan-diri.php">Kesehatan</a></p></li>
-                <li style="padding-left:16px;"><p><a href="category/elektronik/televisi.php">Elektronik</a></p></li>
+                <li style="padding-left:16px;"><p><a href="../kesehatan/perawatan-diri-afterlogin.php">Kesehatan</a></p></li>
+                <li style="padding-left:16px;"><p><a href="../elektronik/televisi-afterlogin.php">Elektronik</a></p></li>
               </div>
 
-              <li><p><a href="category/kebutuhan rumah tangga/peralatan-kebersihan.php">Kebutuhan Rumah Tangga</a></p></li>
-              <li><p><a href="category/fashion/fashion-pria.php">Fashion</a></p></li>
+              <li><p><a href="../kebutuhan rumah tangga/peralatan-kebersihan-afterlogin.php">Kebutuhan Rumah Tangga</a></p></li>
+              <li><p><a href="../fashion/fashion-pria-afterlogin.php">Fashion</a></p></li>
             </ul>
 
           </div>
@@ -385,25 +331,7 @@
       <!-- Copyright -->
 
     </footer>
-    <div class="wrapper">
-        <!-- Modal start h  ere -->
-        <div class="modal fade" id="showtransaksi" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Edit Transaksi</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="modal-data"></div>
-                        </div>
-                    </div>
-            </div>
-        </div>
-        <!-- End of Modal -->
-    </div>
+
 
     <!-- Footer -->
     <!-- Button trigger modal    -->
@@ -428,34 +356,5 @@
     </script>
     <script src="assets/bootstrap.js"></script>
     <script src="assets/script.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function(){
-        $('#showtransaksi').on('show.bs.modal', function (e) {
-            var getDetail = $(e.relatedTarget).data('id');
-            /* fungsi AJAX untuk melakukan fetch data */
-            $.ajax({
-                type : 'post',
-                url : 'detailtransaksi.php',
-                /* detail per identifier ditampung pada berkas detail.php yang berada di folder application/view */
-                data :  'getDetail='+ getDetail,
-                /* memanggil fungsi getDetail dan mengirimkannya */
-                success : function(data){
-                $('.modal-data').html(data);
-                /* menampilkan data dalam bentuk dokumen HTML */
-                }
-            });
-         });
-    });
-  </script>
-   <script>
-    $(document).ready(function(){
-      //page
-      $('.col-md-9').on("click",".nav_link",function(e){ 
-        e.preventDefault(); // cancel click
-        var page = $(this).attr('href');   
-        $('.col-md-9').load(page);
-        });
-    });
-  </script>
 </body>
 </html>

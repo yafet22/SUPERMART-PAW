@@ -212,7 +212,7 @@
 
                     include('../../koneksi.php');
 
-                    $sql = "SELECT * FROM barang WHERE kategori=''AksesorisHP' ORDER BY idbarang ASC";
+                    $sql = "SELECT * FROM barang WHERE kategori='AksesorisHP' ORDER BY idbarang ASC";
                     $result=mysqli_query($conn,$sql);
 
                     if(mysqli_num_rows($result) == 0){

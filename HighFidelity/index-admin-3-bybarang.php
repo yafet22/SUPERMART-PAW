@@ -27,6 +27,19 @@
     <title>Supermarket</title>
 </head>
 <body>
+    <?php
+      session_start();
+      if (!isset($_SESSION['email']))
+      {
+        // echo " <p><center>Anda Belum Login.<br>Klik Link Dibawah ini Untuk Login.<br><a href=login.php>Disini</a></center></p>";
+        // exit;
+        echo "<script type='text/javascript'>location='../../belum-login.php';</script>";
+      }
+      else if($_SESSION['role']!='admin')
+      {
+        echo "<script type='text/javascript'>location='../../bukan-admin.php';</script>";
+      }
+    ?>
     <!--Untuk bagian header-->
     <header id="header-section">
         <div class="container">
