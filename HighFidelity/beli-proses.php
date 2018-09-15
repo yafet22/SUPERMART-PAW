@@ -22,7 +22,15 @@
 
     <title>Supermarket</title>
 </head>
-<?php session_start(); ?>
+    <?php
+        session_start();
+        if (!isset($_SESSION['email']))
+        {
+            // echo " <p><center>Anda Belum Login.<br>Klik Link Dibawah ini Untuk Login.<br><a href=login.php>Disini</a></center></p>";
+            // exit;
+            echo "<script type='text/javascript'>location='belum-login.php';</script>";
+        }
+        ?>
 <body>
     <!--Untuk bagian header-->
     <header id="header-section">

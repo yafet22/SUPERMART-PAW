@@ -416,7 +416,7 @@
                 data :  'getDetail='+ getDetail,
                 /* memanggil fungsi getDetail dan mengirimkannya */
                 success : function(data){
-                $('.modal-data').php(data);
+                $('.modal-data').html(data);
                 /* menampilkan data dalam bentuk dokumen HTML */
                 }
             });

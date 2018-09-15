@@ -13,7 +13,7 @@
     $data = mysqli_fetch_assoc($result2);
     $sessionuser = $data['session'];
 
-    $cek = "SELECT * FROM transaksi WHERE idbarang='$idbarang' AND idpembeli='$iduser' AND session='$sessionuser'";
+    $cek = "SELECT * FROM transaksi WHERE idbarang='$idbarang' AND idpembeli='$iduser' AND sessionpembeli='$sessionuser'";
     $result=mysqli_query($conn,$cek);
     
     $user = "SELECT * FROM user WHERE id=$iduser";

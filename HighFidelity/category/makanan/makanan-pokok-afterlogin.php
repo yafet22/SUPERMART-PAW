@@ -19,7 +19,16 @@
 
     <title>Supermarket</title>
 </head>
-<body>
+<body> 
+    <?php
+      session_start();
+      if (!isset($_SESSION['email']))
+      {
+        // echo " <p><center>Anda Belum Login.<br>Klik Link Dibawah ini Untuk Login.<br><a href=login.php>Disini</a></center></p>";
+        // exit;
+        echo "<script type='text/javascript'>location='../../belum-login.php';</script>";
+      }
+    ?>
     <!--Untuk bagian header-->
     <header id="header-section">
         <div class="container">
@@ -34,7 +43,7 @@
               <a href="../../logreg-afterlogin.php"><img id="user-logo" src="../../img/usernew.png" alt="user-logo"></a>
               <a href="../../shopping-list.php"><img id="shop-chart" src="../../image/shop-chart.png" alt="shop-chart"></a>
               <div class="desc"><a id="user" href="../../profile.php">
-              <?php session_start(); 
+              <?php 
               $text=$_SESSION['email'];
               $wordlimit=wordlimit($text);
               echo $wordlimit;
