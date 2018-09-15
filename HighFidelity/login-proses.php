@@ -18,6 +18,15 @@
       $_SESSION['telp'] = $data['telp'];
       $_SESSION['id'] = $data['id'];
       $_SESSION['s'] = $data['session'];
-      echo "<script type='text/javascript'>alert('Selamat Datang');location='after-login.php';</script>";
+      $_SESSION['role'] = $data['role'];
+      $_SESSION['image_name'] = $data['image_name'];
+      if($data['role']=='admin')
+      {
+        echo "<script type='text/javascript'>alert('Anda Login Sebagai Admin');location='index-admin.php';</script>";
+      }
+      else if($data['role']=='user' && $data['aktif']=='Y')
+        echo "<script type='text/javascript'>alert('Selamat Datang');location='after-login.php';</script>";
+      else if($data['role']=='user' && $data['aktif']=='T')
+        echo "<script type='text/javascript'>alert('Akun anda belum diaktivasi silahkan cek email anda untuk aktivasi');location='logreg.php';</script>";
    }
 ?>

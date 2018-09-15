@@ -15,14 +15,14 @@
   <link rel="stylesheet" href="style/mdb.css">
   <link rel="stylesheet" href="webfonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
-  <script type="text/javascript" src="assets/jquery.js"></script>
-  <script type="text/javascript" src="assets/popper.js"></script>
-  <script type="text/javascript" src="assets/bootstrap.js"></script>
-  <script type="text/javascript" src="assets/mdb.js"></script>
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/regis_auth.js"></script>
+  <script src="assets/jquery.js"></script>
+  <script src="assets/popper.js"></script>
+  <script src="assets/bootstrap.js"></script>
+  <script src="assets/mdb.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/regis_auth.js"></script>
 
-  <title>Supermarket</title>
+  <title>IMK Supermarket</title>
 </head>
 
 <body>
@@ -38,75 +38,73 @@
         </div>
         <div class="col-md-4">
           <a href="logreg.php"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
-          <a href="shopping-list.php"><img id="shop-chart" src="image/shop-chart.png" alt="shop-chart"></a>
-          <div id="user" class="desc">UserName</div>
         </div>
       </div>
     </div>
   </header>
 
   <nav id="navbar">
-    <div class="container">
-      <div class="menu-wrapper">
-        <ul style="padding-left:0px;">
-          <div class="dropdown">
-            <li class="menu">Makanan</li>
-            <div class="menu-content">
-              <li><a href="category/makanan/makanan-ringan.html">Makanan Ringan</a></li>
-              <li><a href="category/makanan/makanan-beku.html">Makanan Beku</a></li>
-              <li><a href="category/makanan/makanan-pokok.html">Makanan Pokok</a></li>
-            </div>
-          </div>
+        <div class="container">
+            <div class="menu-wrapper">
+                <ul style="padding-left:0px;">
+                    <div class="dropdown">
+                        <li class="menu">Makanan</li>
+                        <div class="menu-content">
+                            <li><a href="category/makanan/makanan-ringan.php">Makanan Ringan</a></li>
+                            <li><a href="category/makanan/makanan-beku.php">Makanan Beku</a></li>
+                            <li><a href="category/makanan/makanan-pokok.php">Makanan Pokok</a></li>
+                        </div>
+                    </div>
 
-          <div class="dropdown">
-            <li class="menu">Minuman</li>
-            <div class="menu-content">
-              <li><a href="category/minuman/minuman-ringan.html">Minuman Ringan</a></li>
-              <li><a href="category/minuman/minuman-isotonik.html">Minuman Isotonik</a></li>
-              <li><a href="category/minuman/minuman-soda.html">Minuman Soda</a></li>
-            </div>
-          </div>
+                    <div class="dropdown">
+                        <li class="menu">Minuman</li>
+                        <div class="menu-content">
+                            <li><a href="category/minuman/minuman-ringan.php">Minuman Ringan</a></li>
+                            <li><a href="category/minuman/minuman-isotonik.php">Minuman Isotonik</a></li>
+                            <li><a href="category/minuman/minuman-soda.php">Minuman Soda</a></li>
+                        </div>
+                    </div>
 
-          <div class="dropdown">
-            <li class="menu">Kesehatan</li>
-            <div class="menu-content">
-              <li><a href="category/kesehatan/perawatan-diri.html">Perawatan Diri</a></li>
-              <li><a href="category/kesehatan/perawatan-badan.html">Perawatan Badan</a></li>
-              <li><a href="category/kesehatan/perawatan-rambut.html">Perawatan Rambut</a></li>
-              <li><a href="category/kesehatan/perawatan-pria.html">Perawatan Pria</a></li>
-              <li><a href="category/kesehatan/obat-obatan.html">Obat - obatan</a></li>
-            </div>
-          </div>
+                    <div class="dropdown">
+                        <li class="menu">Kesehatan</li>
+                        <div class="menu-content">
+                            <li><a href="category/kesehatan/perawatan-diri.php">Perawatan Diri</a></li>
+                            <li><a href="category/kesehatan/perawatan-badan.php">Perawatan Badan</a></li>
+                            <li><a href="category/kesehatan/perawatan-rambut.php">Perawatan Rambut</a></li>
+                            <li><a href="category/kesehatan/perawatan-pria.php">Perawatan Pria</a></li>
+                            <li><a href="category/kesehatan/obat-obatan.php">Obat - obatan</a></li>
+                        </div>
+                    </div>
 
-          <div class="dropdown">
-            <li class="menu">Elektronik</li>
-            <div class="menu-content">
-              <li><a href="category/elektronik/televisi.html">Televisi</a></li>
-              <li><a href="category/elektronik/aksesoris-komputer.html">Aksesoris Komputer</a></li>
-              <li><a href="category/elektronik/aksesoris-handphone.html">Aksesoris Handphone</a></li>
-            </div>
-          </div>
+                    <div class="dropdown">
+                        <li class="menu">Elektronik</li>
+                        <div class="menu-content">
+                            <li><a href="category/elektronik/televisi.php">Televisi</a></li>
+                            <li><a href="category/elektronik/aksesoris-komputer.php">Aksesoris Komputer</a></li>
+                            <li><a href="category/elektronik/aksesoris-handphone.php">Aksesoris Handphone</a></li>
+                        </div>
+                    </div>
 
-          <div class="dropdown">
-            <li class="menu">Kebutuhan Rumah Tangga</li>
-            <div class="menu-content">
-              <li><a href="category/kebutuhan rumah tangga/peralatan-kebersihan.html">Peralatan Kebersihan</a></li>
-              <li><a href="category/kebutuhan rumah tangga/peralatan-makan.html">Peralatan Makan</a></li>
-              <li><a href="category/kebutuhan rumah tangga/peralatan-rumah-tangga.html">Peralatan Rumah Tangga</a></li>
-            </div>
-          </div>
+                    <div class="dropdown">
+                        <li class="menu">Kebutuhan Rumah Tangga</li>
+                        <div class="menu-content">
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-kebersihan.php">Peralatan Kebersihan</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-makan.php">Peralatan Makan</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-rumah-tangga.php">Peralatan Rumah Tangga</a></li>
+                        </div>
+                    </div>
 
-          <div class="dropdown">
-            <li class="menu">Fashion</li>
-            <div class="menu-content">
-              <li><a href="category/fashion/fashion-pria.html">Fashion Pria</a></li>
-              <li><a href="category/fashion/fashion-wanita.html">Fashion Wanita</a></li>
+                    <div class="dropdown">
+                        <li class="menu">Fashion</li>
+                        <div class="menu-content">
+                            <li><a href="category/fashion/fashion-pria.php">Fashion Pria</a></li>
+                            <li><a href="category/fashion/fashion-wanita.php">Fashion Wanita</a></li>
+                        </div>
+                    </div>
+                </ul>
             </div>
-          </div>
-        </ul>
-      </div>
-    </div>
-  </nav>
+        </div>
+    </nav>
 
   <nav id="sidebar">
     <div class="container">
@@ -186,7 +184,7 @@
 
         </div>
         <div class="col-md-4">
-          <img id="loginform" src="img/user-logo.png" style="width:50%;">
+      
         </div>
         <div class="col-md-4">
 
@@ -199,26 +197,37 @@
 
         </div>
         <div class="col-md-4">
-          <form id="login" action="tambah-proses.php" method="POST">
+          <form id="login" action="tambah-proses.php" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+            <div class="container">
+                <div class="picture-container">
+                    <div class="picture">
+                        <img src="https://lh3.googleusercontent.com/LfmMVU71g-HKXTCP_QWlDOemmWg4Dn1rJjxeEsZKMNaQprgunDTtEuzmcwUBgupKQVTuP0vczT9bH32ywaF7h68mF-osUSBAeM6MxyhvJhG6HKZMTYjgEv3WkWCfLB7czfODidNQPdja99HMb4qhCY1uFS8X0OQOVGeuhdHy8ln7eyr-6MnkCcy64wl6S_S6ep9j7aJIIopZ9wxk7Iqm-gFjmBtg6KJVkBD0IA6BnS-XlIVpbqL5LYi62elCrbDgiaD6Oe8uluucbYeL1i9kgr4c1b_NBSNe6zFwj7vrju4Zdbax-GPHmiuirf2h86eKdRl7A5h8PXGrCDNIYMID-J7_KuHKqaM-I7W5yI00QDpG9x5q5xOQMgCy1bbu3St1paqt9KHrvNS_SCx-QJgBTOIWW6T0DHVlvV_9YF5UZpN7aV5a79xvN1Gdrc7spvSs82v6gta8AJHCgzNSWQw5QUR8EN_-cTPF6S-vifLa2KtRdRAV7q-CQvhMrbBCaEYY73bQcPZFd9XE7HIbHXwXYA=s200-no" class="picture-src" id="wizardPicturePreview" title="">
+                        <input id="wizard-picture" type="file" name="file">
+                    </div>
+                    <h6 class="">Choose Picture</h6>
+                </div>
+            </div>
+            </div>
             <div class="form-group">
               <label for="nama">Nama:</label>
-              <input type="name" class="form-control" id="nama" placeholder="Enter name" name="nama" >
+              <input type="name" class="form-control" id="nama" placeholder="Enter name" name="nama" required>
             </div>
             <div class="form-group">
               <label for="phone">Phone:</label>
-              <input type="phone" class="form-control" id="phone" placeholder="Enter phone number" name="phone" >
+              <input type="phone" class="form-control" id="phone" placeholder="Enter phone number" name="phone" required>
             </div>
             <div class="form-group">
               <label for="email">Email:</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" >
+              <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
             </div>
             <div class="form-group">
               <label for="pwd">Password:</label>
-              <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" >
+              <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" required>
             </div>
             <div class="form-group">
               <label for="pwd">Confirm Password:</label>
-              <input type="password" class="form-control" id="c-pwd" placeholder="Enter password" name="c-pwd" >
+              <input type="password" class="form-control" id="c-pwd" placeholder="Enter password" name="c-pwd" required>
             </div>
             <div class="row">
               <div class="col-md-6">
@@ -227,9 +236,10 @@
                 </a>
               </div>
               <div class="col-md-6">
-                <button type="submit" class="btn btn-success" id="submit" name="tambah" value="Tambah" onclick="return regisAuth();" style="display: block; margin: 0 auto;">Register</button>
+                <button type="submit" class="btn btn-success" value="Upload" id="submit" name="tambah" value="Tambah" style="display: block; margin: 0 auto;">Register</button>
               </div>
           </form>
+          <div id="kv-avatar-errors-1" class="center-block" style="width:800px;display:none"></div>
 
           <div class="col-md-4">
           </div>
@@ -386,39 +396,29 @@
       evt.currentTarget.className += " active";
     }
 
-function regisAuth() {
-    var Regex= /^[a-z0-9][a-z0-9_\.-]{0,}[a-z0-9]@[a-z0-9][a-z0-9_\.-]{0,}[a-z0-9][\.][a-z0-9]{2,4}$/;
-    var sMsg = "";
-
-    if(document.getElementById("email").value ==="") {
-        sMsg +=("\n* Anda Belum Megisikan Email");
-    }
-
-    if(document.getElementById("pwd").value ==="") {
-        sMsg +=("\n* Anda Belum Megisikan Password");
-    }
-
-    else if(document.getElementById("pwd").value !== document.getElementById("c-pwd")) {
-        sMsg +=("\n* Password anda tidak sama!");
-    }
-
-    if(sMsg !=""){
-        alert("Peringatan:\n" +sMsg);
-        location.href="regis.php"
-        return false;
-    }
-
-    else {
-        // alert("Berhasil Input data");
-        return true;
-    }
-}
-
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
   </script>
   <script src="assets/bootstrap.js"></script>
   <script src="assets/script.js"></script>
+  <script>
+  $(document).ready(function(){
+  // Prepare the preview for profile picture
+      $("#wizard-picture").change(function(){
+          readURL(this);
+      });
+  });
+  function readURL(input) {
+      if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+              $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
+          }
+          reader.readAsDataURL(input.files[0]);
+      }
+  }
+  </script>
 </body>
 
 </html>

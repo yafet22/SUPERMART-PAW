@@ -25,29 +25,14 @@
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <a href="after-login.php"><img id="logo" src="../../img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+              <a href="../../index-admin.php"><img id="logo" src="../../img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
             </div>
             <div class="col-md-4">
 
             </div>
             <div class="col-md-4">
-              <a href="logreg.html"><img id="user-logo" src="../../img/usernew.png" alt="user-logo"></a>
-              <a href="shopping-list.html"><img id="shop-chart" src="../../image/shop-chart.png" alt="shop-chart"></a>
-              <div class="desc"><a id="user" href="profile.php">
-              <?php session_start(); 
-              $text=$_SESSION['email'];
-              $wordlimit=wordlimit($text);
-              echo $wordlimit;
-
-              function wordlimit($text,$limit=13){
-                  if(strlen($text)>$limit)
-                    $word=mb_substr($text,0,$limit-3)."...";
-                  else
-                    $word=$text;
-
-                    return $word;
-              }
-              ?>
+              <a href="../../logreg.php"><img id="user-logo" src="../../img/usernew.png" alt="user-logo"></a>
+              <div class="desc"><a id="admin" href="../../profile-admin.php">ADMIN
               </a>
               </div>
             </div>
@@ -62,55 +47,55 @@
                     <div class="dropdown">
                         <li class="menu">Makanan</li>
                         <div class="menu-content">
-                            <li><a href="../makanan/makanan-ringan.html">Makanan Ringan</a></li>
-                            <li><a href="../makanan/makanan-beku.html">Makanan Beku</a></li>
-                            <li><a href="../makanan/makanan-pokok.html">Makanan Pokok</a></li>
+                            <li><a href="../makanan/makanan-ringan-admin.php">Makanan Ringan</a></li>
+                            <li><a href="../makanan/makanan-beku-admin.php">Makanan Beku</a></li>
+                            <li><a href="../makanan/makanan-pokok-admin.php">Makanan Pokok</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Minuman</li>
                         <div class="menu-content">
-                            <li><a href="../minuman/minuman-ringan.html">Minuman Ringan</a></li>
-                            <li><a href="../minuman/minuman-isotonik.html">Minuman Isotonik</a></li>
-                            <li><a href="../minuman/minuman-soda.html">Minuman Soda</a></li>
+                            <li><a href="../minuman/minuman-ringan-admin.php">Minuman Ringan</a></li>
+                            <li><a href="../minuman/minuman-isotonik-admin.php">Minuman Isotonik</a></li>
+                            <li><a href="../minuman/minuman-soda-admin.php">Minuman Soda</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Kesehatan</li>
                         <div class="menu-content">
-                            <li><a href="../kesehatan/perawatan-diri.html">Perawatan Diri</a></li>
-                            <li><a href="../kesehatan/perawatan-badan.html">Perawatan Badan</a></li>
-                            <li><a href="../kesehatan/perawatan-rambut.html">Perawatan Rambut</a></li>
-                            <li><a href="../kesehatan/perawatan-pria.html">Perawatan Pria</a></li>
-                            <li><a href="../kesehatan/obat-obatan.html">Obat - obatan</a></li>
+                            <li><a href="../kesehatan/perawatan-diri-admin.php">Perawatan Diri</a></li>
+                            <li><a href="../kesehatan/perawatan-badan-admin.php">Perawatan Badan</a></li>
+                            <li><a href="../kesehatan/perawatan-rambut-admin.php">Perawatan Rambut</a></li>
+                            <li><a href="../kesehatan/perawatan-pria-admin.php">Perawatan Pria</a></li>
+                            <li><a href="../kesehatan/obat-obatan-admin.php">Obat - obatan</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Elektronik</li>
                         <div class="menu-content">
-                            <li><a href="../elektronik/televisi.html">Televisi</a></li>
-                            <li><a href="../elektronik/aksesoris-komputer.html">Aksesoris Komputer</a></li>
-                            <li><a href="../elektronik/aksesoris-handphone.html">Aksesoris Handphone</a></li>
+                            <li><a href="../elektronik/televisi-admin.php">Televisi</a></li>
+                            <li><a href="../elektronik/aksesoris-komputer-admin.php">Aksesoris Komputer</a></li>
+                            <li><a href="../elektronik/aksesoris-handphone-admin.php">Aksesoris Handphone</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Kebutuhan Rumah Tangga</li>
                         <div class="menu-content">
-                            <li><a href="../kebutuhan rumah tangga/peralatan-kebersihan.html">Peralatan Kebersihan</a></li>
-                            <li><a href="../kebutuhan rumah tangga/peralatan-makan.html">Peralatan Makan</a></li>
-                            <li><a href="../kebutuhan rumah tangga/peralatan-rumah-tangga.html">Peralatan Rumah Tangga</a></li>
+                            <li><a href="../kebutuhan rumah tangga/peralatan-kebersihan-admin.php">Peralatan Kebersihan</a></li>
+                            <li><a href="../kebutuhan rumah tangga/peralatan-makan-admin.php">Peralatan Makan</a></li>
+                            <li><a href="../kebutuhan rumah tangga/peralatan-rumah-tangga-admin.php">Peralatan Rumah Tangga</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Fashion</li>
                         <div class="menu-content">
-                            <li><a href="../fashion/fashion-pria.html">Fashion Pria</a></li>
-                            <li><a href="../fashion/fashion-wanita.html">Fashion Wanita</a></li>
+                            <li><a href="../fashion/fashion-pria-admin.php">Fashion Pria</a></li>
+                            <li><a href="../fashion/fashion-wanita-admin.php">Fashion Wanita</a></li>
                         </div>
                     </div>
 
@@ -119,7 +104,7 @@
         </div>
     </nav>
 
-    <nav id="sidebar">
+    <!-- <nav id="sidebar">
         <div class="container">
             <div class="menu-sidebar">
                 <div class="menu-title">
@@ -175,7 +160,7 @@
                 </div>
             </div>
         </div>
-    </nav>
+    </nav> -->
 
     <div class="hover"></div>
 
@@ -185,15 +170,15 @@
         <div class="row">
             <div class="col-md-3 order-first mt-2">
                 <li class="list-group-item bg-primary">
-                    <a href="minuman-ringan.html" class="text-light">Minuman Ringan</a>
+                    <a href="minuman-ringan-admin.php" class="text-light">Minuman Ringan</a>
                 </li>
 
                 <li class="list-group-item">
-                    <a href="minuman-isotonik.html" class="text-dark">Minuman Isotonik</a>
+                    <a href="minuman-isotonik-admin.php" class="text-dark">Minuman Isotonik</a>
                 </li>
 
                 <li class="list-group-item">
-                    <a href="minuman-soda.html" class="text-dark">Minuman Soda</a>
+                    <a href="minuman-soda-admin.php" class="text-dark">Minuman Soda</a>
                 </li>
                 <br>
                 <button type="button" class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#inputbarang">
@@ -207,7 +192,7 @@
 
                     include('../../koneksi.php');
 
-                    $sql = "SELECT * FROM barang ORDER BY idbarang ASC";
+                    $sql = "SELECT * FROM barang WHERE kategori='MinumanRingan' ORDER BY idbarang ASC";
                     $result=mysqli_query($conn,$sql);
 
                     if(mysqli_num_rows($result) == 0){
@@ -408,7 +393,7 @@
 
             include('../../koneksi.php');
 
-            $sql = "SELECT * FROM barang ORDER BY idbarang ASC";
+            $sql = "SELECT * FROM barang WHERE kategori='MinumanRingan' ORDER BY idbarang ASC";
             $result=mysqli_query($conn,$sql);
 
             if(mysqli_num_rows($result) == 0){
@@ -461,7 +446,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="kbarang">Kategori: </label>
-                                <input type="text" class="form-control" id="kbarang" placeholder="Enter kategori barang" name="kbarang" value="Minuman">
+                                <input type="text" class="form-control" id="kbarang" placeholder="Enter kategori barang" name="kbarang" value="MinumanRingan">
                             </div>
                             <div class="form-group">
                                 <label for="hbarang">Harga: </label>

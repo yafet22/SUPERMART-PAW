@@ -1,4 +1,4 @@
-function functionLogin() {
+function loginFunction() {
     var Regex= /^[a-z0-9][a-z0-9_\.-]{0,}[a-z0-9]@[a-z0-9][a-z0-9_\.-]{0,}[a-z0-9][\.][a-z0-9]{2,4}$/;
     var sMsg = "";
 

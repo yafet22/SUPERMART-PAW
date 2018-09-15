@@ -20,7 +20,7 @@
     <script src="assets/mdb.js"></script>
     <script src="js/jquery.min.js"></script>
 
-    <title>Supermarket</title>
+    <title>IMK Supermarket</title>
 </head>
 <body>
     <!--Untuk bagian header-->
@@ -34,7 +34,7 @@
 
             </div>
             <div class="col-md-4">
-              <a href="logreg.php"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
+              <a href="logreg-afterlogin.php"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
               <a href="shopping-list.php"><img id="shop-chart" src="image/shop-chart.png" alt="shop-chart"></a>
               <div class="desc"><a id="user" href="profile.php">
               <?php session_start(); 
@@ -65,55 +65,55 @@
                     <div class="dropdown">
                         <li class="menu">Makanan</li>
                         <div class="menu-content">
-                            <li><a href="category/makanan/makanan-ringan.html">Makanan Ringan</a></li>
-                            <li><a href="category/makanan/makanan-beku.html">Makanan Beku</a></li>
-                            <li><a href="category/makanan/makanan-pokok.html">Makanan Pokok</a></li>
+                            <li><a href="category/makanan/makanan-ringan-afterlogin.php">Makanan Ringan</a></li>
+                            <li><a href="category/makanan/makanan-beku-afterlogin.php">Makanan Beku</a></li>
+                            <li><a href="category/makanan/makanan-pokok-afterlogin.php">Makanan Pokok</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Minuman</li>
                         <div class="menu-content">
-                            <li><a href="category/minuman/minuman-ringan.html">Minuman Ringan</a></li>
-                            <li><a href="category/minuman/minuman-isotonik.html">Minuman Isotonik</a></li>
-                            <li><a href="category/minuman/minuman-soda.html">Minuman Soda</a></li>
+                            <li><a href="category/minuman/minuman-ringan-afterlogin.php">Minuman Ringan</a></li>
+                            <li><a href="category/minuman/minuman-isotonik-afterlogin.php">Minuman Isotonik</a></li>
+                            <li><a href="category/minuman/minuman-soda-afterlogin.php">Minuman Soda</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Kesehatan</li>
                         <div class="menu-content">
-                            <li><a href="category/kesehatan/perawatan-diri.html">Perawatan Diri</a></li>
-                            <li><a href="category/kesehatan/perawatan-badan.html">Perawatan Badan</a></li>
-                            <li><a href="category/kesehatan/perawatan-rambut.html">Perawatan Rambut</a></li>
-                            <li><a href="category/kesehatan/perawatan-pria.html">Perawatan Pria</a></li>
-                            <li><a href="category/kesehatan/obat-obatan.html">Obat - obatan</a></li>
+                            <li><a href="category/kesehatan/perawatan-diri-afterlogin.php">Perawatan Diri</a></li>
+                            <li><a href="category/kesehatan/perawatan-badan-afterlogin.php">Perawatan Badan</a></li>
+                            <li><a href="category/kesehatan/perawatan-rambut-afterlogin.php">Perawatan Rambut</a></li>
+                            <li><a href="category/kesehatan/perawatan-pria-afterlogin.php">Perawatan Pria</a></li>
+                            <li><a href="category/kesehatan/obat-obatan-afterlogin.php">Obat - obatan</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Elektronik</li>
                         <div class="menu-content">
-                            <li><a href="category/elektronik/televisi.html">Televisi</a></li>
-                            <li><a href="category/elektronik/aksesoris-komputer.html">Aksesoris Komputer</a></li>
-                            <li><a href="category/elektronik/aksesoris-handphone.html">Aksesoris Handphone</a></li>
+                            <li><a href="category/elektronik/televisi-afterlogin.php">Televisi</a></li>
+                            <li><a href="category/elektronik/aksesoris-komputer-afterlogin.php">Aksesoris Komputer</a></li>
+                            <li><a href="category/elektronik/aksesoris-handphone-afterlogin.php">Aksesoris Handphone</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Kebutuhan Rumah Tangga</li>
                         <div class="menu-content">
-                            <li><a href="category/kebutuhan rumah tangga/peralatan-kebersihan.html">Peralatan Kebersihan</a></li>
-                            <li><a href="category/kebutuhan rumah tangga/peralatan-makan.html">Peralatan Makan</a></li>
-                            <li><a href="category/kebutuhan rumah tangga/peralatan-rumah-tangga.html">Peralatan Rumah Tangga</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-kebersihan-afterlogin.php">Peralatan Kebersihan</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-makan-afterlogin.php">Peralatan Makan</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-rumah-tangga-afterlogin.php">Peralatan Rumah Tangga</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Fashion</li>
                         <div class="menu-content">
-                            <li><a href="category/fashion/fashion-pria.html">Fashion Pria</a></li>
-                            <li><a href="category/fashion/fashion-wanita.html">Fashion Wanita</a></li>
+                            <li><a href="category/fashion/fashion-pria-afterlogin.php">Fashion Pria</a></li>
+                            <li><a href="category/fashion/fashion-wanita-afterlogin.php">Fashion Wanita</a></li>
                         </div>
                     </div>
                 </ul>
@@ -201,7 +201,10 @@
 
               </div>
               <div class="avatar">
-                  <img id="loginform" src="img/user-logo.png" style="width:100%;">
+                  <?php 
+                        echo '<img src="image/profile/'.$_SESSION['image_name'].'" class="img-display" />'; 
+                  ?>
+                  <!-- <img id="loginform" src="image/" style="width:100%;"> -->
               </div>
               <div class="info">
                   <div class="title">
@@ -221,9 +224,8 @@
                     </div>
               </div>
               <div class="bottom">
-                  <form class="" action="">
-                      <button type="submit" class="btn btn-primary" action="edit-profile.php" formaction="edit-profile.php" style="display: block; margin: 0 auto;">Edit Profile</button>
-                  </form>
+                      <a href="edit-profile.php"><button type="submit" class="btn btn-primary" style="display: block; margin: 0 auto;">Edit Profile</button></a>
+                      <a href="logout-proses.php"><button type="submit" class="btn btn-danger" style="display: block; margin: 0 auto;">Log-out</button></a>
               </div>
             </div>
           </div>

@@ -25,92 +25,75 @@
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <a href="after-login.php"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+            <a href="../../index.php"><img id="logo" src="../../img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
             </div>
             <div class="col-md-4">
 
             </div>
             <div class="col-md-4">
-              <a href="logreg.html"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
-              <a href="shopping-list.html"><img id="shop-chart" src="image/shop-chart.png" alt="shop-chart"></a>
-              <div class="desc"><a id="user" href="profile.php">
-              <?php session_start(); 
-              $text=$_SESSION['email'];
-              $wordlimit=wordlimit($text);
-              echo $wordlimit;
-
-              function wordlimit($text,$limit=13){
-                  if(strlen($text)>$limit)
-                    $word=mb_substr($text,0,$limit-3)."...";
-                  else
-                    $word=$text;
-
-                    return $word;
-              }
-              ?>
-              </a>
-              </div>
+              <a href="../../logreg.html"><img id="user-logo" src="../../img/usernew.png" alt="user-logo"></a>
             </div>
           </div>
         </div>
+        </div>
     </header>
 
-    <nav id="navbar">
+   <nav id="navbar">
         <div class="container">
             <div class="menu-wrapper">
                 <ul style="padding-left:0px;">
                     <div class="dropdown">
                         <li class="menu">Makanan</li>
                         <div class="menu-content">
-                            <li><a href="../makanan/makanan-ringan.html">Makanan Ringan</a></li>
-                            <li><a href="../makanan/makanan-beku.html">Makanan Beku</a></li>
-                            <li><a href="../makanan/makanan-pokok.html">Makanan Pokok</a></li>
+                            <li><a href="../makanan/makanan-ringan.php">Makanan Ringan</a></li>
+                            <li><a href="../makanan/makanan-beku.php">Makanan Beku</a></li>
+                            <li><a href="../makanan/makanan-pokok.php">Makanan Pokok</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Minuman</li>
                         <div class="menu-content">
-                            <li><a href="../minuman/minuman-ringan.html">Minuman Ringan</a></li>
-                            <li><a href="../minuman/minuman-isotonik.html">Minuman Isotonik</a></li>
-                            <li><a href="../minuman/minuman-soda.html">Minuman Soda</a></li>
+                            <li><a href="../minuman/minuman-ringan.php">Minuman Ringan</a></li>
+                            <li><a href="../minuman/minuman-isotonik.php">Minuman Isotonik</a></li>
+                            <li><a href="../minuman/minuman-soda.php">Minuman Soda</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Kesehatan</li>
                         <div class="menu-content">
-                            <li><a href="../kesehatan/perawatan-diri.html">Perawatan Diri</a></li>
-                            <li><a href="../kesehatan/perawatan-badan.html">Perawatan Badan</a></li>
-                            <li><a href="../kesehatan/perawatan-rambut.html">Perawatan Rambut</a></li>
-                            <li><a href="../kesehatan/perawatan-pria.html">Perawatan Pria</a></li>
-                            <li><a href="../kesehatan/obat-obatan.html">Obat - obatan</a></li>
+                            <li><a href="../kesehatan/perawatan-diri.php">Perawatan Diri</a></li>
+                            <li><a href="../kesehatan/perawatan-badan.php">Perawatan Badan</a></li>
+                            <li><a href="../kesehatan/perawatan-rambut.php">Perawatan Rambut</a></li>
+                            <li><a href="../kesehatan/perawatan-pria.php">Perawatan Pria</a></li>
+                            <li><a href="../kesehatan/obat-obatan.php">Obat - obatan</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Elektronik</li>
                         <div class="menu-content">
-                            <li><a href="../elektronik/televisi.html">Televisi</a></li>
-                            <li><a href="../elektronik/aksesoris-komputer.html">Aksesoris Komputer</a></li>
-                            <li><a href="../elektronik/aksesoris-handphone.html">Aksesoris Handphone</a></li>
+                            <li><a href="../elektronik/televisi.php">Televisi</a></li>
+                            <li><a href="../elektronik/aksesoris-komputer.php">Aksesoris Komputer</a></li>
+                            <li><a href="../elektronik/aksesoris-handphone.php">Aksesoris Handphone</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Kebutuhan Rumah Tangga</li>
                         <div class="menu-content">
-                            <li><a href="../kebutuhan rumah tangga/peralatan-kebersihan.html">Peralatan Kebersihan</a></li>
-                            <li><a href="../kebutuhan rumah tangga/peralatan-makan.html">Peralatan Makan</a></li>
-                            <li><a href="../kebutuhan rumah tangga/peralatan-rumah-tangga.html">Peralatan Rumah Tangga</a></li>
+                            <li><a href="../kebutuhan rumah tangga/peralatan-kebersihan.php">Peralatan Kebersihan</a></li>
+                            <li><a href="../kebutuhan rumah tangga/peralatan-makan.php">Peralatan Makan</a></li>
+                            <li><a href="../kebutuhan rumah tangga/peralatan-rumah-tangga.php">Peralatan Rumah Tangga</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Fashion</li>
                         <div class="menu-content">
-                            <li><a href="../fashion/fashion-pria.html">Fashion Pria</a></li>
-                            <li><a href="../fashion/fashion-wanita.html">Fashion Wanita</a></li>
+                            <li><a href="../fashion/fashion-pria.php">Fashion Pria</a></li>
+                            <li><a href="../fashion/fashion-wanita.php">Fashion Wanita</a></li>
                         </div>
                     </div>
 
@@ -119,7 +102,7 @@
         </div>
     </nav>
 
-    <nav id="sidebar">
+    <!-- <nav id="sidebar">
         <div class="container">
             <div class="menu-sidebar">
                 <div class="menu-title">
@@ -175,7 +158,7 @@
                 </div>
             </div>
         </div>
-    </nav>
+    </nav> -->
 
     <div class="hover"></div>
 
@@ -185,21 +168,47 @@
         <div class="row">
             <div class="col-md-3 order-first mt-2">
                 <li class="list-group-item bg-primary">
-                    <a href="minuman-ringan.html" class="text-light">Minuman Ringan</a>
+                    <a href="minuman-ringan.php" class="text-light">Minuman Ringan</a>
                 </li>
 
                 <li class="list-group-item">
-                    <a href="minuman-isotonik.html" class="text-dark">Minuman Isotonik</a>
+                    <a href="minuman-isotonik.php" class="text-dark">Minuman Isotonik</a>
                 </li>
 
                 <li class="list-group-item">
-                    <a href="minuman-soda.html" class="text-dark">Minuman Soda</a>
+                    <a href="minuman-soda.php" class="text-dark">Minuman Soda</a>
                 </li>
             </div>
 
             <div class="col-md-9 order-last mt-2">
                 <div class="row">
-                    <div class="card col-md-3 mx-1 p-3">
+                <?php
+
+                    include('../../koneksi.php');
+
+                    $sql = "SELECT * FROM barang WHERE kategori='MinumanRingan' ORDER BY idbarang ASC";
+                    $result=mysqli_query($conn,$sql);
+
+                    if(mysqli_num_rows($result) == 0){
+                        echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
+
+                    }else{
+                        $no = 1;
+                        while($data = mysqli_fetch_assoc($result)){
+                            echo '<div class="card col-md-3 mx-1 p-3">';
+                            // echo '<img src="'.base64_encode($data['foto']).'" alt="foto-bahan" class="img-display">';
+                            // echo '<img src="data:image/jpeg;base64,'.base64_encode($data['foto'] ).'" class="img-display"/>';
+                            echo '<img src="../../image/'.$data['image_name'].'" class="img-display" />'; 
+                            echo '<p class="text-center lead">'.$data['namabarang'].'</p>';
+                            echo '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#'.$data['idbarang'].'">Info</button>';
+                            echo '</div>';
+                            $no++;
+
+                        }
+
+                    }
+                ?>
+                    <!-- <div class="card col-md-3 mx-1 p-3">
                         <img src="../../img/Edited/Minuman Ringan/Ultramilk.jpg" alt="foto-bahan" class="img-display">
                         <p class="text-center lead">Ultra Milk Coklat</p>
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ultraProduk">
@@ -261,7 +270,7 @@
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tehBotolProduk">
                             Info
                         </button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -376,7 +385,43 @@
 
     </footer>
     <div class="wrapper">
-        <div class="modal fade" id="ultraProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <?php
+
+            include('../../koneksi.php');
+
+            $sql = "SELECT * FROM barang WHERE kategori='MinumanRingan' ORDER BY idbarang ASC";
+            $result=mysqli_query($conn,$sql);
+
+            if(mysqli_num_rows($result) == 0){
+                echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
+
+            }else{
+                $no = 1;
+                while($data = mysqli_fetch_assoc($result)){
+                    echo '<div class="modal fade" id="'.$data['idbarang'].'" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">';
+                    echo '<div class="modal-dialog modal-dialog-centered" role="document">';
+                    echo '<div class="modal-content">';
+                    echo '<div class="modal-header">';
+                    echo '<h5 class="modal-title" id="exampleModalLongTitle">'.$data['namabarang'].'</h5>';
+                    echo '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+                    echo '</div>';
+                    echo '<div class="modal-body">';
+                    echo '<div class="wrapper"><img src="../../image/'.$data['image_name'].'" alt="foto-bahan" class="img-info mx-auto d-block"></div>';
+                    echo '<div class="info-wrapper"><ul><li><b>Harga</b> : '.$data['harga'].'</li><li><b>Stok</b>  : '.$data['stock'].'</li><li><b>Deskripsi</b>  : '.$data['deskripsi'].'</li> </ul></div>';
+                    echo '<p class="text-center">Lakukan <a href="../../logreg.php">Login</a> untuk dapat membeli barang</p>';
+                    echo '</div>';
+                    echo '<div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
+                    $no++;
+                }
+
+            }
+        ?>
+        <!-- <div class="modal fade" id="ultraProduk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -652,7 +697,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </div>
     <!--Load javascript-->

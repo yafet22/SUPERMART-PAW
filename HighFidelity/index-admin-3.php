@@ -8,19 +8,23 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
+    <script src="assets/jquery.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="assets/popper.js"></script>
+    <script src="assets/bootstrap.js"></script>
+    <script src="assets/mdb.js"></script>
+    
+    
+
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/bootstrap.min.css">
     <link rel="stylesheet" href="style/bootstrap.css">
     <link rel="stylesheet" href="style/mdb.css">
     <link rel="stylesheet" href="webfonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
-    <script src="assets/jquery.js"></script>
-    <script src="assets/popper.js"></script>
-    <script src="assets/bootstrap.js"></script>
-    <script src="assets/mdb.js"></script>
-    <script src="js/jquery.min.js"></script>
-
-    <title>Supermarket</title>
+    <title>IMK Supermarket</title>
 </head>
 <body>
     <!--Untuk bagian header-->
@@ -28,15 +32,16 @@
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <a href="index.php"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+              <a href="index-admin.php"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
             </div>
             <div class="col-md-4">
 
             </div>
             <div class="col-md-4">
               <a href="logreg.php"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
-              <a href="shopping-list.php"><img id="shop-chart" src="image/shop-chart.png" alt="shop-chart"></a>
-              <div id="user" class="desc">UserName</div>
+              <div class="desc"><a id="admin" href="profile-admin.php">ADMIN
+              </a>
+              </div>
             </div>
           </div>
         </div>
@@ -49,116 +54,58 @@
                     <div class="dropdown">
                         <li class="menu">Makanan</li>
                         <div class="menu-content">
-                            <li><a href="category/makanan/makanan-ringan.html">Makanan Ringan</a></li>
-                            <li><a href="category/makanan/makanan-beku.html">Makanan Beku</a></li>
-                            <li><a href="category/makanan/makanan-pokok.html">Makanan Pokok</a></li>
+                            <li><a href="category/makanan/makanan-ringan-admin.php">Makanan Ringan</a></li>
+                            <li><a href="category/makanan/makanan-beku-admin.php">Makanan Beku</a></li>
+                            <li><a href="category/makanan/makanan-pokok-admin.php">Makanan Pokok</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Minuman</li>
                         <div class="menu-content">
-                            <li><a href="category/minuman/minuman-ringan.html">Minuman Ringan</a></li>
-                            <li><a href="category/minuman/minuman-isotonik.html">Minuman Isotonik</a></li>
-                            <li><a href="category/minuman/minuman-soda.html">Minuman Soda</a></li>
+                            <li><a href="category/minuman/minuman-ringan-admin.php">Minuman Ringan</a></li>
+                            <li><a href="category/minuman/minuman-isotonik-admin.php">Minuman Isotonik</a></li>
+                            <li><a href="category/minuman/minuman-soda-admin.php">Minuman Soda</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Kesehatan</li>
                         <div class="menu-content">
-                            <li><a href="category/kesehatan/perawatan-diri.html">Perawatan Diri</a></li>
-                            <li><a href="category/kesehatan/perawatan-badan.html">Perawatan Badan</a></li>
-                            <li><a href="category/kesehatan/perawatan-rambut.html">Perawatan Rambut</a></li>
-                            <li><a href="category/kesehatan/perawatan-pria.html">Perawatan Pria</a></li>
-                            <li><a href="category/kesehatan/obat-obatan.html">Obat - obatan</a></li>
+                            <li><a href="category/kesehatan/perawatan-diri-admin.php">Perawatan Diri</a></li>
+                            <li><a href="category/kesehatan/perawatan-badan-admin.php">Perawatan Badan</a></li>
+                            <li><a href="category/kesehatan/perawatan-rambut-admin.php">Perawatan Rambut</a></li>
+                            <li><a href="category/kesehatan/perawatan-pria-admin.php">Perawatan Pria</a></li>
+                            <li><a href="category/kesehatan/obat-obatan-admin.php">Obat - obatan</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Elektronik</li>
                         <div class="menu-content">
-                            <li><a href="category/elektronik/televisi.html">Televisi</a></li>
-                            <li><a href="category/elektronik/aksesoris-komputer.html">Aksesoris Komputer</a></li>
-                            <li><a href="category/elektronik/aksesoris-handphone.html">Aksesoris Handphone</a></li>
+                            <li><a href="category/elektronik/televisi-admin.php">Televisi</a></li>
+                            <li><a href="category/elektronik/aksesoris-komputer-admin.php">Aksesoris Komputer</a></li>
+                            <li><a href="category/elektronik/aksesoris-handphone-admin.php">Aksesoris Handphone</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Kebutuhan Rumah Tangga</li>
                         <div class="menu-content">
-                            <li><a href="category/kebutuhan rumah tangga/peralatan-kebersihan.html">Peralatan Kebersihan</a></li>
-                            <li><a href="category/kebutuhan rumah tangga/peralatan-makan.html">Peralatan Makan</a></li>
-                            <li><a href="category/kebutuhan rumah tangga/peralatan-rumah-tangga.html">Peralatan Rumah Tangga</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-kebersihan-admin.php">Peralatan Kebersihan</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-makan-admin.php">Peralatan Makan</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-rumah-tangga-admin.php">Peralatan Rumah Tangga</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Fashion</li>
                         <div class="menu-content">
-                            <li><a href="category/fashion/fashion-pria.html">Fashion Pria</a></li>
-                            <li><a href="category/fashion/fashion-wanita.html">Fashion Wanita</a></li>
+                            <li><a href="category/fashion/fashion-pria-admin.php">Fashion Pria</a></li>
+                            <li><a href="category/fashion/fashion-wanita-admin.php">Fashion Wanita</a></li>
                         </div>
                     </div>
                 </ul>
-            </div>
-        </div>
-    </nav>
-
-    <nav id="sidebar">
-        <div class="container">
-            <div class="menu-sidebar">
-                <div class="menu-title">
-                    Makanan
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                    <li><a href="category/makanan/makanan-ringan.html">Makanan Ringan</a></li>
-                    <li><a href="category/makanan/makanan-beku.html">Makanan Beku</a></li>
-                    <li><a href="category/makanan/makanan-pokok.html">Makanan Pokok</a></li>
-                </div>
-                <hr>
-                <div class="menu-title">
-                    Minuman
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                    <li><a href="category/minuman/minuman-ringan.html">Minuman Ringan</a></li>
-                    <li><a href="category/minuman/minuman-isotonik.html">Minuman Isotonik</a></li>
-                    <li><a href="category/minuman/minuman-soda.html">Minuman Soda</a></li>
-                </div>
-                <hr>
-                <div class="menu-title">
-                    Kesehatan
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                  <li><a href="category/kesehatan/perawatan-diri.html">Perawatan Diri</a></li>
-                  <li><a href="category/kesehatan/perawatan-badan.html">Perawatan Badan</a></li>
-                  <li><a href="category/kesehatan/perawatan-rambut.html">Perawatan Rambut</a></li>
-                  <li><a href="category/kesehatan/perawatan-pria.html">Perawatan Pria</a></li>
-                  <li><a href="category/kesehatan/obat-obatan.html">Obat - obatan</a></li>
-                </div>
-                <hr>
-                <div class="menu-title">
-                    Elektronik
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                  <li><a href="category/elektronik/televisi.html">Televisi</a></li>
-                  <li><a href="category/elektronik/aksesoris-komputer.html">Aksesoris Komputer</a></li>
-                  <li><a href="category/elektronik/aksesoris-handphone.html">Aksesoris Handphone</a></li>
-                </div>
-                <hr>
-                <div class="menu-title">
-                    Peralatan Rumah Tangga
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                  <li><a href="category/kebutuhan rumah tangga/peralatan-kebersihan.html">Peralatan Kebersihan</a></li>
-                  <li><a href="category/kebutuhan rumah tangga/peralatan-makan.html">Peralatan Makan</a></li>
-                  <li><a href="category/kebutuhan rumah tangga/peralatan-rumah-tangga.html">Peralatan Rumah Tangga</a></li>
-                </div>
             </div>
         </div>
     </nav>
@@ -168,9 +115,6 @@
     </div>
 
     <!--Bagian Isi-->
-
-
-
 
     <section class="kategori">
       <div class="container title_hightlight">
@@ -192,8 +136,26 @@
                     <a href="index-admin-3.php" class="text-light">Data Transaksi</a>
                 </li>
         </div>
-          <div class="col-md-9 order-first mt-2">
-            <table id=tableadmin class="table table-bordered" cellpadding="5" cellspacing="0" width="100%">
+          <div class="col-md-9 order-first mt-2">   
+          <nav class="navbar navbar-expand-lg navbar-light bg-primary ">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" style="color:white;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Search By
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="index-admin-3.php">By ID Transaksi</a>
+                    <a class="dropdown-item" href="index-admin-3-byuser.php">By ID User</a>
+                    <a class="dropdown-item" href="index-admin-3-bybarang.php">By ID Barang</a>
+                </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by ID Transaksi" aria-label="Search">
+                </form>
+            </div>
+            </nav>
+            <table id=tableadmin3 class="table table-bordered" cellpadding="5" cellspacing="0" width="100%">
                 <tr style="background-color:#4285f4;color:white;text-align:center;">
                     <th class="font-weight-bold">No</th>
                     <th class="font-weight-bold">Id-Transaksi</th>
@@ -202,37 +164,61 @@
                     <th class="font-weight-bold">Nama-Barang</th>
                     <th class="font-weight-bold">Jumlah-Barang</th>
                     <th class="font-weight-bold">Total Harga</th>
-                    <th> </th>
+                    <!-- <th> </th> -->
                 </tr>
 
                 <?php
-                // include('koneksi.php');
+                include('koneksi.php');
 
-                // $query ="SELECT * FROM user ORDER BY id ASC";
-                // $result=mysqli_query($conn,$query);
+                $query ="SELECT * FROM transaksi ORDER BY idtransaksi ASC";
+                $result=mysqli_query($conn,$query);
 
-                // if(mysqli_num_rows($result) == 0){
-                //     echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
+                if(mysqli_num_rows($result) == 0){
+                    echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
 
-                // }else{
-                //     $no = 1;
-                //     while($data = mysqli_fetch_assoc($result)){
+                }else{
+                    $no = 1;
+                    $total = 0;
+                    while($data = mysqli_fetch_assoc($result)){
 
-                //         echo '<tr style="text-align:center;">';
-                //         echo '<td>'.$no.'</td>';
-                //         echo '<td>'.$data['username'].'</td>';
-                //         echo '<td>'.$data['telp'].'</td>';
-                //         echo '<td>'.$data['email'].'</td>';
-                //         echo '<td>'.$data['aktif'].'</td>';
-                //         echo '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#show" data-id="'.$data['id'].'">
-                //         Edit</button><a href="hapus-user.php?id='.$data['id'].'""><button type="button" class="btn btn-warning">Hapus</button></a></td>';
-                //         // echo '<td><a href="edit-user.php?id='.$data['id'].'" data-toggle="modal" data-target="#edituser" style="color:blue;">Edit</a> / <a href="hapus-user.php?id='.$data['id'].'" style="color:blue;" onclick="return confirm(\'Yakin?\')">Hapus</a></td>';
-                //         echo '</tr>';
-                //         $no++;
+                        echo '<tr style="text-align:center;">';
+                        echo '<td>'.$no.'</td>';
+                        echo '<td>'.$data['idtransaksi'].'</td>';
+                        echo '<td>'.$data['idpembeli'].'</td>';
+                        echo '<td>'.$data['idbarang'].'</td>';
+                        echo '<td>'.$data['namabarang'].'</td>';
+                        echo '<td>'.$data['jumlahbarang'].'</td>';
+                        echo '<td>'.$data['totalharga'].'</td>';  
+                        // echo '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#show" data-id="'.$data['id'].'">
+                        // Edit</button><a href="hapus-user.php?id='.$data['id'].'""><button type="button" class="btn btn-warning">Hapus</button></a></td>';
+                        // echo '<td><a href="edit-user.php?id='.$data['id'].'" data-toggle="modal" data-target="#edituser" style="color:blue;">Edit</a> / <a href="hapus-user.php?id='.$data['id'].'" style="color:blue;" onclick="return confirm(\'Yakin?\')">Hapus</a></td>';
+                        echo '</tr>';
+                        $no++;
+                        $total=$total+$data['totalharga'];
 
-                //     }
+                    }
+                        // echo'<table id=tableadmin class="table" cellpadding="5" cellspacing="0" width="100%">';
+                        // echo'<tr>';
+                        // echo'<th>Total Pendapatan</th>';
+                        // echo'<th></th>';
+                        // echo'<th></th>';
+                        // echo'<th></th>';
+                        // echo'<th></th>';
+                        // echo'<th></th>';
+                        // echo'<th>'.$total.'</th>';
+                        // echo'</tr>';
 
-                // }
+                        echo '<tr style="text-align:center;">';
+                        echo '<td>Total Pendapatan</td>';
+                        echo '<td> </td>';
+                        echo '<td> </td>';
+                        echo '<td> </td>';
+                        echo '<td> </td>';
+                        echo '<td> </td>';
+                        echo '<td>'.$total.'</td>';  
+                        echo '</tr>';
+
+                }
                 ?>
             </table>
           </div>
@@ -428,8 +414,6 @@
       // Get the element with id="defaultOpen" and click on it
       document.getElementById("defaultOpen").click();
     </script>
-    <script src="assets/bootstrap.js"></script>
-    <script src="assets/script.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){
         $('#show').on('show.bs.modal', function (e) {
@@ -449,5 +433,27 @@
          });
     });
   </script>
+  <script>
+    function myFunction() {
+    // Declare variables
+    var input, filter, table, tr, td, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("tableadmin3");
+    tr = table.getElementsByTagName("tr");
+
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[1];
+        if (td) {
+        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+        } else {
+            tr[i].style.display = "none";
+        }
+        }
+    }
+    }
+    </script>
 </body>
 </html>
