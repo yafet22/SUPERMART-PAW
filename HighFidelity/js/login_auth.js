@@ -16,7 +16,6 @@ function loginFunction() {
     }
 
     else {
-        alert("Berhasil Input data");
         return true;
     }
 }

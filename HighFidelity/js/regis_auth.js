@@ -1,4 +1,4 @@
-function loginFunction() {
+function regisFunction() {
     var Regex= /^[a-z0-9][a-z0-9_\.-]{0,}[a-z0-9]@[a-z0-9][a-z0-9_\.-]{0,}[a-z0-9][\.][a-z0-9]{2,4}$/;
     var sMsg = "";
 
@@ -10,13 +10,16 @@ function loginFunction() {
         sMsg +=("\n* Anda Belum Megisikan Password");
     }
 
+    else if(document.getElementById("pwd").value !== document.getElementById("c-pwd").value) {
+        sMsg +=("\n* Password tidak sesuai");
+    }
+
     if(sMsg !=""){
         alert("Peringatan:\n" +sMsg);
         return false;
     }
 
     else {
-        alert("Berhasil Input data");
         return true;
     }
 }

@@ -21,7 +21,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/login_auth.js"></script>
 
-    <title>IMK Supermarket</title>
+    <title>Supermarket</title>
 </head>
 <body>
     <!--Untuk bagian header-->
@@ -35,7 +35,10 @@
 
             </div>
             <div class="col-md-4">
-              <a href="logreg.php"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
+                <div class="row pull-right align-items-center">
+                    <a href="logreg.php"><h4 style="color:white;" width=auto>LOGIN<h4>
+                    <img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
+                </div>
             </div>
           </div>
         </div>

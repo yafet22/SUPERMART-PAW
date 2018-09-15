@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="style/mdb.css">
     <link rel="stylesheet" href="webfonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
-    <title>IMK Supermarket</title>
+    <title>Supermarket</title>
 </head>
 <body>
     <!--Untuk bagian header-->

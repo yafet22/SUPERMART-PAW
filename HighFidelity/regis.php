@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="style/bootstrap.css">
   <link rel="stylesheet" href="style/mdb.css">
   <link rel="stylesheet" href="webfonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="croppie.css" />
 
   <script src="assets/jquery.js"></script>
   <script src="assets/popper.js"></script>
@@ -21,8 +22,9 @@
   <script src="assets/mdb.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/regis_auth.js"></script>
+  <script src="croppie.js"></script>
 
-  <title>IMK Supermarket</title>
+  <title>Supermarket</title>
 </head>
 
 <body>
@@ -37,7 +39,10 @@
 
         </div>
         <div class="col-md-4">
-          <a href="logreg.php"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
+          <div class="row pull-right align-items-center">
+            <a href="logreg.php"><h4 style="color:white;" width=auto>LOGIN<h4>
+            <img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
+          </div>
         </div>
       </div>
     </div>
@@ -202,7 +207,12 @@
             <div class="container">
                 <div class="picture-container">
                     <div class="picture">
-                        <img src="https://lh3.googleusercontent.com/LfmMVU71g-HKXTCP_QWlDOemmWg4Dn1rJjxeEsZKMNaQprgunDTtEuzmcwUBgupKQVTuP0vczT9bH32ywaF7h68mF-osUSBAeM6MxyhvJhG6HKZMTYjgEv3WkWCfLB7czfODidNQPdja99HMb4qhCY1uFS8X0OQOVGeuhdHy8ln7eyr-6MnkCcy64wl6S_S6ep9j7aJIIopZ9wxk7Iqm-gFjmBtg6KJVkBD0IA6BnS-XlIVpbqL5LYi62elCrbDgiaD6Oe8uluucbYeL1i9kgr4c1b_NBSNe6zFwj7vrju4Zdbax-GPHmiuirf2h86eKdRl7A5h8PXGrCDNIYMID-J7_KuHKqaM-I7W5yI00QDpG9x5q5xOQMgCy1bbu3St1paqt9KHrvNS_SCx-QJgBTOIWW6T0DHVlvV_9YF5UZpN7aV5a79xvN1Gdrc7spvSs82v6gta8AJHCgzNSWQw5QUR8EN_-cTPF6S-vifLa2KtRdRAV7q-CQvhMrbBCaEYY73bQcPZFd9XE7HIbHXwXYA=s200-no" class="picture-src" id="wizardPicturePreview" title="">
+                        <img  width=auto height=200 src="https://lh3.googleusercontent.com/LfmMVU71g-HKXTCP_QWlDOemmWg4Dn1rJjxeEsZKMNaQprgunDTtEuzmcwUBgupKQVTuP0vczT9bH32ywaF7h68mF-osUSBAeM6MxyhvJhG6HKZMTYjgEv3WkWCfLB7czfODidNQPdja99HMb4qhCY1uFS8X0OQOVGeuhdHy8ln7eyr-6MnkCcy64wl6S_S6ep9j7aJIIopZ9wxk7Iqm-gFjmBtg6KJVkBD0IA6BnS-XlIVpbqL5LYi62elCrbDgiaD6Oe8uluucbYeL1i9kgr4c1b_NBSNe6zFwj7vrju4Zdbax-GPHmiuirf2h86eKdRl7A5h8PXGrCDNIYMID-J7_KuHKqaM-I7W5yI00QDpG9x5q5xOQMgCy1bbu3St1paqt9KHrvNS_SCx-QJgBTOIWW6T0DHVlvV_9YF5UZpN7aV5a79xvN1Gdrc7spvSs82v6gta8AJHCgzNSWQw5QUR8EN_-cTPF6S-vifLa2KtRdRAV7q-CQvhMrbBCaEYY73bQcPZFd9XE7HIbHXwXYA=s200-no" class="picture-src" id="wizardPicturePreview" title="">
+                         <!-- belom jalan  -->
+                        <script> 
+                          $('.picture-src').croppie();
+                        </script>
+                        <!-- belom jalan -->
                         <input id="wizard-picture" type="file" name="file">
                     </div>
                     <h6 class="">Choose Picture</h6>
@@ -236,7 +246,7 @@
                 </a>
               </div>
               <div class="col-md-6">
-                <button type="submit" class="btn btn-success" value="Upload" id="submit" name="tambah" value="Tambah" style="display: block; margin: 0 auto;">Register</button>
+                <button type="submit" class="btn btn-success"  onclick="regisFunction()" value="Upload" id="submit" name="tambah" value="Tambah" style="display: block; margin: 0 auto;">Register</button>
               </div>
           </form>
           <div id="kv-avatar-errors-1" class="center-block" style="width:800px;display:none"></div>

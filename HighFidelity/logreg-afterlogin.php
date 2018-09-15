@@ -21,7 +21,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/login_auth.js"></script>
 
-    <title>IMK Supermarket</title>
+    <title>Supermarket</title>
 </head>
 <body>
     <!--Untuk bagian header-->
