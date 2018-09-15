@@ -17,7 +17,7 @@
     <script src="../../assets/popper.js"></script>
     <script src="../../assets/bootstrap.js"></script>
 
-    <title>IMK Supermarket</title>
+    <title>Supermarket</title>
 </head>
 <body>
     <!--Untuk bagian header-->
@@ -265,16 +265,16 @@
 
             <ul class="list-unstyled">
               <div class="row">
-                <li style="padding-left:16px;"><p><a href="../makanan/makanan-ringan.html">Makanan</a></p></li>
-                <li style="padding-left:16px;"><p><a href="../minuman/minuman-ringan.html">Minuman</a></p></li>
+                <li style="padding-left:16px;"><p><a href="../makanan/makanan-ringan.php">Makanan</a></p></li>
+                <li style="padding-left:16px;"><p><a href="../minuman/minuman-ringan.php">Minuman</a></p></li>
               </div>
               <div class="row">
-                <li style="padding-left:16px;"><p><a href="../kesehatan/perawatan-diri.html">Kesehatan</a></p></li>
-                <li style="padding-left:16px;"><p><a href="../elektronik/televisi.html">Elektronik</a></p></li>
+                <li style="padding-left:16px;"><p><a href="../kesehatan/perawatan-diri.php">Kesehatan</a></p></li>
+                <li style="padding-left:16px;"><p><a href="../elektronik/televisi.php">Elektronik</a></p></li>
               </div>
 
-              <li><p><a href="../kebutuhan rumah tangga/peralatan-kebersihan.html">Kebutuhan Rumah Tangga</a></p></li>
-              <li><p><a href="../fashion/fashion-pria.html">Fashion</a></p></li>
+              <li><p><a href="../kebutuhan rumah tangga/peralatan-kebersihan.php">Kebutuhan Rumah Tangga</a></p></li>
+              <li><p><a href="../fashion/fashion-pria.php">Fashion</a></p></li>
             </ul>
 
           </div>
@@ -339,7 +339,7 @@
 
       <!-- Copyright -->
       <div class="footer-copyright text-center py-3">© 2018 Copyright:
-        <a href="index.html"> Supermart.com</a> alright reserved.
+        <a href="index.php"> Supermart.com</a> alright reserved.
       </div>
       <!-- Copyright -->
 

@@ -256,16 +256,16 @@
 
             <ul class="list-unstyled">
               <div class="row">
-                <li style="padding-left:16px;"><p><a href="category/makanan/makanan-ringan.html">Makanan</a></p></li>
-                <li style="padding-left:16px;"><p><a href="category/minuman/minuman-ringan.html">Minuman</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/makanan/makanan-ringan.php">Makanan</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/minuman/minuman-ringan.php">Minuman</a></p></li>
               </div>
               <div class="row">
-                <li style="padding-left:16px;"><p><a href="category/kesehatan/perawatan-diri.html">Kesehatan</a></p></li>
-                <li style="padding-left:16px;"><p><a href="category/elektronik/televisi.html">Elektronik</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/kesehatan/perawatan-diri.php">Kesehatan</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/elektronik/televisi.php">Elektronik</a></p></li>
               </div>
 
-              <li><p><a href="category/kebutuhan rumah tangga/peralatan-kebersihan.html">Kebutuhan Rumah Tangga</a></p></li>
-              <li><p><a href="category/fashion/fashion-pria.html">Fashion</a></p></li>
+              <li><p><a href="category/kebutuhan rumah tangga/peralatan-kebersihan.php">Kebutuhan Rumah Tangga</a></p></li>
+              <li><p><a href="category/fashion/fashion-pria.php">Fashion</a></p></li>
             </ul>
 
           </div>
@@ -426,7 +426,7 @@
                 data :  'getDetail='+ getDetail,
                 /* memanggil fungsi getDetail dan mengirimkannya */
                 success : function(data){
-                $('.modal-data').html(data);
+                $('.modal-data').php(data);
                 /* menampilkan data dalam bentuk dokumen HTML */
                 }
             });
