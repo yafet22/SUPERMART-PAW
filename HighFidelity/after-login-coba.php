@@ -9,17 +9,18 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <script src="assets/jquery.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="assets/popper.js"></script>
+    <script src="assets/bootstrap.js"></script>
+    <script src="assets/mdb.js"></script>
+    
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/bootstrap.min.css">
     <link rel="stylesheet" href="style/bootstrap.css">
     <link rel="stylesheet" href="style/mdb.css">
     <link rel="stylesheet" href="webfonts/font-awesome-4.7.0/css/font-awesome.min.css">
-
-    <script src="assets/jquery.js"></script>
-    <script src="assets/popper.js"></script>
-    <script src="assets/bootstrap.js"></script>
-    <script src="assets/mdb.js"></script>
-    <script src="js/jquery.min.js"></script>
 
     <title>Supermarket</title>
 </head>
@@ -34,41 +35,35 @@
       }
     ?>
     <!--Untuk bagian header-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+    <nav class="navbar navbar-expand-lg navbar-dark p-0" style="background-color:#22A7F0">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+            </div>
+            <div class="img-wrapper float-right mt-1">
+                <img src="img/menu.png" id="menu-icon-phone" alt="icon-menu"style="width: 40px">
+                </div>
+            <div class="collapse navbar-collapse collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav mr-auto">
+            
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                <li id="profiledrop" class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <?php echo '<img src="image/profile/'.$_SESSION['image_name'].'" class="img-display mx-2" style="border-radius:50%;width:30px;height:30px" />'; echo $_SESSION['email']; ?> 
+                    </a>
+                    <div class="dropdown-menu pull-left" role="menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="after-login.php">Home</a>
+                    <a class="dropdown-item" href="profile.php">Profile</a>
+                    <a class="dropdown-item" href="shopping-list.php">Shopping List</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="logout-proses.php">Log Out</a>
+                    </div>
+                </li>
+                </ul>
+            </div>
         </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+    </nav>
 
     <nav id="navbar">
         <div class="container">

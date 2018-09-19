@@ -8,17 +8,19 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <script src="assets/jquery.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="assets/popper.js"></script>
+    <script src="assets/bootstrap.js"></script>
+    <script src="assets/mdb.js"></script>
+    
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/bootstrap.min.css">
     <link rel="stylesheet" href="style/bootstrap.css">
     <link rel="stylesheet" href="style/mdb.css">
     <link rel="stylesheet" href="webfonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
-    <script src="assets/jquery.js"></script>
-    <script src="assets/popper.js"></script>
-    <script src="assets/bootstrap.js"></script>
-    <script src="assets/mdb.js"></script>
-    <script src="js/jquery.min.js"></script>
 
     <title>Supermarket</title>
 </head>
@@ -31,41 +33,45 @@
         // exit;
         echo "<script type='text/javascript'>location='belum-login.php';</script>";
       }
+      else{
+        $text=$_SESSION['email'];
+      }
     ?>
     <!--Untuk bagian header-->
-    <header id="header-section">
+    <nav class="navbar navbar-expand-lg navbar-dark p-0" style="background-color:#22A7F0">
         <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-              <a href="index.php"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="after-login.php"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
             </div>
-            <div class="col-md-4">
-
+            <div class="img-wrapper float-right mt-1">
+                <img src="img/menu.png" id="menu-icon-phone" alt="icon-menu"style="width: 40px">
+                </div>
+            <div class="collapse navbar-collapse collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav mr-auto">
+                    
+                </ul>
+                <span>  <a href="shopping-list.php"><img id="shop-chart" src="img/shop-chart.png" class="img-display mx-2" style="width:30px;height:30px;" alt="shop-logo"></a></span>
+                <ul class="nav navbar-nav navbar-right">
+                <li id="profiledrop" class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <?php echo '<img src="image/profile/'.$_SESSION['image_name'].'" class="img-display mx-2" style="border-radius:50%;width:35px;height:35px" />'; echo $_SESSION['email']; ?> 
+                    </a>
+                    <div class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="after-login.php"><img id="shop-chart" src="img/homelogo.png" class="img-display mx-2" style="width:30px;height:30px;" alt="home-logo"><span style="margin-left: 45px;
+                    font-size: 18px;">Home</span></a>
+                    <a class="dropdown-item" href="profile.php"><img src="img/user-logo.png" class="img-display mx-2" style="width:30px;height:30px;" alt="user-logo"><span style="margin-left: 45px;
+                    font-size: 18px;">Profile</span></a>
+                    <a class="dropdown-item" href="shopping-list.php"><img id="shop-chart" src="img/shoplist.png" class="img-display mx-2" style="width:28px;height:30px;" alt="shop-chart"><span style="margin-left: 45px;
+                    font-size: 18px;">Shopping List</span></a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="logout-proses.php"><img id="logout-logo" src="img/logoutlogo.png" class="img-display mx-2" style="width:36px;height:30px;" alt="logout-logo"><span style="margin-left: 40px;
+                    font-size: 18px;">Log Out</span></a>
+                    </div>
+                </li>
+                </ul>
             </div>
-            <div class="col-md-4">
-              <a href="logreg-afterlogin.php"><img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
-              <a href="shopping-list.php"><img id="shop-chart" src="image/shop-chart.png" alt="shop-chart"></a>
-              <div class="desc"><a id="user" href="profile.php">
-              <?php 
-              $text=$_SESSION['email'];
-              $wordlimit=wordlimit($text);
-              echo $wordlimit;
-
-              function wordlimit($text,$limit=13){
-                  if(strlen($text)>$limit)
-                    $word=mb_substr($text,0,$limit-3)."...";
-                  else
-                    $word=$text;
-
-                    return $word;
-              }
-              ?>
-              </a>
-              </div>
-            </div>
-          </div>
         </div>
-    </header>
+    </nav>
 
     <nav id="navbar">
         <div class="container">
@@ -130,60 +136,44 @@
         </div>
     </nav>
 
-    <nav id="sidebar">
+     <nav id="sidebar" style="height:570px">
         <div class="container">
             <div class="menu-sidebar">
                 <div class="menu-title">
-                    Makanan
+                <?php echo '<img src="image/profile/'.$_SESSION['image_name'].'" class="img-display mx-2" style="border-radius:50%;width:35px;height:35px" />'; echo $_SESSION['email']; ?> 
                 </div>
                 <hr>
                 <div class="menu-content-sidebar">
-                    <li><a href="category/makanan/makanan-ringan.php">Makanan Ringan</a></li>
-                    <li><a href="category/makanan/makanan-beku.php">Makanan Beku</a></li>
-                    <li><a href="category/makanan/makanan-pokok.php">Makanan Pokok</a></li>
+                    <li><a href="after-login.php">Home</a></li>
+                    <li><a href="profile.php">Profile</a></li>
+                    <li><a href="shopping-list.php">Shopping List</a></li>
+                    <li><a href="logout-proses.php">Log Out</a></li>
                 </div>
                 <hr>
                 <div class="menu-title">
-                    Minuman
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                    <li><a href="category/minuman/minuman-ringan.php">Minuman Ringan</a></li>
-                    <li><a href="category/minuman/minuman-isotonik.php">Minuman Isotonik</a></li>
-                    <li><a href="category/minuman/minuman-soda.php">Minuman Soda</a></li>
+                    <a href="category/makanan/makanan-ringan-afterlogin.php">Makanan</a>
                 </div>
                 <hr>
                 <div class="menu-title">
-                    Kesehatan
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                  <li><a href="category/kesehatan/perawatan-diri.php">Perawatan Diri</a></li>
-                  <li><a href="category/kesehatan/perawatan-badan.php">Perawatan Badan</a></li>
-                  <li><a href="category/kesehatan/perawatan-rambut.php">Perawatan Rambut</a></li>
-                  <li><a href="category/kesehatan/perawatan-pria.php">Perawatan Pria</a></li>
-                  <li><a href="category/kesehatan/obat-obatan.php">Obat - obatan</a></li>
+                    <a href="category/minuman/minuman-ringan-afterlogin.php">Minuman</a>
                 </div>
                 <hr>
                 <div class="menu-title">
-                    Elektronik
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                  <li><a href="category/elektronik/televisi.php">Televisi</a></li>
-                  <li><a href="category/elektronik/aksesoris-komputer.php">Aksesoris Komputer</a></li>
-                  <li><a href="category/elektronik/aksesoris-handphone.php">Aksesoris Handphone</a></li>
-                </div>
+                    <a href="category/kesehatan/perawatan-diri-afterlogin.php">Kesehatan</a>
+                </div>        
                 <hr>
                 <div class="menu-title">
-                    Peralatan Rumah Tangga
+                  <a href="category/elektronik/televisi-afterlogin.php">Elektronik</a>
+                </div> 
+                <hr>
+                <div class="menu-title">
+                    <a href="category/fashion/fashion-pria-afterlogin.php">Fashion</a>
+                </div> 
+                <hr> 
+                <div class="menu-title">
+                  <a href="category/kebutuhan rumah tangga/peralatan-kebersihan-afterlogin.php">Peralatan Rumah Tangga</a>
                 </div>
                 <hr>
-                <div class="menu-content-sidebar">
-                  <li><a href="category/kebutuhan rumah tangga/peralatan-kebersihan.php">Peralatan Kebersihan</a></li>
-                  <li><a href="category/kebutuhan rumah tangga/peralatan-makan.php">Peralatan Makan</a></li>
-                  <li><a href="category/kebutuhan rumah tangga/peralatan-rumah-tangga.php">Peralatan Rumah Tangga</a></li>
-                </div>
             </div>
         </div>
     </nav>
@@ -234,7 +224,6 @@
               </div>
               <div class="bottom">
                       <a href="edit-profile.php"><button type="submit" class="btn btn-primary" style="display: block; margin: 0 auto;">Edit Profile</button></a>
-                      <a href="logout-proses.php"><button type="submit" class="btn btn-danger" style="display: block; margin: 0 auto;">Log-out</button></a>
               </div>
             </div>
           </div>
