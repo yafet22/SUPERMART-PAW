@@ -34,22 +34,34 @@
               // $result = mysql_query($q);
               $sql = "INSERT into user VALUES (NULL,'$nama','$user','$phone','$email','$pwd','$kode','T',0,'$fileName')";
           
-              $mail->sendEmail($email, $kode);
       
               if($conn->query($sql)==TRUE)
               {
                   // echo "<p class='info'>Berhasil Dikirim</p>";
+                  $mail->sendEmail($email, $kode);
                   echo "<script type='text/javascript'>alert('Berhasil membuat akun');location='logreg.php';</script>";
               }
               else
               {
-                  echo "<script type='text/javascript'>alert('Gagal Membuat Akun');location='regis.php';</script>";
+                  echo "<script type='text/javascript'>alert('Gagal membuat akun');location='profile.php';</script>";
               }
               
              }
           } 
           else{
-              echo "<h3>Failed! </h3>";
+            $sql = "INSERT into user VALUES (NULL,'$nama','$user','$phone','$email','$pwd','$kode','T',0,'default-pp.jpg')";
+          
+    
+            if($conn->query($sql)==TRUE)
+            {
+                // echo "<p class='info'>Berhasil Dikirim</p>";
+                $mail->sendEmail($email, $kode);
+                echo "<script type='text/javascript'>alert('Berhasil membuat akun');location='logreg.php';</script>";
+            }
+            else
+            {
+                echo "<script type='text/javascript'>alert('Gagal membuat akun');location='profile.php';</script>";
+            }
           }
     }
  

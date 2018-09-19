@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="style/mdb.css">
     <link rel="stylesheet" href="webfonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
-
     <title>Supermarket</title>
 </head>
 <body>
@@ -31,11 +30,11 @@
       {
         // echo " <p><center>Anda Belum Login.<br>Klik Link Dibawah ini Untuk Login.<br><a href=login.php>Disini</a></center></p>";
         // exit;
+        $text=$_SESSION['email'];
         echo "<script type='text/javascript'>location='belum-login.php';</script>";
       }
-      else if($_SESSION['role']!='admin')
-      {
-        echo "<script type='text/javascript'>location='bukan-admin.php';</script>";
+      else{
+        $text=$_SESSION['email'];
       }
     ?>
     <!--Untuk bagian header-->
@@ -51,20 +50,21 @@
                 <ul class="nav navbar-nav mr-auto">
                     
                 </ul>
+                <span>  <a href="shopping-list.php"><img id="shop-chart" src="img/shop-chart.png" class="img-display mx-2" style="width:30px;height:30px;" alt="shop-logo"></a></span>
                 <ul class="nav navbar-nav navbar-right">
                 <li id="profiledrop" class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <?php echo '<img src="image/profile/'.$_SESSION['image_name'].'" class="img-display mx-2" style="border-radius:50%;width:35px;height:35px" />'; echo'ADMIN'; ?> 
+                    <?php echo '<img src="image/profile/'.$_SESSION['image_name'].'" class="img-display mx-2" style="border-radius:50%;width:35px;height:35px" />'; echo $_SESSION['email']; ?> 
                     </a>
                     <div class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="home-admin.php"><img id="shop-chart" src="img/homelogo.png" class="img-display mx-2" style="width:30px;height:30px;" alt="home-logo"><span style="margin-left: 25px;
+                    <a class="dropdown-item" href="after-login.php"><img id="shop-chart" src="img/homelogo.png" class="img-display mx-2" style="width:30px;height:30px;" alt="home-logo"><span style="margin-left: 45px;
                     font-size: 18px;">Home</span></a>
-                    <a class="dropdown-item" href="profile-admin.php"><img src="img/user-logo.png" class="img-display mx-2" style="width:30px;height:30px;" alt="user-logo"><span style="margin-left: 25px;
+                    <a class="dropdown-item" href="profile.php"><img src="img/user-logo.png" class="img-display mx-2" style="width:30px;height:30px;" alt="user-logo"><span style="margin-left: 45px;
                     font-size: 18px;">Profile</span></a>
-                    <a class="dropdown-item" href="index-admin.php"><img id="shop-chart" src="img/shoplist.png" class="img-display mx-2" style="width:28px;height:30px;" alt="shop-chart"><span style="margin-left: 4px;
-                    font-size: 18px;">Admin Panel</span></a>
+                    <a class="dropdown-item" href="shopping-list.php"><img id="shop-chart" src="img/shoplist.png" class="img-display mx-2" style="width:28px;height:30px;" alt="shop-chart"><span style="margin-left: 45px;
+                    font-size: 18px;">Shopping List</span></a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="logout-proses.php"><img id="logout-logo" src="img/logoutlogo.png" class="img-display mx-2" style="width:36px;height:30px;" alt="logout-logo"><span style="margin-left: 14px;
+                    <a class="dropdown-item" href="logout-proses.php"><img id="logout-logo" src="img/logoutlogo.png" class="img-display mx-2" style="width:36px;height:30px;" alt="logout-logo"><span style="margin-left: 40px;
                     font-size: 18px;">Log Out</span></a>
                     </div>
                 </li>
@@ -80,55 +80,55 @@
                     <div class="dropdown">
                         <li class="menu">Makanan</li>
                         <div class="menu-content">
-                            <li><a href="category/makanan/makanan-ringan-admin.php">Makanan Ringan</a></li>
-                            <li><a href="category/makanan/makanan-beku-admin.php">Makanan Beku</a></li>
-                            <li><a href="category/makanan/makanan-pokok-admin.php">Makanan Pokok</a></li>
+                            <li><a href="category/makanan/makanan-ringan-afterlogin.php">Makanan Ringan</a></li>
+                            <li><a href="category/makanan/makanan-beku-afterlogin.php">Makanan Beku</a></li>
+                            <li><a href="category/makanan/makanan-pokok-afterlogin.php">Makanan Pokok</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Minuman</li>
                         <div class="menu-content">
-                            <li><a href="category/minuman/minuman-ringan-admin.php">Minuman Ringan</a></li>
-                            <li><a href="category/minuman/minuman-isotonik-admin.php">Minuman Isotonik</a></li>
-                            <li><a href="category/minuman/minuman-soda-admin.php">Minuman Soda</a></li>
+                            <li><a href="category/minuman/minuman-ringan-afterlogin.php">Minuman Ringan</a></li>
+                            <li><a href="category/minuman/minuman-isotonik-afterlogin.php">Minuman Isotonik</a></li>
+                            <li><a href="category/minuman/minuman-soda-afterlogin.php">Minuman Soda</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Kesehatan</li>
                         <div class="menu-content">
-                            <li><a href="category/kesehatan/perawatan-diri-admin.php">Perawatan Diri</a></li>
-                            <li><a href="category/kesehatan/perawatan-badan-admin.php">Perawatan Badan</a></li>
-                            <li><a href="category/kesehatan/perawatan-rambut-admin.php">Perawatan Rambut</a></li>
-                            <li><a href="category/kesehatan/perawatan-pria-admin.php">Perawatan Pria</a></li>
-                            <li><a href="category/kesehatan/obat-obatan-admin.php">Obat - obatan</a></li>
+                            <li><a href="category/kesehatan/perawatan-diri-afterlogin.php">Perawatan Diri</a></li>
+                            <li><a href="category/kesehatan/perawatan-badan-afterlogin.php">Perawatan Badan</a></li>
+                            <li><a href="category/kesehatan/perawatan-rambut-afterlogin.php">Perawatan Rambut</a></li>
+                            <li><a href="category/kesehatan/perawatan-pria-afterlogin.php">Perawatan Pria</a></li>
+                            <li><a href="category/kesehatan/obat-obatan-afterlogin.php">Obat - obatan</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Elektronik</li>
                         <div class="menu-content">
-                            <li><a href="category/elektronik/televisi-admin.php">Televisi</a></li>
-                            <li><a href="category/elektronik/aksesoris-komputer-admin.php">Aksesoris Komputer</a></li>
-                            <li><a href="category/elektronik/aksesoris-handphone-admin.php">Aksesoris Handphone</a></li>
+                            <li><a href="category/elektronik/televisi-afterlogin.php">Televisi</a></li>
+                            <li><a href="category/elektronik/aksesoris-komputer-afterlogin.php">Aksesoris Komputer</a></li>
+                            <li><a href="category/elektronik/aksesoris-handphone-afterlogin.php">Aksesoris Handphone</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Kebutuhan Rumah Tangga</li>
                         <div class="menu-content">
-                            <li><a href="category/kebutuhan rumah tangga/peralatan-kebersihan-admin.php">Peralatan Kebersihan</a></li>
-                            <li><a href="category/kebutuhan rumah tangga/peralatan-makan-admin.php">Peralatan Makan</a></li>
-                            <li><a href="category/kebutuhan rumah tangga/peralatan-rumah-tangga-admin.php">Peralatan Rumah Tangga</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-kebersihan-afterlogin.php">Peralatan Kebersihan</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-makan-afterlogin.php">Peralatan Makan</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-rumah-tangga-afterlogin.php">Peralatan Rumah Tangga</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Fashion</li>
                         <div class="menu-content">
-                            <li><a href="category/fashion/fashion-pria-admin.php">Fashion Pria</a></li>
-                            <li><a href="category/fashion/fashion-wanita-admin.php">Fashion Wanita</a></li>
+                            <li><a href="category/fashion/fashion-pria-afterlogin.php">Fashion Pria</a></li>
+                            <li><a href="category/fashion/fashion-wanita-afterlogin.php">Fashion Wanita</a></li>
                         </div>
                     </div>
                 </ul>
@@ -136,7 +136,7 @@
         </div>
     </nav>
 
-     <nav id="sidebar" style="height:570px">
+    <nav id="sidebar" style="height:570px">
         <div class="container">
             <div class="menu-sidebar">
                 <div class="menu-title">
@@ -144,95 +144,180 @@
                 </div>
                 <hr>
                 <div class="menu-content-sidebar">
-                    <li><a href="home-admin.php">Home</a></li>
-                    <li><a href="profile-admin.php">Profile</a></li>
-                    <li><a href="index-admin.php">Admin Panel</a></li>
+                    <li><a href="after-login.php">Home</a></li>
+                    <li><a href="profile.php">Profile</a></li>
+                    <li><a href="shopping-list.php">Shopping List</a></li>
                     <li><a href="logout-proses.php">Log Out</a></li>
                 </div>
                 <hr>
                 <div class="menu-title">
-                    <a href="category/makanan/makanan-ringan-admin.php">Makanan</a>
+                    <a href="category/makanan/makanan-ringan-afterlogin.php">Makanan</a>
                 </div>
                 <hr>
                 <div class="menu-title">
-                    <a href="category/minuman/minuman-ringan-admin.php">Minuman</a>
+                    <a href="category/minuman/minuman-ringan-afterlogin.php">Minuman</a>
                 </div>
                 <hr>
                 <div class="menu-title">
-                    <a href="category/kesehatan/perawatan-diri-admin.php">Kesehatan</a>
+                    <a href="category/kesehatan/perawatan-diri-afterlogin.php">Kesehatan</a>
                 </div>        
                 <hr>
                 <div class="menu-title">
-                  <a href="category/elektronik/televisi-admin.php">Elektronik</a>
+                  <a href="category/elektronik/televisi-afterlogin.php">Elektronik</a>
                 </div> 
                 <hr>
                 <div class="menu-title">
-                    <a href="category/fashion/fashion-pria-admin.php">Fashion</a>
+                    <a href="category/fashion/fashion-pria-afterlogin.php">Fashion</a>
                 </div> 
                 <hr> 
                 <div class="menu-title">
-                  <a href="category/kebutuhan rumah tangga/peralatan-kebersihan-admin.php">Peralatan Rumah Tangga</a>
+                  <a href="category/kebutuhan rumah tangga/peralatan-kebersihan-afterlogin.php">Peralatan Rumah Tangga</a>
                 </div>
                 <hr>
             </div>
         </div>
     </nav>
 
-
     <div class="hover">
 
     </div>
 
     <!--Bagian Isi-->
-
-    <section class="login">
-      <div class="container title_hightlight">
-        <h2 class="font-weight-bold">PROFILE</h2>
-      </div>
-      <br>
-      <div class="container formlogin">
-        <div class="row">
-          <div class="col-md-4">
-
-          </div>
-          <div class="col-md-4">
-            <div class="card hovercard">
-              <div class="cardheader">
-
-              </div>
-              <div class="avatar">
-                    <?php 
-                        echo '<img src="image/profile/'.$_SESSION['image_name'].'" class="img-display" />'; 
-                  ?>
-              </div>
-              <div class="info">
-                  <div class="title">
-                      <?php 
-                        echo $_SESSION['username'];
-                       ?>
+    <section class="top">
+        <div class="container slider">
+            <br>
+            <div class="container innerslider">
+                <div id="sliderinti" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                    <li data-target="#sliderinti" data-slide-to="0" class="active"></li>
+                    <li data-target="#sliderinti" data-slide-to="1"></li>
+                    <li data-target="#sliderinti" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/slider1.jpg" style="width:100%;">
                     </div>
-                  <div class="desc">
-                        <?php 
-                        echo $_SESSION['telp'];
-                       ?>
+                    <div class="carousel-item">
+                      <img src="img/slider2.jpg" style="width:100%;">
                     </div>
-                  <div class="desc">
-                       <?php 
-                        echo $_SESSION['email'];
-                       ?>
+                    <div class="carousel-item">
+                      <img src="img/slider3.jpg" style="width:100%;">
                     </div>
-              </div>
-              <div class="bottom">
-                    <a href="edit-profile-admin.php"><button type="submit" class="btn btn-primary" style="display: block; margin: 0 auto;">Edit Profile</button></a>
-              </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#sliderinti" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#sliderinti" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
             </div>
-          </div>
-          <div class="col-md-4">
+            <br>
+        </div>
+    </section>
 
+    <section class="kategori">
+      <div class="container title_hightlight">
+        <h2 class="font-weight-bold">HIGHLIGHT</h2>
+      </div>
+      <div class="container minuman tipe">
+        <div class="row">
+          <div class="col-md-3">
+              <img src="img/minuman.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/minuman1.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/minuman2.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/minuman1.jpg" style="width:100%;">
           </div>
         </div>
       </div>
-
+      <div class="container makanan tipe">
+        <div class="row">
+          <div class="col-md-3">
+              <img src="img/makanan1.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/makanan1.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/makanan1.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/makanan.jpg" style="width:100%;">
+          </div>
+        </div>
+      </div>
+      <div class="container kesehatan tipe">
+        <div class="row">
+          <div class="col-md-3">
+              <img src="img/kesehatan.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/kesehatan1.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/kesehatan2.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/kesehatan3.jpg" style="width:100%;">
+          </div>
+        </div>
+      </div>
+      <div class="container elektronik tipe">
+        <div class="row">
+          <div class="col-md-3">
+              <img src="img/elektronik1.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/elektronik1.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/elektronik1.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/elektronik.jpg" style="width:100%;">
+          </div>
+        </div>
+      </div>
+      <div class="container rumahtangga tipe">
+        <div class="row">
+          <div class="col-md-3">
+              <img src="img/rumahtangga.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/rumahtangga1.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/rumahtangga2.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/rumahtangga3.jpg" style="width:100%;">
+          </div>
+        </div>
+      </div>
+      <div class="container fashion tipe">
+        <div class="row">
+          <div class="col-md-3">
+              <img src="img/fashion3.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/fashion2.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/fashion1.jpg" style="width:100%;">
+          </div>
+          <div class="col-md-3">
+              <img src="img/fashion.jpg" style="width:100%;">
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
@@ -265,16 +350,16 @@
 
             <ul class="list-unstyled">
               <div class="row">
-                <li style="padding-left:16px;"><p><a href="../makanan/makanan-ringan.php">Makanan</a></p></li>
-                <li style="padding-left:16px;"><p><a href="../minuman/minuman-ringan.php">Minuman</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/makanan/makanan-ringan.php">Makanan</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/minuman/minuman-ringan.php">Minuman</a></p></li>
               </div>
               <div class="row">
-                <li style="padding-left:16px;"><p><a href="../kesehatan/perawatan-diri.php">Kesehatan</a></p></li>
-                <li style="padding-left:16px;"><p><a href="../elektronik/televisi.php">Elektronik</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/kesehatan/perawatan-diri.php">Kesehatan</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/elektronik/televisi.php">Elektronik</a></p></li>
               </div>
 
-              <li><p><a href="../kebutuhan rumah tangga/peralatan-kebersihan.php">Kebutuhan Rumah Tangga</a></p></li>
-              <li><p><a href="../fashion/fashion-pria.php">Fashion</a></p></li>
+              <li><p><a href="category/kebutuhan rumah tangga/peralatan-kebersihan.php">Kebutuhan Rumah Tangga</a></p></li>
+              <li><p><a href="category/fashion/fashion-pria.php">Fashion</a></p></li>
             </ul>
 
           </div>
@@ -344,7 +429,6 @@
       <!-- Copyright -->
 
     </footer>
-
 
     <!-- Footer -->
     <!-- Button trigger modal    -->
