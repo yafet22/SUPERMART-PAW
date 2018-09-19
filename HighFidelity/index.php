@@ -8,40 +8,47 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <script src="assets/jquery.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="assets/popper.js"></script>
+    <script src="assets/bootstrap.js"></script>
+    <script src="assets/mdb.js"></script>
+    
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/bootstrap.min.css">
     <link rel="stylesheet" href="style/bootstrap.css">
     <link rel="stylesheet" href="style/mdb.css">
     <link rel="stylesheet" href="webfonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
-    <script src="assets/jquery.js"></script>
-    <script src="assets/popper.js"></script>
-    <script src="assets/bootstrap.js"></script>
-    <script src="assets/mdb.js"></script>
-    <script src="js/jquery.min.js"></script>
 
     <title>Supermarket</title>
 </head>
 <body>
+    <?php
+      session_start();
+    ?>
     <!--Untuk bagian header-->
-    <header id="header-section">
+    <nav class="navbar navbar-expand-lg navbar-dark p-0" style="background-color:#22A7F0">
         <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-              <img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="home-admin.php"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
             </div>
-            <div class="col-md-4">
-
-            </div>
-            <div class="col-md-4">
-                <div class="row pull-right align-items-center">
-                    <a href="logreg.php"><h4 style="color:white;" width=auto>LOGIN<h4>
-                    <img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
+            <div class="img-wrapper float-right mt-1">
+                <img src="img/menu.png" id="menu-icon-phone" alt="icon-menu"style="width: 40px">
                 </div>
+            <div class="collapse navbar-collapse collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav mr-auto">
+                    
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                <li id="loginlink" class="nav-item dropdown">
+                <p><b><a href="logreg.php" style="color:white;">Silahkan Login/Register</a></p></b>
+                </li>
+                </ul>
             </div>
-          </div>
         </div>
-    </header>
+    </nav>
 
     <nav id="navbar">
         <div class="container">

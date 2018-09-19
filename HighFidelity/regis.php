@@ -29,24 +29,26 @@
 
 <body>
   <!--Untuk bagian header-->
-  <header id="header-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <a href="index.php"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+  <nav class="navbar navbar-expand-lg navbar-dark p-0" style="background-color:#22A7F0">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="home-admin.php"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+            </div>
+            <div class="img-wrapper float-right mt-1">
+                <img src="img/menu.png" id="menu-icon-phone" alt="icon-menu"style="width: 40px">
+                </div>
+            <div class="collapse navbar-collapse collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav mr-auto">
+                    
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                <li id="loginlink" class="nav-item dropdown">
+                <p><b><a href="logreg.php" style="color:white;">Silahkan Login/Register</a></p></b>
+                </li>
+                </ul>
+            </div>
         </div>
-        <div class="col-md-4">
-
-        </div>
-        <div class="col-md-4">
-          <div class="row pull-right align-items-center">
-            <a href="logreg.php"><h4 style="color:white;" width=auto>LOGIN<h4>
-            <img id="user-logo" src="img/usernew.png" alt="user-logo"></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+    </nav>
 
   <nav id="navbar">
         <div class="container">

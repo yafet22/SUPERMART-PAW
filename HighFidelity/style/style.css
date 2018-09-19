@@ -658,3 +658,19 @@ color: grey;
     width: 100%;
 }
 /*Profile Pic End*/
+#loginlink:link {
+    text-decoration: none;
+}
+
+#loginlink:visited {
+    text-decoration: none;
+}
+
+#loginlink:hover {
+    color: #427fed;
+    text-decoration: underline;
+}
+
+#loginlink:active {
+    text-decoration: underline;
+}
