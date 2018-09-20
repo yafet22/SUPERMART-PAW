@@ -25,9 +25,6 @@
     <title>Supermarket</title>
 </head>
 <body>
-    <?php
-      session_start();
-    ?>
     <!--Untuk bagian header-->
     <nav class="navbar navbar-expand-lg navbar-dark p-0" style="background-color:#22A7F0">
         <div class="container">

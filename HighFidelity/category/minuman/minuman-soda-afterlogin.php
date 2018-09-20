@@ -1,3 +1,4 @@
+<?php  session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +26,6 @@
 </head>
 <body>
     <?php
-      session_start();
       if (!isset($_SESSION['email']))
       {
         // echo " <p><center>Anda Belum Login.<br>Klik Link Dibawah ini Untuk Login.<br><a href=login.php>Disini</a></center></p>";

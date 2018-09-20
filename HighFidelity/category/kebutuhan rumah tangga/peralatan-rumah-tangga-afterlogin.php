@@ -1,3 +1,4 @@
+<?php  session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +27,6 @@
 </head>
 <body>
     <?php
-      session_start();
       if (!isset($_SESSION['email']))
       {
         // echo " <p><center>Anda Belum Login.<br>Klik Link Dibawah ini Untuk Login.<br><a href=login.php>Disini</a></center></p>";
@@ -335,7 +335,7 @@
               <li><p><a href="../kebutuhan rumah tangga/peralatan-kebersihan-afterlogin.php">Kebutuhan Rumah Tangga</a></p></li>
               <li><p><a href="../fashion/fashion-pria-afterlogin.php">Fashion</a></p></li>
             </ul>
-            
+
           </div>
           <!-- Grid column -->
 
