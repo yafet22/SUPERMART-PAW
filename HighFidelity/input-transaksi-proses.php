@@ -7,11 +7,15 @@
     $namabarang = $_GET['namabarang'];
     $harga = $_GET['harga'];
     $jumlah = $_POST['jumlah'];
+    $status = 'hold';
+    // $tanggal = $date->getTimestamp();          
 
     $user = "SELECT * FROM user WHERE id=$iduser";
     $result2=mysqli_query($conn,$user);
     $data = mysqli_fetch_assoc($result2);
     $sessionuser = $data['session'];
+    $namauser = $data['username'];
+
 
     $cek = "SELECT * FROM transaksi WHERE idbarang='$idbarang' AND idpembeli='$iduser' AND sessionpembeli='$sessionuser'";
     $result=mysqli_query($conn,$cek);
@@ -22,18 +26,18 @@
 
     if(mysqli_num_rows($result) == 0)
     {
-        $sql = "INSERT into transaksi VALUES (NULL,'$iduser','$sessionuser','$idbarang','$namabarang','$jumlah','$jumlah'*'$harga')";
+        $sql = "INSERT into transaksi VALUES (NULL,'$iduser','$namauser','$sessionuser','$idbarang','$namabarang','$jumlah','$jumlah'*'$harga',NOW(),'$status')";
       
           if($conn->query($sql)==TRUE)
           {
               $sql2 = "UPDATE barang SET stock=(stock-'$jumlah') WHERE idbarang='$idbarang'";
               $result2=mysqli_query($conn,$sql2);
               // echo "<p class='info'>Berhasil Dikirim</p>";
-              echo "<script type='text/javascript'>location='shopping-list.php';alert('Berhasil memasukan kedalam chart');</script>";
+              echo "<script type='text/javascript'>location='shopping-list.php';</script>";
           }
           else
           {
-              echo "<script type='text/javascript'>window.history.back();alert('Gagal memasukan kedalam chart');</script>";
+              echo "<script type='text/javascript'>alert('Gagal memasukan kedalam chart');window.history.back();</script>";
           }
     }
     else{

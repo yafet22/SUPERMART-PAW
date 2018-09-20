@@ -30,7 +30,22 @@ if($_POST['getDetail']) {
                   <div class="form-group row">
                             <label class="col-sm-4 col-form-label">Status Aktif</label>
                             <div class="col-sm-8">
-                            <input type="text" class="form-control" value="<?php echo $row['aktif'];?>" name="aktif">
+                            <?php
+                                if($row['aktif']=="Y")
+                                {
+                                    echo'<label class="radio-inline">';
+                                    echo'<input type="radio" name="aktif" id="optionsRadiosInline1" value="Y" checked> Y </label>';
+                                    echo'<label class="radio-inline" style="margin-left:20px;" >';
+                                    echo'<input type="radio" name="aktif" id="optionsRadiosInline2" value="T"> T </label>';
+                                }
+                                else
+                                {
+                                    echo'<label class="radio-inline">';
+                                    echo'<input type="radio" name="aktif" id="optionsRadiosInline1" value="Y"> Y </label>';
+                                    echo'<label class="radio-inline" style="margin-left:20px;">';
+                                    echo'<input type="radio" name="aktif" id="optionsRadiosInline2" value="T" checked> T </label>';
+                                }
+                            ?>
                             </div>
                             </div>
                   <div class="modal-footer">

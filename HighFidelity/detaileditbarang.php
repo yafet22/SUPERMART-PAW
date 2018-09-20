@@ -14,7 +14,7 @@ if($_POST['getDetail']) {
                              </div>
                   <div class="form-group">
                              <label for="kbarang">Kategori: </label>
-                             <input type="text" class="form-control" id="kbarang" placeholder="Enter kategori barang" name="kbarang" value="Minuman">
+                             <input type="text" class="form-control" id="kbarang" placeholder="Enter kategori barang" name="kbarang" value="<?php echo $row['kategori'];?>"  readonly>
                              </div>
                   <div class="form-group">
                              <label for="hbarang">Harga: </label>

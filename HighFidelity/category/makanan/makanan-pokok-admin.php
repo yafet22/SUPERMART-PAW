@@ -42,7 +42,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark p-0" style="background-color:#22A7F0">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="home-admin.php"><img id="logo" src="../../img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+                <a class="navbar-brand" href="../../home-admin.php"><img id="logo" src="../../img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
             </div>
             <div class="img-wrapper float-right mt-1">
                 <img src="../../img/menu.png" id="menu-icon-phone" alt="icon-menu"style="width: 40px">
@@ -378,7 +378,7 @@
                 </div>
                 <div class="container">
                   <!-- Google +-->
-                  <a class="btn-gplus col-md-6" href="https://www.google.com/"><i class="fa fa-google-plus"></i></a>
+                  <a class="btn-gplus col-md-6" href="https://www.google.com/"><i class="fa fa-google-plus" style="width:38px;"></i></a>
                 </div>
                 <div class="container">
                   <!-- Dribbble -->

@@ -194,69 +194,6 @@
 
                     }
                 ?>
-                    <!-- <div class="card col-md-3 mx-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Ultramilk.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Ultra Milk Coklat</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ultraProduk">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Indomilk.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Indomilk</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#indomilkProduk">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Indomilk Kaleng.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Indomilk Kaleng</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#kalengProduk">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Cimory.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Cimory</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cimoryProduk">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Makanan Ringan/Indomilk buah.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Indomilk Pisang</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#indomilkPisang">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Kratingdaeng.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Kratingdaeng</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#kratingdaengProduk">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/marjan.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Sirup Marjan</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#marjanProduk">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/teh botol.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Teh Botol</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tehBotolProduk">
-                            Info
-                        </button>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -343,7 +280,7 @@
                 </div>
                 <div class="container">
                   <!-- Google +-->
-                  <a class="btn-gplus col-md-6" href="https://www.google.com/"><i class="fa fa-google-plus"></i></a>
+                  <a class="btn-gplus col-md-6" href="https://www.google.com/"><i class="fa fa-google-plus" style="width:38px;"></i></a>
                 </div>
                 <div class="container">
                   <!-- Dribbble -->

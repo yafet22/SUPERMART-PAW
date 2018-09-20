@@ -136,64 +136,6 @@
         </div>
     </nav>
 
-    <nav id="sidebar">
-        <div class="container">
-            <div class="menu-sidebar">
-                <div class="menu-title">
-                    Makanan
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                    <li><a href="category/makanan/makanan-ringan.php">Makanan Ringan</a></li>
-                    <li><a href="category/makanan/makanan-beku.php">Makanan Beku</a></li>
-                    <li><a href="category/makanan/makanan-pokok.php">Makanan Pokok</a></li>
-                </div>
-                <hr>
-                <div class="menu-title">
-                    Minuman
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                    <li><a href="category/minuman/minuman-ringan.php">Minuman Ringan</a></li>
-                    <li><a href="category/minuman/minuman-isotonik.php">Minuman Isotonik</a></li>
-                    <li><a href="category/minuman/minuman-soda.php">Minuman Soda</a></li>
-                </div>
-                <hr>
-                <div class="menu-title">
-                    Kesehatan
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                  <li><a href="category/kesehatan/perawatan-diri.php">Perawatan Diri</a></li>
-                  <li><a href="category/kesehatan/perawatan-badan.php">Perawatan Badan</a></li>
-                  <li><a href="category/kesehatan/perawatan-rambut.php">Perawatan Rambut</a></li>
-                  <li><a href="category/kesehatan/perawatan-pria.php">Perawatan Pria</a></li>
-                  <li><a href="category/kesehatan/obat-obatan.php">Obat - obatan</a></li>
-                </div>
-                <hr>
-                <div class="menu-title">
-                    Elektronik
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                  <li><a href="category/elektronik/televisi.php">Televisi</a></li>
-                  <li><a href="category/elektronik/aksesoris-komputer.php">Aksesoris Komputer</a></li>
-                  <li><a href="category/elektronik/aksesoris-handphone.php">Aksesoris Handphone</a></li>
-                </div>
-                <hr>
-                <div class="menu-title">
-                    Peralatan Rumah Tangga
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                  <li><a href="category/kebutuhan rumah tangga/peralatan-kebersihan.php">Peralatan Kebersihan</a></li>
-                  <li><a href="category/kebutuhan rumah tangga/peralatan-makan.php">Peralatan Makan</a></li>
-                  <li><a href="category/kebutuhan rumah tangga/peralatan-rumah-tangga.php">Peralatan Rumah Tangga</a></li>
-                </div>
-            </div>
-        </div>
-    </nav>
-
      <nav id="sidebar" style="height:570px">
         <div class="container">
             <div class="menu-sidebar">
@@ -354,16 +296,16 @@
 
             <ul class="list-unstyled">
               <div class="row">
-                <li style="padding-left:16px;"><p><a href="category/makanan/makanan-ringan.php">Makanan</a></p></li>
-                <li style="padding-left:16px;"><p><a href="category/minuman/minuman-ringan.php">Minuman</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/makanan/makanan-ringan-admin.php">Makanan</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/minuman/minuman-ringan-admin.php">Minuman</a></p></li>
               </div>
               <div class="row">
-                <li style="padding-left:16px;"><p><a href="category/kesehatan/perawatan-diri.php">Kesehatan</a></p></li>
-                <li style="padding-left:16px;"><p><a href="category/elektronik/televisi.php">Elektronik</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/kesehatan/perawatan-diri-admin.php">Kesehatan</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/elektronik/televisi-admin.php">Elektronik</a></p></li>
               </div>
 
-              <li><p><a href="category/kebutuhan rumah tangga/peralatan-kebersihan.php">Kebutuhan Rumah Tangga</a></p></li>
-              <li><p><a href="category/fashion/fashion-pria.php">Fashion</a></p></li>
+              <li><p><a href="category/kebutuhan rumah tangga/peralatan-kebersihan-admin.php">Kebutuhan Rumah Tangga</a></p></li>
+              <li><p><a href="category/fashion/fashion-pria-admin.php">Fashion</a></p></li>
             </ul>
 
           </div>
@@ -406,7 +348,7 @@
                 </div>
                 <div class="container">
                   <!-- Google +-->
-                  <a class="btn-gplus col-md-6" href="https://www.google.com/"><i class="fa fa-google-plus"></i></a>
+                  <a class="btn-gplus col-md-6" href="https://www.google.com/"><i class="fa fa-google-plus" style="width:38px;"></i></a>
                 </div>
                 <div class="container">
                   <!-- Dribbble -->

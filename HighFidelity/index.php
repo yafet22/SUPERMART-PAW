@@ -155,6 +155,7 @@
     <!--Bagian Isi-->
     <section class="top">
         <div class="container slider">
+            <br>
             <div class="container innerslider">
                 <div id="sliderinti" class="carousel slide" data-ride="carousel">
                   <ol class="carousel-indicators">
@@ -183,16 +184,7 @@
                   </a>
                 </div>
             </div>
-            <div class="container highlight">
-                <div class="row">
-                    <div class="col-md-6">
-                        <img src="img/slider2.jpg" style="width:100%;">
-                    </div>
-                    <div class="col-md-6">
-                        <img src="img/slider3.jpg" style="width:100%;">
-                    </div>
-                </div>
-            </div>
+            <br>
         </div>
     </section>
 
@@ -376,7 +368,7 @@
             <div class="row sosmed">
                 <div class="container">
                   <!-- Facebook -->
-                  <a class="btn-fb col-md-6" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                  <a class="btn-fb col-md-6" href="https://www.facebook.com/" style=""><i class="fa fa-facebook"></i></a>
                 </div>
                 <div class="container">
                   <!-- Twitter -->
@@ -384,7 +376,7 @@
                 </div>
                 <div class="container">
                   <!-- Google +-->
-                  <a class="btn-gplus col-md-6" href="https://www.google.com/"><i class="fa fa-google-plus"></i></a>
+                  <a class="btn-gplus col-md-6" href="https://www.google.com/"><i class="fa fa-google-plus" style="width:38px;"></i></a>
                 </div>
                 <div class="container">
                   <!-- Dribbble -->

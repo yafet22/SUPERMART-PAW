@@ -16,7 +16,7 @@
         $result2=mysqli_query($conn,$sql2);
         if($result && $result2)
         {
-            echo "<script type='text/javascript'>location='shopping-list.php';alert('Berhasil update chart');</script>";
+            echo "<script type='text/javascript'>alert('Berhasil update chart');location='shopping-list.php';</script>";
         }
 
     }      

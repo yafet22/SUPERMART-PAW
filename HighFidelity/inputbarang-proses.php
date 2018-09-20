@@ -21,11 +21,11 @@
         // $result = mysql_query($q);
         
             if ($conn->query($sql)==TRUE) {
-                echo "<script type='text/javascript'>alert('Berhasil menambah barang');location='category/minuman/minuman-ringan-admin.php';</script>";
+                echo "<script type='text/javascript'>alert('Berhasil menambah barang');window.history.go(-1);</script>";
             }
             else
             {
-                echo "<script type='text/javascript'>alert('Gagal Menambag barang');location='category/minuman/minuman-ringan-admin.php';</script>";
+                echo "<script type='text/javascript'>alert('Gagal Menambag barang');>window.history.back();</script>";
             }
         }
     } 

@@ -1,6 +1,11 @@
 body{
     margin: 0;
     padding: 0;
+    padding-right: 0px !important
+}
+
+.modal-open {
+    overflow-y: auto;
 }
 
 .container-menu{
@@ -674,3 +679,4 @@ color: grey;
 #loginlink:active {
     text-decoration: underline;
 }
+

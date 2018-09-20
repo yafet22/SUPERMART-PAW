@@ -21,18 +21,30 @@
           
           if ($result)
           {
-              echo "<script type='text/javascript'>alert('Berhasil Mengubah Data Barang');location='category/minuman/minuman-ringan-admin.php';</script>";
+              echo "<script type='text/javascript'>alert('Berhasil Mengubah Data Barang');window.history.go(-1);</script>";
               echo "Record updated successfully";
           }
           else
           {
-            echo "<script type='text/javascript'>alert('Gagal Mengubah Data Barang');location='category/minuman/minuman-ringan-admin.php';</script>";
+            echo "<script type='text/javascript'>alert('Gagal Mengubah Data Barang');window.history.go(-1);</script>";
             echo "Error updating record: " . mysqli_error($conn);
           }
           }
       } 
       else{
-          echo "<h3>Failed! </h3>";
+            $sql = "UPDATE barang SET namabarang='$nama', kategori='$kategori', harga='$harga', stock='$stock', deskripsi='$deskripsi' WHERE idbarang='$id'";
+            $result=mysqli_query($conn,$sql);
+            
+            if ($result)
+            {
+                echo "<script type='text/javascript'>alert('Berhasil Mengubah Data Barang');window.history.go(-1);</script>";
+                echo "Record updated successfully";
+            }
+            else
+            {
+            echo "<script type='text/javascript'>alert('Gagal Mengubah Data Barang');window.history.go(-1);</script>";
+            echo "Error updating record: " . mysqli_error($conn);
+            }
       }
       } 
       else 

@@ -217,6 +217,7 @@
                     <a class="dropdown-item" href="index-admin-3.php">By ID Transaksi</a>
                     <a class="dropdown-item" href="index-admin-3-byuser.php">By ID User</a>
                     <a class="dropdown-item" href="index-admin-3-bybarang.php">By ID Barang</a>
+                    <a class="dropdown-item" href="index-admin-3-bydate.php">By ID Tanggal</a>
                 </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
@@ -227,12 +228,15 @@
             <table id=tableadmin3 class="table table-bordered" cellpadding="5" cellspacing="0" width="100%">
                 <tr style="background-color:#4285f4;color:white;text-align:center;">
                     <th class="font-weight-bold">No</th>
-                    <th class="font-weight-bold">Id-Transaksi</th>
-                    <th class="font-weight-bold">Id-Pembeli</th>
-                    <th class="font-weight-bold">Id-Barang</th>
-                    <th class="font-weight-bold">Nama-Barang</th>
-                    <th class="font-weight-bold">Jumlah-Barang</th>
+                    <th class="font-weight-bold">Id Transaksi</th>
+                    <th class="font-weight-bold">Id Pembeli</th>
+                    <th class="font-weight-bold">Nama Pembeli</th>
+                    <th class="font-weight-bold">Id Barang</th>
+                    <th class="font-weight-bold">Nama Barang</th>
+                    <th class="font-weight-bold">Jumlah Barang</th>
+                    <th class="font-weight-bold">Tanggal</th>
                     <th class="font-weight-bold">Total Harga</th>
+                    <th class="font-weight-bold">Status</th>
                     <!-- <th> </th> -->
                 </tr>
 
@@ -254,10 +258,13 @@
                         echo '<td>'.$no.'</td>';
                         echo '<td>'.$data['idtransaksi'].'</td>';
                         echo '<td>'.$data['idpembeli'].'</td>';
+                        echo '<td>'.$data['namapembeli'].'</td>';
                         echo '<td>'.$data['idbarang'].'</td>';
                         echo '<td>'.$data['namabarang'].'</td>';
                         echo '<td>'.$data['jumlahbarang'].'</td>';
+                        echo '<td>'.date_format(new DateTime($data['tanggal']),'g:ia \o\n l jS F Y').'</td>'; 
                         echo '<td>'.$data['totalharga'].'</td>';  
+                        echo '<td>'.$data['status'].'</td>';   
                         // echo '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#show" data-id="'.$data['id'].'">
                         // Edit</button><a href="hapus-user.php?id='.$data['id'].'""><button type="button" class="btn btn-warning">Hapus</button></a></td>';
                         // echo '<td><a href="edit-user.php?id='.$data['id'].'" data-toggle="modal" data-target="#edituser" style="color:blue;">Edit</a> / <a href="hapus-user.php?id='.$data['id'].'" style="color:blue;" onclick="return confirm(\'Yakin?\')">Hapus</a></td>';
@@ -266,26 +273,6 @@
                         $total=$total+$data['totalharga'];
 
                     }
-                        // echo'<table id=tableadmin class="table" cellpadding="5" cellspacing="0" width="100%">';
-                        // echo'<tr>';
-                        // echo'<th>Total Pendapatan</th>';
-                        // echo'<th></th>';
-                        // echo'<th></th>';
-                        // echo'<th></th>';
-                        // echo'<th></th>';
-                        // echo'<th></th>';
-                        // echo'<th>'.$total.'</th>';
-                        // echo'</tr>';
-
-                        echo '<tr style="text-align:center;">';
-                        echo '<td>Total Pendapatan</td>';
-                        echo '<td> </td>';
-                        echo '<td> </td>';
-                        echo '<td> </td>';
-                        echo '<td> </td>';
-                        echo '<td> </td>';
-                        echo '<td>'.$total.'</td>';  
-                        echo '</tr>';
 
                 }
                 ?>
@@ -325,16 +312,16 @@
 
             <ul class="list-unstyled">
               <div class="row">
-                <li style="padding-left:16px;"><p><a href="category/makanan/makanan-ringan.php">Makanan</a></p></li>
-                <li style="padding-left:16px;"><p><a href="category/minuman/minuman-ringan.php">Minuman</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/makanan/makanan-ringan-admin.php">Makanan</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/minuman/minuman-ringan-admin.php">Minuman</a></p></li>
               </div>
               <div class="row">
-                <li style="padding-left:16px;"><p><a href="category/kesehatan/perawatan-diri.php">Kesehatan</a></p></li>
-                <li style="padding-left:16px;"><p><a href="category/elektronik/televisi.php">Elektronik</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/kesehatan/perawatan-diri-admin.php">Kesehatan</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/elektronik/televisi-admin.php">Elektronik</a></p></li>
               </div>
 
-              <li><p><a href="category/kebutuhan rumah tangga/peralatan-kebersihan.php">Kebutuhan Rumah Tangga</a></p></li>
-              <li><p><a href="category/fashion/fashion-pria.php">Fashion</a></p></li>
+              <li><p><a href="category/kebutuhan rumah tangga/peralatan-kebersihan-admin.php">Kebutuhan Rumah Tangga</a></p></li>
+              <li><p><a href="category/fashion/fashion-pria-admin.php">Fashion</a></p></li>
             </ul>
 
           </div>
@@ -377,7 +364,7 @@
                 </div>
                 <div class="container">
                   <!-- Google +-->
-                  <a class="btn-gplus col-md-6" href="https://www.google.com/"><i class="fa fa-google-plus"></i></a>
+                  <a class="btn-gplus col-md-6" href="https://www.google.com/"><i class="fa fa-google-plus" style="width:38px;"></i></a>
                 </div>
                 <div class="container">
                   <!-- Dribbble -->
