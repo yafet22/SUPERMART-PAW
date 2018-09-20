@@ -309,18 +309,18 @@
             <!-- Links -->
             <h5 class="font-weight-bold text-uppercase mb-4">Produk</h5>
 
-            <ul class="list-unstyled">
+           <ul class="list-unstyled">
               <div class="row">
-                <li style="padding-left:16px;"><p><a href="category/makanan/makanan-ringan.php">Makanan</a></p></li>
-                <li style="padding-left:16px;"><p><a href="category/minuman/minuman-ringan.php">Minuman</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/makanan/makanan-ringan-admin.php">Makanan</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/minuman/minuman-ringan-admin.php">Minuman</a></p></li>
               </div>
               <div class="row">
-                <li style="padding-left:16px;"><p><a href="category/kesehatan/perawatan-diri.php">Kesehatan</a></p></li>
-                <li style="padding-left:16px;"><p><a href="category/elektronik/televisi.php">Elektronik</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/kesehatan/perawatan-diri-admin.php">Kesehatan</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/elektronik/televisi-admin.php">Elektronik</a></p></li>
               </div>
 
-              <li><p><a href="category/kebutuhan rumah tangga/peralatan-kebersihan.php">Kebutuhan Rumah Tangga</a></p></li>
-              <li><p><a href="category/fashion/fashion-pria.php">Fashion</a></p></li>
+              <li><p><a href="category/kebutuhan rumah tangga/peralatan-kebersihan-admin.php">Kebutuhan Rumah Tangga</a></p></li>
+              <li><p><a href="category/fashion/fashion-pria-admin.php">Fashion</a></p></li>
             </ul>
 
           </div>

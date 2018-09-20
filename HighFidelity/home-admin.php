@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="style/mdb.css">
     <link rel="stylesheet" href="webfonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
+
     <title>Supermarket</title>
 </head>
 <body>
@@ -30,11 +31,11 @@
       {
         // echo " <p><center>Anda Belum Login.<br>Klik Link Dibawah ini Untuk Login.<br><a href=login.php>Disini</a></center></p>";
         // exit;
-        $text=$_SESSION['email'];
         echo "<script type='text/javascript'>location='belum-login.php';</script>";
       }
-      else{
-        $text=$_SESSION['email'];
+      else if($_SESSION['role']!='admin')
+      {
+        echo "<script type='text/javascript'>location='bukan-admin.php';</script>";
       }
     ?>
     <!--Untuk bagian header-->
@@ -50,21 +51,20 @@
                 <ul class="nav navbar-nav mr-auto">
                     
                 </ul>
-                <span>  <a href="shopping-list.php"><img id="shop-chart" src="img/shop-chart.png" class="img-display mx-2" style="width:30px;height:30px;" alt="shop-logo"></a></span>
                 <ul class="nav navbar-nav navbar-right">
                 <li id="profiledrop" class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <?php echo '<img src="image/profile/'.$_SESSION['image_name'].'" class="img-display mx-2" style="border-radius:50%;width:35px;height:35px" />'; echo $_SESSION['email']; ?> 
+                    <?php echo '<img src="image/profile/'.$_SESSION['image_name'].'" class="img-display mx-2" style="border-radius:50%;width:35px;height:35px" />'; echo'ADMIN'; ?> 
                     </a>
                     <div class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="after-login.php"><img id="shop-chart" src="img/homelogo.png" class="img-display mx-2" style="width:30px;height:30px;" alt="home-logo"><span style="margin-left: 45px;
+                    <a class="dropdown-item" href="home-admin.php"><img id="shop-chart" src="img/homelogo.png" class="img-display mx-2" style="width:30px;height:30px;" alt="home-logo"><span style="margin-left: 25px;
                     font-size: 18px;">Home</span></a>
-                    <a class="dropdown-item" href="profile.php"><img src="img/user-logo.png" class="img-display mx-2" style="width:30px;height:30px;" alt="user-logo"><span style="margin-left: 45px;
+                    <a class="dropdown-item" href="profile-admin.php"><img src="img/user-logo.png" class="img-display mx-2" style="width:30px;height:30px;" alt="user-logo"><span style="margin-left: 25px;
                     font-size: 18px;">Profile</span></a>
-                    <a class="dropdown-item" href="shopping-list.php"><img id="shop-chart" src="img/shoplist.png" class="img-display mx-2" style="width:28px;height:30px;" alt="shop-chart"><span style="margin-left: 45px;
-                    font-size: 18px;">Shopping List</span></a>
+                    <a class="dropdown-item" href="index-admin.php"><img id="shop-chart" src="img/shoplist.png" class="img-display mx-2" style="width:28px;height:30px;" alt="shop-chart"><span style="margin-left: 4px;
+                    font-size: 18px;">Admin Panel</span></a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="logout-proses.php"><img id="logout-logo" src="img/logoutlogo.png" class="img-display mx-2" style="width:36px;height:30px;" alt="logout-logo"><span style="margin-left: 40px;
+                    <a class="dropdown-item" href="logout-proses.php"><img id="logout-logo" src="img/logoutlogo.png" class="img-display mx-2" style="width:36px;height:30px;" alt="logout-logo"><span style="margin-left: 14px;
                     font-size: 18px;">Log Out</span></a>
                     </div>
                 </li>
@@ -73,7 +73,7 @@
         </div>
     </nav>
 
-     <nav id="navbar">
+    <nav id="navbar">
         <div class="container">
             <div class="menu-wrapper">
                 <ul style="padding-left:0px;">
@@ -358,8 +358,8 @@
                 <li style="padding-left:16px;"><p><a href="category/elektronik/televisi-admin.php">Elektronik</a></p></li>
               </div>
 
-              <li><p><a href="category/kebutuhan rumah tangga/peralatan-kebersihan.php">Kebutuhan Rumah Tangga</a></p></li>
-              <li><p><a href="category/fashion/fashion-pria.php">Fashion</a></p></li>
+              <li><p><a href="category/kebutuhan rumah tangga/peralatan-kebersihan-admin.php">Kebutuhan Rumah Tangga</a></p></li>
+              <li><p><a href="category/fashion/fashion-pria-admin.php">Fashion</a></p></li>
             </ul>
 
           </div>

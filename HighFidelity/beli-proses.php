@@ -257,16 +257,16 @@
 
             <ul class="list-unstyled">
               <div class="row">
-                <li style="padding-left:16px;"><p><a href="../makanan/makanan-ringan-afterlogin.php">Makanan</a></p></li>
-                <li style="padding-left:16px;"><p><a href="../minuman/minuman-ringan-afterlogin.php">Minuman</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/makanan/makanan-ringan-afterlogin.php">Makanan</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/minuman/minuman-ringan-afterlogin.php">Minuman</a></p></li>
               </div>
               <div class="row">
-                <li style="padding-left:16px;"><p><a href="../kesehatan/perawatan-diri-afterlogin.php">Kesehatan</a></p></li>
-                <li style="padding-left:16px;"><p><a href="../elektronik/televisi-afterlogin.php.php">Elektronik</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/kesehatan/perawatan-diri-afterlogin.php">Kesehatan</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/elektronik/televisi-afterlogin.php.php">Elektronik</a></p></li>
               </div>
 
-              <li><p><a href="../kebutuhan rumah tangga/peralatan-kebersihan-afterlogin.php.php">Kebutuhan Rumah Tangga</a></p></li>
-              <li><p><a href="../fashion/fashion-pria.php">Fashion</a></p></li>
+              <li><p><a href="category/kebutuhan rumah tangga/peralatan-kebersihan-afterlogin.php.php">Kebutuhan Rumah Tangga</a></p></li>
+              <li><p><a href="category/fashion/fashion-pria.php">Fashion</a></p></li>
             </ul>
 
           </div>
