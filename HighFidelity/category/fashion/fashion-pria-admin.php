@@ -8,14 +8,19 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <script src="../../assets/jquery.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../assets/popper.js"></script>
+    <script src="../../assets/bootstrap.js"></script>
+    <script src="../../assets/mdb.js"></script>
+    
     <link rel="stylesheet" href="../../style/style.css">
+    <link rel="stylesheet" href="../../style/bootstrap.min.css">
     <link rel="stylesheet" href="../../style/bootstrap.css">
     <link rel="stylesheet" href="../../style/mdb.css">
     <link rel="stylesheet" href="../../webfonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
-    <script src="../../assets/jquery.js"></script>
-    <script src="../../assets/popper.js"></script>
-    <script src="../../assets/bootstrap.js"></script>
 
     <title>Supermarket</title>
 </head>
@@ -34,24 +39,39 @@
       }
     ?>
     <!--Untuk bagian header-->
-    <header id="header-section">
+    <nav class="navbar navbar-expand-lg navbar-dark p-0" style="background-color:#22A7F0">
         <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-              <a href="../../index-admin.php"><img id="logo" src="../../img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="home-admin.php"><img id="logo" src="../../img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
             </div>
-            <div class="col-md-4">
-
+            <div class="img-wrapper float-right mt-1">
+                <img src="../../img/menu.png" id="menu-icon-phone" alt="icon-menu"style="width: 40px">
+                </div>
+            <div class="collapse navbar-collapse collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav mr-auto">
+                    
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                <li id="profiledrop" class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <?php echo '<img src="../../image/profile/'.$_SESSION['image_name'].'" class="img-display mx-2" style="border-radius:50%;width:35px;height:35px" />'; echo'ADMIN'; ?> 
+                    </a>
+                    <div class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../home-admin.php"><img id="shop-chart" src="../../img/homelogo.png" class="img-display mx-2" style="width:30px;height:30px;" alt="home-logo"><span style="margin-left: 25px;
+                    font-size: 18px;">Home</span></a>
+                    <a class="dropdown-item" href="../../profile-admin.php"><img src="../../img/user-logo.png" class="img-display mx-2" style="width:30px;height:30px;" alt="user-logo"><span style="margin-left: 25px;
+                    font-size: 18px;">Profile</span></a>
+                    <a class="dropdown-item" href="../../index-admin.php"><img id="shop-chart" src="../../img/shoplist.png" class="img-display mx-2" style="width:28px;height:30px;" alt="shop-chart"><span style="margin-left: 4px;
+                    font-size: 18px;">Admin Panel</span></a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="../../logout-proses.php"><img id="logout-logo" src="../../img/logoutlogo.png" class="img-display mx-2" style="width:36px;height:30px;" alt="logout-logo"><span style="margin-left: 14px;
+                    font-size: 18px;">Log Out</span></a>
+                    </div>
+                </li>
+                </ul>
             </div>
-            <div class="col-md-4">
-              <a href="../../logreg.php"><img id="user-logo" src="../../img/usernew.png" alt="user-logo"></a>
-              <div class="desc"><a id="admin" href="../../profile-admin.php">ADMIN
-              </a>
-              </div>
-            </div>
-          </div>
         </div>
-    </header>
+    </nav>
 
     <nav id="navbar">
         <div class="container">
@@ -117,60 +137,44 @@
         </div>
     </nav>
 
-    <nav id="sidebar">
+    <nav id="sidebar" style="height:570px">
         <div class="container">
             <div class="menu-sidebar">
                 <div class="menu-title">
-                    Makanan
+                <?php echo '<img src="../../image/profile/'.$_SESSION['image_name'].'" class="img-display mx-2" style="border-radius:50%;width:35px;height:35px" />'; echo $_SESSION['email']; ?> 
                 </div>
                 <hr>
                 <div class="menu-content-sidebar">
-                    <li><a href="../makanan/makanan-ringan.php">Makanan Ringan</a></li>
-                    <li><a href="../makanan/makanan-beku.php">Makanan Beku</a></li>
-                    <li><a href="../makanan/makanan-pokok.php">Makanan Pokok</a></li>
+                    <li><a href="../../home-admin.php">Home</a></li>
+                    <li><a href="../../profile-admin.php">Profile</a></li>
+                    <li><a href="../../index-admin.php">Admin Panel</a></li>
+                    <li><a href="../../logout-proses.php">Log Out</a></li>
                 </div>
                 <hr>
                 <div class="menu-title">
-                    Minuman
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                    <li><a href="../minuman/minuman-ringan.php">Minuman Ringan</a></li>
-                    <li><a href="../minuman/minuman-isotonik.php">Minuman Isotonik</a></li>
-                    <li><a href="../minuman/minuman-soda.php">Minuman Soda</a></li>
+                    <a href="../makanan/makanan-ringan-admin.php">Makanan</a>
                 </div>
                 <hr>
                 <div class="menu-title">
-                    Kesehatan
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                  <li><a href="../kesehatan/perawatan-diri.php">Perawatan Diri</a></li>
-                  <li><a href="../kesehatan/perawatan-badan.php">Perawatan Badan</a></li>
-                  <li><a href="../kesehatan/perawatan-rambut.php">Perawatan Rambut</a></li>
-                  <li><a href="../kesehatan/perawatan-pria.php">Perawatan Pria</a></li>
-                  <li><a href="../kesehatan/obat-obatan.php">Obat - obatan</a></li>
+                    <a href="../minuman/minuman-ringan-admin.php">Minuman</a>
                 </div>
                 <hr>
                 <div class="menu-title">
-                    Elektronik
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                  <li><a href="../elektronik/televisi.php">Televisi</a></li>
-                  <li><a href="../elektronik/aksesoris-komputer.php">Aksesoris Komputer</a></li>
-                  <li><a href="../elektronik/aksesoris-handphone.php">Aksesoris Handphone</a></li>
-                </div>
+                    <a href="../kesehatan/perawatan-diri-admin.php">Kesehatan</a>
+                </div>        
                 <hr>
                 <div class="menu-title">
-                    Peralatan Rumah Tangga
+                  <a href="../elektronik/televisi-admin.php">Elektronik</a>
+                </div> 
+                <hr>
+                <div class="menu-title">
+                    <a href="../fashion/fashion-pria-admin.php">Fashion</a>
+                </div> 
+                <hr> 
+                <div class="menu-title">
+                  <a href="../kebutuhan rumah tangga/peralatan-kebersihan-admin.php">Peralatan Rumah Tangga</a>
                 </div>
                 <hr>
-                <div class="menu-content-sidebar">
-                  <li><a href="../kebutuhan rumah tangga/peralatan-kebersihan.php">Peralatan Kebersihan</a></li>
-                  <li><a href="../kebutuhan rumah tangga/peralatan-makan.php">Peralatan Makan</a></li>
-                  <li><a href="../kebutuhan rumah tangga/peralatan-rumah-tangga.php">Peralatan Rumah Tangga</a></li>
-                </div>
             </div>
         </div>
     </nav>
@@ -221,69 +225,6 @@
 
                     }
                 ?>
-                    <!-- <div class="card col-md-3 mx-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Ultramilk.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Ultra Milk Coklat</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ultraProduk">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Indomilk.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Indomilk</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#indomilkProduk">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Indomilk Kaleng.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Indomilk Kaleng</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#kalengProduk">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Cimory.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Cimory</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cimoryProduk">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Makanan Ringan/Indomilk buah.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Indomilk Pisang</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#indomilkPisang">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Kratingdaeng.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Kratingdaeng</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#kratingdaengProduk">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/marjan.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Sirup Marjan</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#marjanProduk">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/teh botol.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Teh Botol</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tehBotolProduk">
-                            Info
-                       </button>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -406,7 +347,6 @@
             $result=mysqli_query($conn,$sql);
 
             if(mysqli_num_rows($result) == 0){
-                echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
 
             }else{
                 $no = 1;

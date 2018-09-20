@@ -8,34 +8,44 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <script src="../../assets/jquery.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../assets/popper.js"></script>
+    <script src="../../assets/bootstrap.js"></script>
+    <script src="../../assets/mdb.js"></script>
+    
     <link rel="stylesheet" href="../../style/style.css">
+    <link rel="stylesheet" href="../../style/bootstrap.min.css">
     <link rel="stylesheet" href="../../style/bootstrap.css">
     <link rel="stylesheet" href="../../style/mdb.css">
     <link rel="stylesheet" href="../../webfonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
-    <script src="../../assets/jquery.js"></script>
-    <script src="../../assets/popper.js"></script>
-    <script src="../../assets/bootstrap.js"></script>
 
     <title>Supermarket</title>
 </head>
 <body>
     <!--Untuk bagian header-->
-    <header id="header-section">
+    <nav class="navbar navbar-expand-lg navbar-dark p-0" style="background-color:#22A7F0">
         <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-            <a href="../../index.php"><img id="logo" src="../../img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="../../index.php"><img id="logo" src="../../img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
             </div>
-            <div class="col-md-4">
-
+            <div class="img-wrapper float-right mt-1">
+                <img src="../../img/menu.png" id="menu-icon-phone" alt="icon-menu"style="width: 40px">
+                </div>
+            <div class="collapse navbar-collapse collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav mr-auto">
+                    
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                <li id="loginlink" class="nav-item dropdown">
+                <p><b><a href="../../logreg.php" style="color:white;">Silahkan Login/Register</a></p></b>
+                </li>
+                </ul>
             </div>
-            <div class="col-md-4">
-              <a href="../../logreg.php"><img id="user-logo" src="../../img/usernew.png" alt="user-logo"></a>
-            </div>
-          </div>
         </div>
-    </header>
+    </nav>
 
      <nav id="navbar">
         <div class="container">
@@ -101,60 +111,37 @@
         </div>
     </nav>
 
-    <nav id="sidebar">
+    <nav id="sidebar" style="height:390px">
         <div class="container">
             <div class="menu-sidebar">
                 <div class="menu-title">
-                    Makanan
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                    <li><a href="../makanan/makanan-ringan.php">Makanan Ringan</a></li>
-                    <li><a href="../makanan/makanan-beku.php">Makanan Beku</a></li>
-                    <li><a href="../makanan/makanan-pokok.php">Makanan Pokok</a></li>
+                <a href="../../logreg.php">Login/Register</a>
                 </div>
                 <hr>
                 <div class="menu-title">
-                    Minuman
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                    <li><a href="../minuman/minuman-ringan.php">Minuman Ringan</a></li>
-                    <li><a href="../minuman/minuman-isotonik.php">Minuman Isotonik</a></li>
-                    <li><a href="../minuman/minuman-soda.php">Minuman Soda</a></li>
+                    <a href="../makanan/makanan-ringan.php">Makanan</a>
                 </div>
                 <hr>
                 <div class="menu-title">
-                    Kesehatan
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                  <li><a href="../kesehatan/perawatan-diri.php">Perawatan Diri</a></li>
-                  <li><a href="../kesehatan/perawatan-badan.php">Perawatan Badan</a></li>
-                  <li><a href="../kesehatan/perawatan-rambut.php">Perawatan Rambut</a></li>
-                  <li><a href="../kesehatan/perawatan-pria.php">Perawatan Pria</a></li>
-                  <li><a href="../kesehatan/obat-obatan.php">Obat - obatan</a></li>
+                    <a href="../minuman/minuman-ringan.php">Minuman</a>
                 </div>
                 <hr>
                 <div class="menu-title">
-                    Elektronik
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                  <li><a href="../elektronik/televisi.php">Televisi</a></li>
-                  <li><a href="../elektronik/aksesoris-komputer.php">Aksesoris Komputer</a></li>
-                  <li><a href="../elektronik/aksesoris-handphone.php">Aksesoris Handphone</a></li>
-                </div>
+                    <a href="../kesehatan/perawatan-diri.php">Kesehatan</a>
+                </div>        
                 <hr>
                 <div class="menu-title">
-                    Peralatan Rumah Tangga
+                  <a href="../elektronik/televisi.php">Elektronik</a>
+                </div> 
+                <hr>
+                <div class="menu-title">
+                    <a href="../fashion/fashion-pria.php">Fashion</a>
+                </div> 
+                <hr> 
+                <div class="menu-title">
+                  <a href="../kebutuhan rumah tangga/peralatan-kebersihan.php">Peralatan Rumah Tangga</a>
                 </div>
                 <hr>
-                <div class="menu-content-sidebar">
-                  <li><a href="../kebutuhan rumah tangga/peralatan-kebersihan.php">Peralatan Kebersihan</a></li>
-                  <li><a href="../kebutuhan rumah tangga/peralatan-makan.php">Peralatan Makan</a></li>
-                  <li><a href="../kebutuhan rumah tangga/peralatan-rumah-tangga.php">Peralatan Rumah Tangga</a></li>
-                </div>
             </div>
         </div>
     </nav>
@@ -330,7 +317,6 @@
             $result=mysqli_query($conn,$sql);
 
             if(mysqli_num_rows($result) == 0){
-                echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
 
             }else{
                 $no = 1;

@@ -30,7 +30,6 @@
       {
         // echo " <p><center>Anda Belum Login.<br>Klik Link Dibawah ini Untuk Login.<br><a href=login.php>Disini</a></center></p>";
         // exit;
-        $text=$_SESSION['email'];
         echo "<script type='text/javascript'>location='belum-login.php';</script>";
       }
       else{
@@ -136,7 +135,7 @@
         </div>
     </nav>
 
-     <nav id="sidebar" style="height:570px">
+    <nav id="sidebar" style="height:570px">
         <div class="container">
             <div class="menu-sidebar">
                 <div class="menu-title">

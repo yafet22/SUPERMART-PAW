@@ -28,7 +28,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark p-0" style="background-color:#22A7F0">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="home-admin.php"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+                <a class="navbar-brand" href="index.php"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
             </div>
             <div class="img-wrapper float-right mt-1">
                 <img src="img/menu.png" id="menu-icon-phone" alt="icon-menu"style="width: 40px">
@@ -109,60 +109,37 @@
         </div>
     </nav>
 
-    <nav id="sidebar">
+    <nav id="sidebar" style="height:390px">
         <div class="container">
             <div class="menu-sidebar">
                 <div class="menu-title">
-                    Makanan
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                    <li><a href="category/makanan/makanan-ringan.php">Makanan Ringan</a></li>
-                    <li><a href="category/makanan/makanan-beku.php">Makanan Beku</a></li>
-                    <li><a href="category/makanan/makanan-pokok.php">Makanan Pokok</a></li>
+                <a href="logreg.php">Login/Register</a>
                 </div>
                 <hr>
                 <div class="menu-title">
-                    Minuman
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                    <li><a href="category/minuman/minuman-ringan.php">Minuman Ringan</a></li>
-                    <li><a href="category/minuman/minuman-isotonik.php">Minuman Isotonik</a></li>
-                    <li><a href="category/minuman/minuman-soda.php">Minuman Soda</a></li>
+                    <a href="category/makanan/makanan-ringan.php">Makanan</a>
                 </div>
                 <hr>
                 <div class="menu-title">
-                    Kesehatan
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                  <li><a href="category/kesehatan/perawatan-diri.php">Perawatan Diri</a></li>
-                  <li><a href="category/kesehatan/perawatan-badan.php">Perawatan Badan</a></li>
-                  <li><a href="category/kesehatan/perawatan-rambut.php">Perawatan Rambut</a></li>
-                  <li><a href="category/kesehatan/perawatan-pria.php">Perawatan Pria</a></li>
-                  <li><a href="category/kesehatan/obat-obatan.php">Obat - obatan</a></li>
+                    <a href="category/minuman/minuman-ringan.php">Minuman</a>
                 </div>
                 <hr>
                 <div class="menu-title">
-                    Elektronik
-                </div>
-                <hr>
-                <div class="menu-content-sidebar">
-                  <li><a href="category/elektronik/televisi.php">Televisi</a></li>
-                  <li><a href="category/elektronik/aksesoris-komputer.php">Aksesoris Komputer</a></li>
-                  <li><a href="category/elektronik/aksesoris-handphone.php">Aksesoris Handphone</a></li>
-                </div>
+                    <a href="category/kesehatan/perawatan-diri.php">Kesehatan</a>
+                </div>        
                 <hr>
                 <div class="menu-title">
-                    Peralatan Rumah Tangga
+                  <a href="category/elektronik/televisi.php">Elektronik</a>
+                </div> 
+                <hr>
+                <div class="menu-title">
+                    <a href="category/fashion/fashion-pria.php">Fashion</a>
+                </div> 
+                <hr> 
+                <div class="menu-title">
+                  <a href="category/kebutuhan rumah tangga/peralatan-kebersihan.php">Peralatan Rumah Tangga</a>
                 </div>
                 <hr>
-                <div class="menu-content-sidebar">
-                  <li><a href="category/kebutuhan rumah tangga/peralatan-kebersihan.php">Peralatan Kebersihan</a></li>
-                  <li><a href="category/kebutuhan rumah tangga/peralatan-makan.php">Peralatan Makan</a></li>
-                  <li><a href="category/kebutuhan rumah tangga/peralatan-rumah-tangga.php">Peralatan Rumah Tangga</a></li>
-                </div>
             </div>
         </div>
     </nav>
