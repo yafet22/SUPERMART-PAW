@@ -1,4 +1,6 @@
-<?php  session_start(); ?>
+<?php  session_start();
+require 'encrypt-decrypt.php'
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -238,17 +240,17 @@
                   <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" value=" <?php echo $_SESSION['email'];?>">
                 </div>
                 <div class="form-group">
-                  <label for="pwd">Recent Password:</label>
-                  <input type="password" class="form-control" id="oldpwd" placeholder="Enter password" name="pwd">
-                </div>
-                <div class="form-group">
                   <label for="pwd">Password:</label>
+                  <input type="password" class="form-control" id="oldpwd" placeholder="Enter password" name="pwd" value="<?php echo decryptIt($_SESSION['password']);?>">
+                </div>
+                <!-- <div class="form-group">
+                  <label for="pwd">New Password:</label>
                   <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="new-pwd">
                 </div>
                 <div class="form-group">
                   <label for="pwd">Confirm Password:</label>
                   <input type="password" class="form-control" id="c-pwd" placeholder="Enter password" name="c-pwd">
-                </div>
+                </div> -->
 
                 <button type="submit" class="btn btn-primary" name="simpan" value="Upload" style="display: block; margin: 0 auto;">FINISH EDIT</button>
 

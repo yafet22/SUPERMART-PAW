@@ -7,6 +7,21 @@ if($_POST['getDetail']) {
 ?>
 
             <!-- Modal -->
+              <div class="container">
+                <div class="picture-container">
+                    <div class="picture">
+                        <?php
+                            echo  '<img  width=auto height=200 src="image/profile/'.$row['image_name'].'" class="picture-src" id="wizardPicturePreview" title="">'; 
+                        ?>
+                         <!-- belom jalan  -->
+                        <script> 
+                          $('.picture-src').croppie();
+                        </script>
+                        <!-- belom jalan -->
+                    </div>  
+                </div>
+            </div>
+            <br>
               <form method="POST" action="edit-user.php">
               <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
                   <div class="form-group row">

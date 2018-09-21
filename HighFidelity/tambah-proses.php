@@ -1,6 +1,7 @@
 <?php
   include 'koneksi.php';
   include 'mail.php';
+  require 'encrypt-decrypt.php';
 
 
   if(isset($_POST['tambah']))
@@ -8,7 +9,7 @@
     $nama = $_POST['nama'];
     $phone = $_POST['phone'];
     $email = $_POST['email'];
-    $pwd = md5($_POST['pwd']);
+    $pwd = encryptIt($_POST['pwd']);
     $kode   = md5(uniqid(rand()));
     $mail = new Mail();
     $user='user';

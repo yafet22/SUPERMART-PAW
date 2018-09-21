@@ -1,10 +1,11 @@
 <?php
 
    include ('koneksi.php');
+   require 'encrypt-decrypt.php';
 
    session_start();
    $email = $_POST['email'];
-   $pass = md5($_POST['pwd']);
+   $pass = encryptIt($_POST['pwd']);
    $sql = "SELECT * FROM user where email = '$email' and password ='$pass'";
    $result=mysqli_query($conn,$sql);
    if(mysqli_num_rows($result) == 0)
@@ -24,6 +25,7 @@
         $_SESSION['role'] = $data['role'];
         $_SESSION['aktif'] = $data['aktif'];
         $_SESSION['image_name'] = $data['image_name'];
+        $_SESSION['password'] = $data['password'];
         echo "<script type='text/javascript'>alert('Anda Login Sebagai Admin');location='index-admin.php';</script>";
       }
       else if($data['role']=='user' && $data['aktif']=='Y')
@@ -36,6 +38,7 @@
         $_SESSION['role'] = $data['role'];
         $_SESSION['aktif'] = $data['aktif'];
         $_SESSION['image_name'] = $data['image_name'];
+        $_SESSION['password'] = $data['password'];
         echo "<script type='text/javascript'>alert('Selamat Datang');location='after-login.php';</script>";
       }
       else if($data['role']=='user' && $data['aktif']=='T')
