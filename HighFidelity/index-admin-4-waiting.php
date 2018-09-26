@@ -9,7 +9,7 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-
+  
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="assets/popper.js"></script>
@@ -200,12 +200,12 @@
                         <a href="index-admin-2.php" class="text-dark">Data User</a>
                     </li>
 
-                    <li class="list-group-item  bg-primary">
-                        <a href="index-admin-3.php" class="text-light">Data Transaksi</a>
+                    <li class="list-group-item">
+                        <a href="index-admin-3.php" class="text-dark">Data Transaksi</a>
                     </li>
 
-                    <li class="list-group-item">
-                        <a href="index-admin-4.php" class="text-dark">Konfirmasi</a>
+                    <li class="list-group-item bg-primary">
+                        <a href="index-admin-4.php" class="text-light">Data Topup</a>
                     </li>
           </div>
           <div class="col-md-9 order-first mt-2">
@@ -213,7 +213,7 @@
                     <div class="col-md-12 order-first mt-2">
                         <div class="pull-right">
                             <div class="search p-2">
-                                <input class="form-control mr-sm-2" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by ID User" aria-label="Search">
+                                <input class="form-control mr-sm-2" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by ID Topup" aria-label="Search">
                             </div>
                         </div>
                         <div class="pull-left">
@@ -222,10 +222,8 @@
                                 Search By
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="index-admin-3.php">By ID Transaksi</a>
-                                    <a class="dropdown-item" href="index-admin-3-byuser.php">By ID User</a>
-                                    <a class="dropdown-item" href="index-admin-3-bybarang.php">By ID Barang</a>
-                                    <a class="dropdown-item" href="index-admin-3-bydate.php">By ID Tanggal</a>
+                                    <a class="dropdown-item" href="index-admin-4.php">All</a>
+                                    <a class="dropdown-item" href="index-admin-4-waiting.php">Waiting Only</a>
                             </div>
                         </div>
                         </div>
@@ -233,63 +231,50 @@
             </div>
             <div class="row">
                 <div class="col-md-12 order-first mt-2">
-                    <div class="table-responsive-md">
-                        <table id=tableadmin3 class="table table-bordered" cellpadding="5" cellspacing="0" width="100%">
-                            <tr style="background-color:#4285f4;color:white;text-align:center;">
-                                <th class="font-weight-bold">No</th>
-                                <th class="font-weight-bold">Id Transaksi</th>
-                                <th class="font-weight-bold">Id Pembeli</th>
-                                <th class="font-weight-bold">Nama Pembeli</th>
-                                <th class="font-weight-bold">Id Barang</th>
-                                <th class="font-weight-bold">Nama Barang</th>
-                                <th class="font-weight-bold">Jumlah Barang</th>
-                                <th class="font-weight-bold">Tanggal</th>
-                                <th class="font-weight-bold">Total Harga</th>
-                                <th class="font-weight-bold">Status</th>
-                                <!-- <th> </th> -->
-                            </tr>
+                <div class="table-responsive-md">
+                <table id=tableadmin class="table table-bordered" cellpadding="5" cellspacing="0" width="100%">
+                    <tr style="background-color:#4285f4;color:white;text-align:center;">
+                        <th class="font-weight-bold">No</th>
+                        <th class="font-weight-bold">Id Topup</th>
+                        <th class="font-weight-bold">Id User </th>
+                        <th class="font-weight-bold">Jumlah Topup</th>
+                        <th class="font-weight-bold">Bank</th>
+                        <th class="font-weight-bold">Status</th>
+                        <th> </th>
+                    </tr>
 
-                            <?php
-                            include('koneksi.php');
+                    <?php
 
-                            $query ="SELECT * FROM transaksi ORDER BY idtransaksi ASC";
-                            $result=mysqli_query($conn,$query);
+                    include('koneksi.php');
 
-                            if(mysqli_num_rows($result) == 0){
-                                echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
+                    $query ="SELECT * FROM topup WHERE verifikasi='WAITING' ORDER BY idtopup ASC";
+                    $result=mysqli_query($conn,$query);
 
-                            }else{
-                                $no = 1;
-                                $total = 0;
-                                while($data = mysqli_fetch_assoc($result)){
+                    if(mysqli_num_rows($result) == 0){
+                        echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
 
-                                    echo '<tr style="text-align:center;">';
-                                    echo '<td>'.$no.'</td>';
-                                    echo '<td>'.$data['idtransaksi'].'</td>';
-                                    echo '<td>'.$data['idpembeli'].'</td>';
-                                    echo '<td>'.$data['namapembeli'].'</td>';
-                                    echo '<td>'.$data['idbarang'].'</td>';
-                                    echo '<td>'.$data['namabarang'].'</td>';
-                                    echo '<td>'.$data['jumlahbarang'].'</td>';
-                                    echo '<td>'.date_format(new DateTime($data['tanggal']),'g:ia \o\n l jS F Y').'</td>'; 
-                                    echo '<td>'.$data['totalharga'].'</td>'; 
-                                    echo '<td>'.$data['status'].'</td>';     
-                                    // echo '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#show" data-id="'.$data['id'].'">
-                                    // Edit</button><a href="hapus-user.php?id='.$data['id'].'""><button type="button" class="btn btn-warning">Hapus</button></a></td>';
-                                    // echo '<td><a href="edit-user.php?id='.$data['id'].'" data-toggle="modal" data-target="#edituser" style="color:blue;">Edit</a> / <a href="hapus-user.php?id='.$data['id'].'" style="color:blue;" onclick="return confirm(\'Yakin?\')">Hapus</a></td>';
-                                    echo '</tr>';
-                                    $no++;
-                                    if($data['status']=='lunas')
-                                    {
-                                        $total=$total+$data['totalharga'];
-                                    }
+                    }else{
+                        $no = 1;
+                        while($data = mysqli_fetch_assoc($result)){
 
-                                }
-                            }
-                            ?>
-                        </table>
+                            echo '<tr style="text-align:center;">';
+                            echo '<td>'.$no.'</td>';
+                            echo '<td>'.$data['idtopup'].'</td>';
+                            echo '<td>'.$data['idpembeli'].'</td>';
+                            echo '<td>'.$data['topup'].'</td>';
+                            echo '<td>'.$data['bank'].'</td>';
+                            echo '<td>'.$data['verifikasi'].'</td>';
+                            echo '<td><button type="button" class="btn btn-warning btn-sm btn-block" data-toggle="modal" data-target="#konfirmbyadmin" data-id="'.$data['idtopup'].'">
+                            Lihat</button></td>';
+                            echo '</tr>';
+                            $no++;
+
+                        }
+
+                    }
+                    ?>
+                </table>
                     </div>
-                    <p>Total Pendapatan (hanya dihitung dari transaksi yang sudah lunas) : Rp <?php echo $total; ?>,00</p>
                 </div>
             </div>
           </div>
@@ -338,7 +323,6 @@
               <li><p><a href="category/kebutuhan rumah tangga/peralatan-kebersihan-admin.php">Kebutuhan Rumah Tangga</a></p></li>
               <li><p><a href="category/fashion/fashion-pria-admin.php">Fashion</a></p></li>
             </ul>
-
           </div>
           <!-- Grid column -->
 
@@ -446,7 +430,7 @@
             </div>
         </div> -->
         <!-- Modal start here -->
-        <div class="modal fade" id="show" role="dialog">
+        <div class="modal fade" id="konfirmbyadmin" role="dialog">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -487,12 +471,12 @@
     </script>
     <script type="text/javascript">
     $(document).ready(function(){
-        $('#show').on('show.bs.modal', function (e) {
+        $('#konfirmbyadmin').on('show.bs.modal', function (e) {
             var getDetail = $(e.relatedTarget).data('id');
             /* fungsi AJAX untuk melakukan fetch data */
             $.ajax({
                 type : 'post',
-                url : 'detail.php',
+                url : 'konfirmbyadmin.php',
                 /* detail per identifier ditampung pada berkas detail.php yang berada di folder application/view */
                 data :  'getDetail='+ getDetail,
                 /* memanggil fungsi getDetail dan mengirimkannya */
@@ -510,12 +494,12 @@
     var input, filter, table, tr, td, i;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
-    table = document.getElementById("tableadmin3");
+    table = document.getElementById("tableadmin");
     tr = table.getElementsByTagName("tr");
 
     // Loop through all table rows, and hide those who don't match the search query
     for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[2];
+        td = tr[i].getElementsByTagName("td")[1];
         if (td) {
         if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
             tr[i].style.display = "";

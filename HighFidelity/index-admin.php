@@ -195,7 +195,7 @@
       <div class="container shop list">
         <div class="row">
          <div class="col-md-3 order-first mt-2">
-                <li class="list-group-item bg-primary">
+                <li class="list-group-item bg-primary" >
                     <a href="index-admin.php" class="text-light">Data Barang</a>
                 </li>
 
@@ -206,61 +206,67 @@
                 <li class="list-group-item">
                     <a href="index-admin-3.php" class="text-dark">Data Transaksi</a>
                 </li>
+
+                <li class="list-group-item">
+                    <a href="index-admin-4.php" class="text-dark">Konfirmasi</a>
+                </li>
         </div>
           <div class="col-md-9 order-first mt-2">
-          <nav class="navbar navbar-expand-lg navbar-light bg-primary ">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2 " type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Nama Barang" aria-label="Search">
-                </form>
+            <div class="row">
+                <div class="col-md-12 order-first mt-2">
+                <div class="pull-right">
+                 <input class="form-control mr-sm-2 " type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Nama Barang" aria-label="Search">
+                 </div>
+                </div>
             </div>
-            </nav>
-            <table id=tableadmin class="table table-bordered" cellpadding="5" cellspacing="0" width="100%">
-                <tr style="background-color:#4285f4;color:white;text-align:center;">
-                    <th class="font-weight-bold">No</th>
-                    <th class="font-weight-bold">Id Barang</th>
-                    <th class="font-weight-bold">Nama Barang</th>
-                    <th class="font-weight-bold">Kategori</th>
-                    <th class="font-weight-bold">Harga</th>
-                    <th class="font-weight-bold">Stock</th>
-                    <th> </th>
-                </tr>
+            <div class="row">
+                 <div class="col-md-12 order-first mt-2">
+                 <div class="table-responsive-md">
+                <table id=tableadmin class="table table-bordered" cellpadding="5" cellspacing="0" width="100%">
+                    <tr style="background-color:#4285f4;color:white;text-align:center;">
+                        <th class="font-weight-bold">No</th>
+                        <th class="font-weight-bold">Id Barang</th>
+                        <th class="font-weight-bold">Nama Barang</th>
+                        <th class="font-weight-bold">Kategori</th>
+                        <th class="font-weight-bold">Harga</th>
+                        <th class="font-weight-bold">Stock</th>
+                        <th> </th>
+                    </tr>
 
-                <?php
+                    <?php
 
-                include('koneksi.php');
+                    include('koneksi.php');
 
-                $query ="SELECT * FROM barang ORDER BY idbarang ASC";
-                $result=mysqli_query($conn,$query);
+                    $query ="SELECT * FROM barang ORDER BY idbarang ASC";
+                    $result=mysqli_query($conn,$query);
 
-                if(mysqli_num_rows($result) == 0){
-                    echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
+                    if(mysqli_num_rows($result) == 0){
+                        echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
 
-                }else{
-                    $no = 1;
-                    while($data = mysqli_fetch_assoc($result)){
+                    }else{
+                        $no = 1;
+                        while($data = mysqli_fetch_assoc($result)){
 
-                        echo '<tr style="text-align:center;">';
-                        echo '<td>'.$no.'</td>';
-                        echo '<td>'.$data['idbarang'].'</td>';
-                        echo '<td>'.$data['namabarang'].'</td>';
-                        echo '<td>'.$data['kategori'].'</td>';
-                        echo '<td>'.$data['harga'].'</td>';
-                        echo '<td>'.$data['stock'].'</td>';
-                        echo '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editbarang" data-id="'.$data['idbarang'].'">
-                        Edit</button><a href="hapus-barang.php?id='.$data['idbarang'].'" style="color:blue;" onclick="return confirm(\'Yakin?\')"><button type="button" class="btn btn-warning">Hapus</button></a></td>';
-                        echo '</tr>';
-                        $no++;
+                            echo '<tr style="text-align:center;">';
+                            echo '<td>'.$no.'</td>';
+                            echo '<td>'.$data['idbarang'].'</td>';
+                            echo '<td>'.$data['namabarang'].'</td>';
+                            echo '<td>'.$data['kategori'].'</td>';
+                            echo '<td>'.$data['harga'].'</td>';
+                            echo '<td>'.$data['stock'].'</td>';
+                            echo '<td><div class="span2"><p><button type="button" class="btn btn-primary btn-sm btn-block" data-toggle="modal" data-target="#editbarang" data-id="'.$data['idbarang'].'">
+                            Edit</button><a href="hapus-barang.php?id='.$data['idbarang'].'" style="color:blue;" onclick="return confirm(\'Yakin?\')"></p><p><button type="button" class="btn btn-warning btn-sm btn-block">Hapus</button></a></p></div></td>';
+                            echo '</tr>';
+                            $no++;
+
+                        }
 
                     }
-
-                }
-                ?>
-            </table>
-            
+                    ?>
+                </table>
+            </div>
+                 </div>
+            </div>
           </div>
         </div>
       </div>

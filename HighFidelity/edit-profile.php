@@ -229,15 +229,15 @@ require 'encrypt-decrypt.php'
                 </div>
                 <div class="form-group">
                   <label for="nama">Nama:</label>
-                  <input type="name" class="form-control" id="nama" placeholder="Enter name" name="nama" value=" <?php echo $_SESSION['username'];?>">
+                  <input type="name" class="form-control" id="nama" placeholder="Enter name" name="nama" value="<?php echo $_SESSION['username'];?>">
                 </div>
                 <div class="form-group">
                   <label for="phone">Phone:</label>
-                  <input type="phone" class="form-control" id="phone" placeholder="Enter phone number" name="phone" value=" <?php echo $_SESSION['telp'];?>">
+                  <input type="phone" class="form-control" id="phone" placeholder="Enter phone number" name="phone" value="<?php echo $_SESSION['telp'];?>">
                 </div>
                 <div class="form-group">
                   <label for="email">Email:</label>
-                  <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" value=" <?php echo $_SESSION['email'];?>">
+                  <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" value="<?php echo $_SESSION['email'];?>">
                 </div>
                 <div class="form-group">
                   <label for="pwd">Password:</label>

@@ -64,8 +64,10 @@ if($_POST['getDetail']) {
                             </div>
                             </div>
                   <div class="modal-footer">
-                  <button class="btn btn-danger pull-left" data-dismiss="modal">Cancel</a></button>
-                  <button type="submit" name="simpan" class="btn btn-primary pull-right">Save</a></button>
+                  <div class="span2">
+                        <p><button type="submit" name="simpan" class="btn btn-primary btn-md btn-block pull-right">Save</a></button></p>
+                        <p><button class="btn btn-danger btn-md btn-block pull-left" data-dismiss="modal">Cancel</a></button></p>
+                  </div>
                   </div>            
             </form>
         <?php } }

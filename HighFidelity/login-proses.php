@@ -26,6 +26,7 @@
         $_SESSION['aktif'] = $data['aktif'];
         $_SESSION['image_name'] = $data['image_name'];
         $_SESSION['password'] = $data['password'];
+        $_SESSION['saldo'] = $data['saldo'];
         echo "<script type='text/javascript'>alert('Anda Login Sebagai Admin');location='index-admin.php';</script>";
       }
       else if($data['role']=='user' && $data['aktif']=='Y')
@@ -39,6 +40,7 @@
         $_SESSION['aktif'] = $data['aktif'];
         $_SESSION['image_name'] = $data['image_name'];
         $_SESSION['password'] = $data['password'];
+        $_SESSION['saldo'] = $data['saldo'];
         echo "<script type='text/javascript'>alert('Selamat Datang');location='after-login.php';</script>";
       }
       else if($data['role']=='user' && $data['aktif']=='T')

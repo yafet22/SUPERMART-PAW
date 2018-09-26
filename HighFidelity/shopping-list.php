@@ -201,7 +201,7 @@
       <div class="container shop list">
         <div class="row">
           <div class="col-md-3">
-            <div style="width:75%" class="card hovercard">
+            <div style="width:100%" class="card hovercard">
               <div class="cardheader">
 
               </div>

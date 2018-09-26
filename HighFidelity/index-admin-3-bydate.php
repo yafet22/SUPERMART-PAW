@@ -10,9 +10,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 
-    <script src="assets/jquery.js"></script>
-    <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="assets/popper.js"></script>
     <script src="assets/bootstrap.js"></script>
     <script src="assets/mdb.js"></script>
@@ -187,95 +186,111 @@
 
     <section class="kategori">
       <div class="container title_hightlight">
-        <h2 class="font-weight-bold">DATA USER</h2>
+        <h2 class="font-weight-bold">DATA TRANSAKSI</h2>
       </div>
       <br>
       <div class="container shop list">
         <div class="row">
-         <div class="col-md-3 order-first mt-2">
-                <li class="list-group-item">
-                    <a href="index-admin.php" class="text-dark">Data Barang</a>
-                </li>
+           <div class="col-md-3 order-first mt-2">
+                    <li class="list-group-item">
+                        <a href="index-admin.php" class="text-dark">Data Barang</a>
+                    </li>
 
-                <li class="list-group-item">
-                    <a href="index-admin-2.php" class="text-dark">Data User</a>
-                </li>
+                    <li class="list-group-item">
+                        <a href="index-admin-2.php" class="text-dark">Data User</a>
+                    </li>
 
-                <li class="list-group-item  bg-primary">
-                    <a href="index-admin-3.php" class="text-light">Data Transaksi</a>
-                </li>
-        </div>
-          <div class="col-md-9 order-first mt-2">   
-          <nav class="navbar navbar-expand-lg navbar-light bg-primary ">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" style="color:white;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Search By
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="index-admin-3.php">By ID Transaksi</a>
-                    <a class="dropdown-item" href="index-admin-3-byuser.php">By ID User</a>
-                    <a class="dropdown-item" href="index-admin-3-bybarang.php">By ID Barang</a>
-                    <a class="dropdown-item" href="index-admin-3-bydate.php">By ID Tanggal</a>
-                </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by ID Tanggal" aria-label="Search">
-                </form>
+                    <li class="list-group-item  bg-primary">
+                        <a href="index-admin-3.php" class="text-light">Data Transaksi</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="index-admin-4.php" class="text-dark">Konfirmasi</a>
+                    </li>
+          </div>
+          <div class="col-md-9 order-first mt-2">
+            <div class="row">
+                    <div class="col-md-12 order-first mt-2">
+                        <div class="pull-right">
+                            <div class="search p-2">
+                                <input class="form-control mr-sm-2" type="text" id="myInput" onkeyup="myFunction()" placeholder="Tanggal" aria-label="Search">
+                            </div>
+                        </div>
+                        <div class="pull-left">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" href="#" type="button" role="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Search By
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="index-admin-3.php">By ID Transaksi</a>
+                                    <a class="dropdown-item" href="index-admin-3-byuser.php">By ID User</a>
+                                    <a class="dropdown-item" href="index-admin-3-bybarang.php">By ID Barang</a>
+                                    <a class="dropdown-item" href="index-admin-3-bydate.php">By ID Tanggal</a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
             </div>
-            </nav>
-            <table id=tableadmin3 class="table table-bordered" cellpadding="5" cellspacing="0" width="100%">
-                <tr style="background-color:#4285f4;color:white;text-align:center;">
-                    <th class="font-weight-bold">No</th>
-                    <th class="font-weight-bold">Id Transaksi</th>
-                    <th class="font-weight-bold">Id Pembeli</th>
-                    <th class="font-weight-bold">Nama Pembeli</th>
-                    <th class="font-weight-bold">Id Barang</th>
-                    <th class="font-weight-bold">Nama Barang</th>
-                    <th class="font-weight-bold">Jumlah Barang</th>
-                    <th class="font-weight-bold">Tanggal</th>
-                    <th class="font-weight-bold">Total Harga</th>
-                    <th class="font-weight-bold">Status</th>
-                    <!-- <th> </th> -->
-                </tr>
+            <div class="row">
+                <div class="col-md-12 order-first mt-2">
+                <div class="table-responsive-md">
+                        <table id=tableadmin3 class="table table-bordered" cellpadding="5" cellspacing="0" width="100%">
+                            <tr style="background-color:#4285f4;color:white;text-align:center;">
+                                <th class="font-weight-bold">No</th>
+                                <th class="font-weight-bold">Id Transaksi</th>
+                                <th class="font-weight-bold">Id Pembeli</th>
+                                <th class="font-weight-bold">Nama Pembeli</th>
+                                <th class="font-weight-bold">Id Barang</th>
+                                <th class="font-weight-bold">Nama Barang</th>
+                                <th class="font-weight-bold">Jumlah Barang</th>
+                                <th class="font-weight-bold">Tanggal</th>
+                                <th class="font-weight-bold">Total Harga</th>
+                                <th class="font-weight-bold">Status</th>
+                                <!-- <th> </th> -->
+                            </tr>
 
-                <?php
-                include('koneksi.php');
+                            <?php
+                            include('koneksi.php');
 
-                $query ="SELECT * FROM transaksi ORDER BY idtransaksi ASC";
-                $result=mysqli_query($conn,$query);
+                            $query ="SELECT * FROM transaksi ORDER BY idtransaksi ASC";
+                            $result=mysqli_query($conn,$query);
 
-                if(mysqli_num_rows($result) == 0){
-                    echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
+                            if(mysqli_num_rows($result) == 0){
+                                echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
 
-                }else{
-                    $no = 1;
-                    $total = 0;
-                    while($data = mysqli_fetch_assoc($result)){
+                            }else{
+                                $no = 1;
+                                $total = 0;
+                                while($data = mysqli_fetch_assoc($result)){
 
-                        echo '<tr style="text-align:center;">';
-                        echo '<td>'.$no.'</td>';
-                        echo '<td>'.$data['idtransaksi'].'</td>';
-                        echo '<td>'.$data['idpembeli'].'</td>';
-                        echo '<td>'.$data['namapembeli'].'</td>';
-                        echo '<td>'.$data['idbarang'].'</td>';
-                        echo '<td>'.$data['namabarang'].'</td>';
-                        echo '<td>'.$data['jumlahbarang'].'</td>';
-                        echo '<td>'.date_format(new DateTime($data['tanggal']),'g:ia \o\n l jS F Y').'</td>';
-                        echo '<td>'.$data['totalharga'].'</td>';  
-                        echo '<td>'.$data['status'].'</td>'; 
-                        // echo '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#show" data-id="'.$data['id'].'">
-                        // Edit</button><a href="hapus-user.php?id='.$data['id'].'""><button type="button" class="btn btn-warning">Hapus</button></a></td>';
-                        // echo '<td><a href="edit-user.php?id='.$data['id'].'" data-toggle="modal" data-target="#edituser" style="color:blue;">Edit</a> / <a href="hapus-user.php?id='.$data['id'].'" style="color:blue;" onclick="return confirm(\'Yakin?\')">Hapus</a></td>';
-                        echo '</tr>';
-                        $no++;
-                        $total=$total+$data['totalharga'];
+                                    echo '<tr style="text-align:center;">';
+                                    echo '<td>'.$no.'</td>';
+                                    echo '<td>'.$data['idtransaksi'].'</td>';
+                                    echo '<td>'.$data['idpembeli'].'</td>';
+                                    echo '<td>'.$data['namapembeli'].'</td>';
+                                    echo '<td>'.$data['idbarang'].'</td>';
+                                    echo '<td>'.$data['namabarang'].'</td>';
+                                    echo '<td>'.$data['jumlahbarang'].'</td>';
+                                    echo '<td>'.date_format(new DateTime($data['tanggal']),'g:ia \o\n l jS F Y').'</td>'; 
+                                    echo '<td>'.$data['totalharga'].'</td>'; 
+                                    echo '<td>'.$data['status'].'</td>';     
+                                    // echo '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#show" data-id="'.$data['id'].'">
+                                    // Edit</button><a href="hapus-user.php?id='.$data['id'].'""><button type="button" class="btn btn-warning">Hapus</button></a></td>';
+                                    // echo '<td><a href="edit-user.php?id='.$data['id'].'" data-toggle="modal" data-target="#edituser" style="color:blue;">Edit</a> / <a href="hapus-user.php?id='.$data['id'].'" style="color:blue;" onclick="return confirm(\'Yakin?\')">Hapus</a></td>';
+                                    echo '</tr>';
+                                    $no++;
+                                    if($data['status']=='lunas')
+                                    {
+                                        $total=$total+$data['totalharga'];
+                                    }
 
-                    }
-                }
-                ?>
-            </table>
+                                }
+                            }
+                            ?>
+                        </table>
+                    </div>
+                    <p>Total Pendapatan (hanya dihitung dari transaksi yang sudah lunas) : Rp <?php echo $total; ?>,00</p>
+                </div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,4 +1,6 @@
-<?php  session_start(); ?>
+<?php  session_start();
+require 'encrypt-decrypt.php'
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,16 +35,15 @@
         // exit;
         echo "<script type='text/javascript'>location='belum-login.php';</script>";
       }
-      else if($_SESSION['role']!='admin')
-      {
-        echo "<script type='text/javascript'>location='bukan-admin.php';</script>";
+      else{
+        $text=$_SESSION['email'];
       }
     ?>
     <!--Untuk bagian header-->
     <nav class="navbar navbar-expand-lg navbar-dark p-0" style="background-color:#22A7F0">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="home-admin.php"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
+                <a class="navbar-brand" href="after-login.php"><img id="logo" src="img/logo-supermarket-supermart.png" alt="logo-imk-supermarket"></a>
             </div>
             <div class="img-wrapper float-right mt-1">
                 <img src="img/menu.png" id="menu-icon-phone" alt="icon-menu"style="width: 40px">
@@ -51,20 +52,21 @@
                 <ul class="nav navbar-nav mr-auto">
                     
                 </ul>
+                <span>  <a href="shopping-list.php"><img id="shop-chart" src="img/shop-chart.png" class="img-display mx-2" style="width:30px;height:30px;" alt="shop-logo"></a></span>
                 <ul class="nav navbar-nav navbar-right">
                 <li id="profiledrop" class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <?php echo '<img src="image/profile/'.$_SESSION['image_name'].'" class="img-display mx-2" style="border-radius:50%;width:35px;height:35px" />'; echo'ADMIN'; ?> 
+                    <?php echo '<img src="image/profile/'.$_SESSION['image_name'].'" class="img-display mx-2" style="border-radius:50%;width:35px;height:35px" />'; echo $_SESSION['email']; ?> 
                     </a>
                     <div class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="home-admin.php"><img id="shop-chart" src="img/homelogo.png" class="img-display mx-2" style="width:30px;height:30px;" alt="home-logo"><span style="margin-left: 25px;
+                    <a class="dropdown-item" href="after-login.php"><img id="shop-chart" src="img/homelogo.png" class="img-display mx-2" style="width:30px;height:30px;" alt="home-logo"><span style="margin-left: 45px;
                     font-size: 18px;">Home</span></a>
-                    <a class="dropdown-item" href="profile-admin.php"><img src="img/user-logo.png" class="img-display mx-2" style="width:30px;height:30px;" alt="user-logo"><span style="margin-left: 25px;
+                    <a class="dropdown-item" href="profile.php"><img src="img/user-logo.png" class="img-display mx-2" style="width:30px;height:30px;" alt="user-logo"><span style="margin-left: 45px;
                     font-size: 18px;">Profile</span></a>
-                    <a class="dropdown-item" href="index-admin.php"><img id="shop-chart" src="img/shoplist.png" class="img-display mx-2" style="width:28px;height:30px;" alt="shop-chart"><span style="margin-left: 4px;
-                    font-size: 18px;">Admin Panel</span></a>
+                    <a class="dropdown-item" href="shopping-list.php"><img id="shop-chart" src="img/shoplist.png" class="img-display mx-2" style="width:28px;height:30px;" alt="shop-chart"><span style="margin-left: 45px;
+                    font-size: 18px;">Shopping List</span></a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="logout-proses.php"><img id="logout-logo" src="img/logoutlogo.png" class="img-display mx-2" style="width:36px;height:30px;" alt="logout-logo"><span style="margin-left: 14px;
+                    <a class="dropdown-item" href="logout-proses.php"><img id="logout-logo" src="img/logoutlogo.png" class="img-display mx-2" style="width:36px;height:30px;" alt="logout-logo"><span style="margin-left: 40px;
                     font-size: 18px;">Log Out</span></a>
                     </div>
                 </li>
@@ -80,55 +82,55 @@
                     <div class="dropdown">
                         <li class="menu">Makanan</li>
                         <div class="menu-content">
-                            <li><a href="category/makanan/makanan-ringan-admin.php">Makanan Ringan</a></li>
-                            <li><a href="category/makanan/makanan-beku-admin.php">Makanan Beku</a></li>
-                            <li><a href="category/makanan/makanan-pokok-admin.php">Makanan Pokok</a></li>
+                            <li><a href="category/makanan/makanan-ringan-afterlogin.php">Makanan Ringan</a></li>
+                            <li><a href="category/makanan/makanan-beku-afterlogin.php">Makanan Beku</a></li>
+                            <li><a href="category/makanan/makanan-pokok-afterlogin.php">Makanan Pokok</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Minuman</li>
                         <div class="menu-content">
-                            <li><a href="category/minuman/minuman-ringan-admin.php">Minuman Ringan</a></li>
-                            <li><a href="category/minuman/minuman-isotonik-admin.php">Minuman Isotonik</a></li>
-                            <li><a href="category/minuman/minuman-soda-admin.php">Minuman Soda</a></li>
+                            <li><a href="category/minuman/minuman-ringan-afterlogin.php">Minuman Ringan</a></li>
+                            <li><a href="category/minuman/minuman-isotonik-afterlogin.php">Minuman Isotonik</a></li>
+                            <li><a href="category/minuman/minuman-soda-afterlogin.php">Minuman Soda</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Kesehatan</li>
                         <div class="menu-content">
-                            <li><a href="category/kesehatan/perawatan-diri-admin.php">Perawatan Diri</a></li>
-                            <li><a href="category/kesehatan/perawatan-badan-admin.php">Perawatan Badan</a></li>
-                            <li><a href="category/kesehatan/perawatan-rambut-admin.php">Perawatan Rambut</a></li>
-                            <li><a href="category/kesehatan/perawatan-pria-admin.php">Perawatan Pria</a></li>
-                            <li><a href="category/kesehatan/obat-obatan-admin.php">Obat - obatan</a></li>
+                            <li><a href="category/kesehatan/perawatan-diri-afterlogin.php">Perawatan Diri</a></li>
+                            <li><a href="category/kesehatan/perawatan-badan-afterlogin.php">Perawatan Badan</a></li>
+                            <li><a href="category/kesehatan/perawatan-rambut-afterlogin.php">Perawatan Rambut</a></li>
+                            <li><a href="category/kesehatan/perawatan-pria-afterlogin.php">Perawatan Pria</a></li>
+                            <li><a href="category/kesehatan/obat-obatan-afterlogin.php">Obat - obatan</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Elektronik</li>
                         <div class="menu-content">
-                            <li><a href="category/elektronik/televisi-admin.php">Televisi</a></li>
-                            <li><a href="category/elektronik/aksesoris-komputer-admin.php">Aksesoris Komputer</a></li>
-                            <li><a href="category/elektronik/aksesoris-handphone-admin.php">Aksesoris Handphone</a></li>
+                            <li><a href="category/elektronik/televisi-afterlogin.php">Televisi</a></li>
+                            <li><a href="category/elektronik/aksesoris-komputer-afterlogin.php">Aksesoris Komputer</a></li>
+                            <li><a href="category/elektronik/aksesoris-handphone-afterlogin.php">Aksesoris Handphone</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Kebutuhan Rumah Tangga</li>
                         <div class="menu-content">
-                            <li><a href="category/kebutuhan rumah tangga/peralatan-kebersihan-admin.php">Peralatan Kebersihan</a></li>
-                            <li><a href="category/kebutuhan rumah tangga/peralatan-makan-admin.php">Peralatan Makan</a></li>
-                            <li><a href="category/kebutuhan rumah tangga/peralatan-rumah-tangga-admin.php">Peralatan Rumah Tangga</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-kebersihan-afterlogin.php">Peralatan Kebersihan</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-makan-afterlogin.php">Peralatan Makan</a></li>
+                            <li><a href="category/kebutuhan rumah tangga/peralatan-rumah-tangga-afterlogin.php">Peralatan Rumah Tangga</a></li>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <li class="menu">Fashion</li>
                         <div class="menu-content">
-                            <li><a href="category/fashion/fashion-pria-admin.php">Fashion Pria</a></li>
-                            <li><a href="category/fashion/fashion-wanita-admin.php">Fashion Wanita</a></li>
+                            <li><a href="category/fashion/fashion-pria-afterlogin.php">Fashion Pria</a></li>
+                            <li><a href="category/fashion/fashion-wanita-afterlogin.php">Fashion Wanita</a></li>
                         </div>
                     </div>
                 </ul>
@@ -136,7 +138,7 @@
         </div>
     </nav>
 
-     <nav id="sidebar" style="height:570px">
+    <nav id="sidebar" style="height:570px">
         <div class="container">
             <div class="menu-sidebar">
                 <div class="menu-title">
@@ -144,34 +146,34 @@
                 </div>
                 <hr>
                 <div class="menu-content-sidebar">
-                    <li><a href="home-admin.php">Home</a></li>
-                    <li><a href="profile-admin.php">Profile</a></li>
-                    <li><a href="index-admin.php">Admin Panel</a></li>
+                    <li><a href="after-login.php">Home</a></li>
+                    <li><a href="profile.php">Profile</a></li>
+                    <li><a href="shopping-list.php">Shopping List</a></li>
                     <li><a href="logout-proses.php">Log Out</a></li>
                 </div>
                 <hr>
                 <div class="menu-title">
-                    <a href="category/makanan/makanan-ringan-admin.php">Makanan</a>
+                    <a href="category/makanan/makanan-ringan-afterlogin.php">Makanan</a>
                 </div>
                 <hr>
                 <div class="menu-title">
-                    <a href="category/minuman/minuman-ringan-admin.php">Minuman</a>
+                    <a href="category/minuman/minuman-ringan-afterlogin.php">Minuman</a>
                 </div>
                 <hr>
                 <div class="menu-title">
-                    <a href="category/kesehatan/perawatan-diri-admin.php">Kesehatan</a>
+                    <a href="category/kesehatan/perawatan-diri-afterlogin.php">Kesehatan</a>
                 </div>        
                 <hr>
                 <div class="menu-title">
-                  <a href="category/elektronik/televisi-admin.php">Elektronik</a>
+                  <a href="category/elektronik/televisi-afterlogin.php">Elektronik</a>
                 </div> 
                 <hr>
                 <div class="menu-title">
-                    <a href="category/fashion/fashion-pria-admin.php">Fashion</a>
+                    <a href="category/fashion/fashion-pria-afterlogin.php">Fashion</a>
                 </div> 
                 <hr> 
                 <div class="menu-title">
-                  <a href="category/kebutuhan rumah tangga/peralatan-kebersihan-admin.php">Peralatan Rumah Tangga</a>
+                  <a href="category/kebutuhan rumah tangga/peralatan-kebersihan-afterlogin.php">Peralatan Rumah Tangga</a>
                 </div>
                 <hr>
             </div>
@@ -185,57 +187,55 @@
     <!--Bagian Isi-->
 
 
-
+   
 
     <section class="kategori">
       <div class="container title_hightlight">
-        <h2 class="font-weight-bold">DATA USER</h2>
+        <h2 class="font-weight-bold">TOP UP POINT</h2>
       </div>
       <br>
       <div class="container shop list">
         <div class="row">
-         <div class="col-md-3 order-first mt-2">
-                <li class="list-group-item">
-                    <a href="index-admin.php" class="text-dark">Data Barang</a>
-                </li>
-
-                <li class="list-group-item bg-primary">
-                    <a href="index-admin-2.php" class="text-light">Data User</a>
-                </li>
-
-                <li class="list-group-item">
-                    <a href="index-admin-3.php" class="text-dark">Data Transaksi</a>
-                </li>
-
-                <li class="list-group-item">
-                    <a href="index-admin-4.php" class="text-dark">Konfirmasi</a>
-                </li>
-        </div>
-          <div class="col-md-9 order-first mt-2">
-            <div class="row">
-                <div class="col-md-12 order-first mt-2">
-                <div class="pull-right">
-                 <input class="form-control mr-sm-2 " type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Nama User" aria-label="Search">
+          <div class="col-md-5 order-first mt-2">
+            <form id="login" action="topup-proses.php" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                  <label for="nama">Nominal Top Up:</label>
+                  <input type="number" min="10000" step="100" class="form-control" id="saldo" placeholder="Enter Nominal" name="saldo" required>
                 </div>
+                <div class="form-group">
+                    <label for="nama">Bank:</label>
+                    <div class="radio">
+                    <label><input type="radio" name="optradio" checked value="Mandiri"> Mandiri-Jose(123456789)</label>
+                    </div>
+                    <div class="radio">
+                    <label><input type="radio" name="optradio" value="BRI"> BRI-Jose(123456788)</label>
+                    </div>
+                    <div class="radio">
+                    <label><input type="radio" name="optradio" value="BCA"> BCA-Jose(123456777)</label>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                 <div class="col-md-12 order-first mt-2">
-                 <div class="table-responsive-md">
-                <table id="tableadmin2" class="table table-bordered" cellpadding="5" cellspacing="0" width="100%">
+                <button type="submit" class="btn btn-primary" name="tambah" value="tambah" style="display: block; margin: 0 auto;">Beli</button>
+            </form> 
+          </div>
+          <div class="col-md-7 order-first mt-2">
+          <h2 class="font-weight-bold" style="text-align: center;">DATA TOP UP POINT</h2>
+          <div class="table-responsive-md">
+                <table id=tabletopup class="table table-bordered" cellpadding="5" cellspacing="0" width="100%">
                     <tr style="background-color:#4285f4;color:white;text-align:center;">
                         <th class="font-weight-bold">No</th>
-                        <th class="font-weight-bold">Username</th>
-                        <th class="font-weight-bold">Telp</th>
-                        <th class="font-weight-bold">Email</th>
-                        <th class="font-weight-bold">Status Aktif</th>
+                        <th class="font-weight-bold">Id Transaksi</th>
+                        <th class="font-weight-bold">Jumlah TopUp</th>
+                        <th class="font-weight-bold">Bank</th>
+                        <th class="font-weight-bold">Status</th>
                         <th> </th>
                     </tr>
 
                     <?php
-                    include('koneksi.php');
 
-                    $query ="SELECT * FROM user WHERE role='user' ORDER BY id ASC";
+                    include('koneksi.php');
+                    $idpembeli=$_SESSION['id'];
+
+                    $query ="SELECT * FROM topup WHERE idpembeli=$idpembeli ORDER BY idtopup ASC";
                     $result=mysqli_query($conn,$query);
 
                     if(mysqli_num_rows($result) == 0){
@@ -247,13 +247,12 @@
 
                             echo '<tr style="text-align:center;">';
                             echo '<td>'.$no.'</td>';
-                            echo '<td>'.$data['username'].'</td>';
-                            echo '<td>'.$data['telp'].'</td>';
-                            echo '<td>'.$data['email'].'</td>';
-                            echo '<td>'.$data['aktif'].'</td>';
-                            echo '<td><div class="span2"><p><button type="button" class="btn btn-primary btn-sm btn-block" data-toggle="modal" data-target="#show" data-id="'.$data['id'].'">
-                            Edit</button><a href="hapus-user.php?id='.$data['id'].'""></p><p><button type="button" class="btn btn-warning btn-sm btn-block">Hapus</button></a></p></div></td>';
-                            // echo '<td><a href="edit-user.php?id='.$data['id'].'" data-toggle="modal" data-target="#edituser" style="color:blue;">Edit</a> / <a href="hapus-user.php?id='.$data['id'].'" style="color:blue;" onclick="return confirm(\'Yakin?\')">Hapus</a></td>';
+                            echo '<td>'.$data['idtopup'].'</td>';
+                            echo '<td>'.$data['topup'].'</td>';
+                            echo '<td>'.$data['bank'].'</td>';
+                            echo '<td>'.$data['verifikasi'].'</td>';
+                            echo '<td><button type="button" class="btn btn-warning btn-sm " data-toggle="modal" data-target="#konfirmasitopup" data-id="'.$data['idtopup'].'">
+                            Konfirmasi</button></td>';
                             echo '</tr>';
                             $no++;
 
@@ -262,8 +261,6 @@
                     }
                     ?>
                 </table>
-            </div>
-                 </div>
             </div>
           </div>
         </div>
@@ -298,18 +295,18 @@
             <!-- Links -->
             <h5 class="font-weight-bold text-uppercase mb-4">Produk</h5>
 
-            <ul class="list-unstyled">
+             <ul class="list-unstyled">
               <div class="row">
-                <li style="padding-left:16px;"><p><a href="category/makanan/makanan-ringan-admin.php">Makanan</a></p></li>
-                <li style="padding-left:16px;"><p><a href="category/minuman/minuman-ringan-admin.php">Minuman</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/makanan/makanan-ringan-afterlogin.php">Makanan</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/minuman/minuman-ringan-afterlogin.php">Minuman</a></p></li>
               </div>
               <div class="row">
-                <li style="padding-left:16px;"><p><a href="category/kesehatan/perawatan-diri-admin.php">Kesehatan</a></p></li>
-                <li style="padding-left:16px;"><p><a href="category/elektronik/televisi-admin.php">Elektronik</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/kesehatan/perawatan-diri-afterlogin.php">Kesehatan</a></p></li>
+                <li style="padding-left:16px;"><p><a href="category/elektronik/televisi-afterlogin.php">Elektronik</a></p></li>
               </div>
 
-              <li><p><a href="category/kebutuhan rumah tangga/peralatan-kebersihan-admin.php">Kebutuhan Rumah Tangga</a></p></li>
-              <li><p><a href="category/fashion/fashion-pria-admin.php">Fashion</a></p></li>
+              <li><p><a href="category/kebutuhan rumah tangga/peralatan-kebersihan-afterlogin.php">Kebutuhan Rumah Tangga</a></p></li>
+              <li><p><a href="category/fashion/fashion-pria-afterlogin.php">Fashion</a></p></li>
             </ul>
 
           </div>
@@ -380,50 +377,13 @@
 
     </footer>
     <div class="wrapper">
-        <!-- <div class="modal fade" id="edituser" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Input Barang</h5>
-
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form id="input" action="../../inputbarang-proses.php" method="POST" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <label for="nama">Nama : </label>
-                                <input type="text" class="form-control" id="nama" placeholder="Enter nama user" name="nama">
-                            </div>
-                            <div class="form-group">
-                                <label for="telp">Telp : </label>
-                                <input type="text" class="form-control" id="telp" placeholder="Enter telepon user" name="telp" value="<?php $_SESSION['id']; ?>">
-                            </div>
-                            <div class="form-group">
-                                <label for="hbarang">Email: </label>
-                                <input type="text" class="form-control" id="email" placeholder="Enter harga barang" name="email">
-                            </div>
-                            <div class="form-group">
-                                <label for="sbarang">Status Aktif: </label>
-                                <input type="text" class="form-control" id="aktif" placeholder="Enter stock barang" name="aktif">
-                            </div>
-                            <button type="submit" value="Tambah" class="btn btn-primary" name="tambah">Save </button>
-                        </form>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
         </div> -->
         <!-- Modal start here -->
-        <div class="modal fade" id="show" role="dialog">
+        <div class="modal fade" id="konfirmasitopup" role="dialog">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Edit User</h5>
+                            <h5 class="modal-title" id="exampleModalLongTitle">Konfirmasi Pembayaran</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -460,14 +420,32 @@
     </script>
     <script src="assets/bootstrap.js"></script>
     <script src="assets/script.js"></script>
+    <script>
+      $(document).ready(function(){
+      // Prepare the preview for profile picture
+          $("#wizard-picture").change(function(){
+              readURL(this);
+          });
+      });
+      function readURL(input) {
+          if (input.files && input.files[0]) {
+              var reader = new FileReader();
+
+              reader.onload = function (e) {
+                  $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
+              }
+              reader.readAsDataURL(input.files[0]);
+          }
+      }
+    </script>
     <script type="text/javascript">
     $(document).ready(function(){
-        $('#show').on('show.bs.modal', function (e) {
+        $('#konfirmasitopup').on('show.bs.modal', function (e) {
             var getDetail = $(e.relatedTarget).data('id');
             /* fungsi AJAX untuk melakukan fetch data */
             $.ajax({
                 type : 'post',
-                url : 'detail.php',
+                url : 'konfirmasitopup.php',
                 /* detail per identifier ditampung pada berkas detail.php yang berada di folder application/view */
                 data :  'getDetail='+ getDetail,
                 /* memanggil fungsi getDetail dan mengirimkannya */
@@ -479,27 +457,5 @@
          });
     });
   </script>
-  <script>
-    function myFunction() {
-    // Declare variables
-    var input, filter, table, tr, td, i;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("tableadmin2");
-    tr = table.getElementsByTagName("tr");
-
-    // Loop through all table rows, and hide those who don't match the search query
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[1];
-        if (td) {
-        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            tr[i].style.display = "";
-        } else {
-            tr[i].style.display = "none";
-        }
-        }
-    }
-    }
-    </script>
 </body>
 </html>

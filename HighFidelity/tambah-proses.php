@@ -33,7 +33,7 @@
 
               // $q = "INSERT into tb_image VALUES('','$fileName','image/$fileName')"; //insert image property to database
               // $result = mysql_query($q);
-              $sql = "INSERT into user VALUES (NULL,'$nama','$user','$phone','$email','$pwd','$kode','T',0,'$fileName')";
+              $sql = "INSERT into user VALUES (NULL,'$nama','$user','$phone','$email','$pwd','$kode','T',0,'$fileName',0)";
           
       
               if($conn->query($sql)==TRUE)
@@ -43,14 +43,14 @@
                   echo "<script type='text/javascript'>alert('Berhasil membuat akun');location='logreg.php';</script>";
               }
               else
-              {
+              { 
                   echo "<script type='text/javascript'>alert('Gagal membuat akun');location='profile.php';</script>";
               }
               
              }
           } 
           else{
-            $sql = "INSERT into user VALUES (NULL,'$nama','$user','$phone','$email','$pwd','$kode','T',0,'default-pp.jpg')";
+            $sql = "INSERT into user VALUES (NULL,'$nama','$user','$phone','$email','$pwd','$kode','T',0,'default-pp.jpg',0)";
           
     
             if($conn->query($sql)==TRUE)

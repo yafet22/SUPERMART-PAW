@@ -64,6 +64,7 @@ require 'encrypt-decrypt.php';
                     $_SESSION['role'] = $data['role'];
                     $_SESSION['image_name'] = $data['image_name'];
                     $_SESSION['password'] = $data['password'];
+                    $_SESSION['saldo'] = $data['saldo'];
                     echo "<script type='text/javascript'>alert('Berhasil Mengubah Akun');location='profile.php';</script>";
                     echo "Record updated successfully";
                 }
