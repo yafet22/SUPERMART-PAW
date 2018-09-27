@@ -138,7 +138,7 @@
         </div>
     </nav>
 
-    <nav id="sidebar" style="height:570px">
+    <nav id="sidebar" style="height:640px">
         <div class="container">
             <div class="menu-sidebar">
                 <div class="menu-title">
@@ -146,8 +146,10 @@
                 </div>
                 <hr>
                 <div class="menu-content-sidebar">
+                    <li><a class="disabled" href="#">Saldo :<?php echo$_SESSION['saldo']?></a></li>
                     <li><a href="after-login.php">Home</a></li>
                     <li><a href="profile.php">Profile</a></li>
+                    <li><a href="topup.php">Top Up</a></li>
                     <li><a href="shopping-list.php">Shopping List</a></li>
                     <li><a href="logout-proses.php">Log Out</a></li>
                 </div>

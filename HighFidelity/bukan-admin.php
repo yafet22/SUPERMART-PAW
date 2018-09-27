@@ -39,6 +39,7 @@
                     
                 </ul>
                 <span>  <a href="shopping-list.php"><img id="shop-chart" src="img/shop-chart.png" class="img-display mx-2" style="width:30px;height:30px;" alt="shop-logo"></a></span>
+                <span style="font-size: 18px; color:white;">Saldo :<?php echo$_SESSION['saldo']?></span>
                 <ul class="nav navbar-nav navbar-right">
                 <li id="profiledrop" class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -49,7 +50,9 @@
                     font-size: 18px;">Home</span></a>
                     <a class="dropdown-item" href="profile.php"><img src="img/user-logo.png" class="img-display mx-2" style="width:30px;height:30px;" alt="user-logo"><span style="margin-left: 45px;
                     font-size: 18px;">Profile</span></a>
-                    <a class="dropdown-item" href="shopping-list.php"><img id="shop-chart" src="img/shoplist.png" class="img-display mx-2" style="width:28px;height:30px;" alt="shop-chart"><span style="margin-left: 45px;
+                    <a class="dropdown-item" href="topup.php"><img src="img/topup.png" class="img-display mx-2" style="width:30px;height:30px;" alt="user-logo"><span style="margin-left: 45px;
+                    font-size: 18px;">Top-up</span></a>
+                    <a class="dropdown-item" href="shopping-list.php"><img id="topup" src="img/shoplist.png" class="img-display mx-2" style="width:28px;height:30px;" alt="shop-chart"><span style="margin-left: 45px;
                     font-size: 18px;">Shopping List</span></a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="logout-proses.php"><img id="logout-logo" src="img/logoutlogo.png" class="img-display mx-2" style="width:36px;height:30px;" alt="logout-logo"><span style="margin-left: 40px;
@@ -124,7 +127,7 @@
         </div>
     </nav>
 
-     <nav id="sidebar" style="height:570px">
+    <nav id="sidebar" style="height:640px">
         <div class="container">
             <div class="menu-sidebar">
                 <div class="menu-title">
@@ -132,8 +135,10 @@
                 </div>
                 <hr>
                 <div class="menu-content-sidebar">
+                    <li><a class="disabled" href="#">Saldo :<?php echo$_SESSION['saldo']?></a></li>
                     <li><a href="after-login.php">Home</a></li>
                     <li><a href="profile.php">Profile</a></li>
+                    <li><a href="topup.php">Top Up</a></li>
                     <li><a href="shopping-list.php">Shopping List</a></li>
                     <li><a href="logout-proses.php">Log Out</a></li>
                 </div>

@@ -246,31 +246,73 @@
 
                     include('koneksi.php');
 
-                    $query ="SELECT * FROM topup ORDER BY idtopup ASC";
-                    $result=mysqli_query($conn,$query);
+                    $halaman = 5;
+                    $pages = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
+                    $mulai = ($pages>1) ? ($pages * $halaman) - $halaman : 0;
+                    $sql = "SELECT * FROM topup LIMIT $mulai, $halaman";
+                    $result1 = mysqli_query($conn,"SELECT * FROM topup");
+                    $no = $mulai + 1;
 
-                    if(mysqli_num_rows($result) == 0){
-                        echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
+                    if($result=mysqli_query($conn,$sql))
+                    {
+                        $total = mysqli_num_rows($result1);
+                        $pages = ceil($total/$halaman);
+                        if(mysqli_num_rows(mysqli_query($conn,$sql)) != 0)
+                        {
 
-                    }else{
-                        $no = 1;
-                        while($data = mysqli_fetch_assoc($result)){
-
-                            echo '<tr style="text-align:center;">';
-                            echo '<td>'.$no.'</td>';
-                            echo '<td>'.$data['idtopup'].'</td>';
-                            echo '<td>'.$data['idpembeli'].'</td>';
-                            echo '<td>'.$data['topup'].'</td>';
-                            echo '<td>'.$data['bank'].'</td>';
-                            echo '<td>'.$data['verifikasi'].'</td>';
-                            echo '</tr>';
-                            $no++;
-
+                            while($data = mysqli_fetch_assoc($result)){
+                                    echo '<tr style="text-align:center;">';
+                                    echo '<td>'.$no.'</td>';
+                                    echo '<td>'.$data['idtopup'].'</td>';
+                                    echo '<td>'.$data['idpembeli'].'</td>';
+                                    echo '<td>'.$data['topup'].'</td>';
+                                    echo '<td>'.$data['bank'].'</td>';
+                                    echo '<td>'.$data['verifikasi'].'</td>';
+                                    echo '</tr>';
+                                    $no++;
+                            }
                         }
-
+                        else
+                        {
+                            echo '<tr><td colspan="6">Tidak ada data!</td><tr>';
+                        }
                     }
+
+                    // $query ="SELECT * FROM topup ORDER BY idtopup ASC";
+                    // $result=mysqli_query($conn,$query);
+
+                    // if(mysqli_num_rows($result) == 0){
+                    //     echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
+
+                    // }else{
+                    //     $no = 1;
+                    //     while($data = mysqli_fetch_assoc($result)){
+
+                    //         echo '<tr style="text-align:center;">';
+                    //         echo '<td>'.$no.'</td>';
+                    //         echo '<td>'.$data['idtopup'].'</td>';
+                    //         echo '<td>'.$data['idpembeli'].'</td>';
+                    //         echo '<td>'.$data['topup'].'</td>';
+                    //         echo '<td>'.$data['bank'].'</td>';
+                    //         echo '<td>'.$data['verifikasi'].'</td>';
+                    //         echo '</tr>';
+                    //         $no++;
+
+                    //     }
+
+                    // }
                     ?>
                 </table>
+                <div class="col-md-12">
+                <nav aria-label="Page navigation example">
+                <ul class="pagination" style="margin-left:320px">
+                <?php for ($i=1; $i<=$pages ; $i++){ ?>
+                  <li class="page-item"><a class="page-link text-white bg-primary" href="?barang&halaman=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+
+                  <?php } ?>
+                </ul>
+                </nav>
+                </div>  
                     </div>
                 </div>
             </div>

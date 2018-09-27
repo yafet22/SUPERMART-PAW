@@ -235,33 +235,77 @@
                     <?php
                     include('koneksi.php');
 
-                    $query ="SELECT * FROM user WHERE role='user' ORDER BY id ASC";
-                    $result=mysqli_query($conn,$query);
+                    $halaman = 5;
+                    $pages = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
+                    $mulai = ($pages>1) ? ($pages * $halaman) - $halaman : 0;
+                    $sql = "SELECT * FROM user WHERE role='user' LIMIT $mulai, $halaman";
+                    $result1 = mysqli_query($conn,"SELECT * FROM user WHERE role='user'");
+                    $no = $mulai + 1;
 
-                    if(mysqli_num_rows($result) == 0){
-                        echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
+                    if($result=mysqli_query($conn,$sql))
+                    {
+                        $total = mysqli_num_rows($result1);
+                        $pages = ceil($total/$halaman);
+                        if(mysqli_num_rows(mysqli_query($conn,$sql)) != 0)
+                        {
 
-                    }else{
-                        $no = 1;
-                        while($data = mysqli_fetch_assoc($result)){
-
-                            echo '<tr style="text-align:center;">';
-                            echo '<td>'.$no.'</td>';
-                            echo '<td>'.$data['username'].'</td>';
-                            echo '<td>'.$data['telp'].'</td>';
-                            echo '<td>'.$data['email'].'</td>';
-                            echo '<td>'.$data['aktif'].'</td>';
-                            echo '<td><div class="span2"><p><button type="button" class="btn btn-primary btn-sm btn-block" data-toggle="modal" data-target="#show" data-id="'.$data['id'].'">
-                            Edit</button><a href="hapus-user.php?id='.$data['id'].'""></p><p><button type="button" class="btn btn-warning btn-sm btn-block">Hapus</button></a></p></div></td>';
-                            // echo '<td><a href="edit-user.php?id='.$data['id'].'" data-toggle="modal" data-target="#edituser" style="color:blue;">Edit</a> / <a href="hapus-user.php?id='.$data['id'].'" style="color:blue;" onclick="return confirm(\'Yakin?\')">Hapus</a></td>';
-                            echo '</tr>';
-                            $no++;
-
+                            while($data = mysqli_fetch_assoc($result)){
+                                    echo '<tr style="text-align:center;">';
+                                    echo '<td>'.$no.'</td>';
+                                    echo '<td>'.$data['username'].'</td>';
+                                    echo '<td>'.$data['telp'].'</td>';
+                                    echo '<td>'.$data['email'].'</td>';
+                                    echo '<td>'.$data['aktif'].'</td>';
+                                    echo '<td><div class="span2"><p><button type="button" class="btn btn-primary btn-sm btn-block" data-toggle="modal" data-target="#show" data-id="'.$data['id'].'">
+                                    Edit</button><a href="hapus-user.php?id='.$data['id'].'""></p><p><button type="button" class="btn btn-warning btn-sm btn-block">Hapus</button></a></p></div></td>';
+                                    // echo '<td><a href="edit-user.php?id='.$data['id'].'" data-toggle="modal" data-target="#edituser" style="color:blue;">Edit</a> / <a href="hapus-user.php?id='.$data['id'].'" style="color:blue;" onclick="return confirm(\'Yakin?\')">Hapus</a></td>';
+                                    echo '</tr>';
+                                    $no++;
+                            }
                         }
-
+                        else
+                        {
+                            echo '<tr><td colspan="6">Tidak ada data!</td><tr>';
+                        }
                     }
+
+                    // $query ="SELECT * FROM user WHERE role='user' ORDER BY id ASC";
+                    // $result=mysqli_query($conn,$query);
+
+                    // if(mysqli_num_rows($result) == 0){
+                    //     echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
+
+                    // }else{
+                    //     $no = 1;
+                    //     while($data = mysqli_fetch_assoc($result)){
+
+                    //         echo '<tr style="text-align:center;">';
+                    //         echo '<td>'.$no.'</td>';
+                    //         echo '<td>'.$data['username'].'</td>';
+                    //         echo '<td>'.$data['telp'].'</td>';
+                    //         echo '<td>'.$data['email'].'</td>';
+                    //         echo '<td>'.$data['aktif'].'</td>';
+                    //         echo '<td><div class="span2"><p><button type="button" class="btn btn-primary btn-sm btn-block" data-toggle="modal" data-target="#show" data-id="'.$data['id'].'">
+                    //         Edit</button><a href="hapus-user.php?id='.$data['id'].'""></p><p><button type="button" class="btn btn-warning btn-sm btn-block">Hapus</button></a></p></div></td>';
+                    //         // echo '<td><a href="edit-user.php?id='.$data['id'].'" data-toggle="modal" data-target="#edituser" style="color:blue;">Edit</a> / <a href="hapus-user.php?id='.$data['id'].'" style="color:blue;" onclick="return confirm(\'Yakin?\')">Hapus</a></td>';
+                    //         echo '</tr>';
+                    //         $no++;
+
+                    //     }
+
+                    // }
                     ?>
                 </table>
+                <div class="col-md-12">
+                <nav aria-label="Page navigation example">
+                <ul class="pagination" style="margin-left:320px">
+                <?php for ($i=1; $i<=$pages ; $i++){ ?>
+                  <li class="page-item"><a class="page-link text-white bg-primary" href="?barang&halaman=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+
+                  <?php } ?>
+                </ul>
+                </nav>
+                </div>
             </div>
                  </div>
             </div>

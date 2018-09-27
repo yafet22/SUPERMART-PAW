@@ -57,6 +57,7 @@
                     
                 </ul>
                 <span>  <a href="shopping-list.php"><img id="shop-chart" src="img/shop-chart.png" class="img-display mx-2" style="width:30px;height:30px;" alt="shop-logo"></a></span>
+                <span style="font-size: 18px; color:white;">Saldo :<?php echo$_SESSION['saldo']?></span>
                 <ul class="nav navbar-nav navbar-right">
                 <li id="profiledrop" class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -67,7 +68,9 @@
                     font-size: 18px;">Home</span></a>
                     <a class="dropdown-item" href="profile.php"><img src="img/user-logo.png" class="img-display mx-2" style="width:30px;height:30px;" alt="user-logo"><span style="margin-left: 45px;
                     font-size: 18px;">Profile</span></a>
-                    <a class="dropdown-item" href="shopping-list.php"><img id="shop-chart" src="img/shoplist.png" class="img-display mx-2" style="width:28px;height:30px;" alt="shop-chart"><span style="margin-left: 45px;
+                    <a class="dropdown-item" href="topup.php"><img src="img/topup.png" class="img-display mx-2" style="width:30px;height:30px;" alt="user-logo"><span style="margin-left: 45px;
+                    font-size: 18px;">Top-up</span></a>
+                    <a class="dropdown-item" href="shopping-list.php"><img id="topup" src="img/shoplist.png" class="img-display mx-2" style="width:28px;height:30px;" alt="shop-chart"><span style="margin-left: 45px;
                     font-size: 18px;">Shopping List</span></a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="logout-proses.php"><img id="logout-logo" src="img/logoutlogo.png" class="img-display mx-2" style="width:36px;height:30px;" alt="logout-logo"><span style="margin-left: 40px;
@@ -79,7 +82,7 @@
         </div>
     </nav>
 
-     <nav id="navbar">
+    <nav id="navbar">
         <div class="container">
             <div class="menu-wrapper">
                 <ul style="padding-left:0px;">
@@ -142,7 +145,7 @@
         </div>
     </nav>
 
-    <nav id="sidebar" style="height:570px">
+    <nav id="sidebar" style="height:640px">
         <div class="container">
             <div class="menu-sidebar">
                 <div class="menu-title">
@@ -150,8 +153,10 @@
                 </div>
                 <hr>
                 <div class="menu-content-sidebar">
+                    <li><a class="disabled" href="#">Saldo :<?php echo$_SESSION['saldo']?></a></li>
                     <li><a href="after-login.php">Home</a></li>
                     <li><a href="profile.php">Profile</a></li>
+                    <li><a href="topup.php">Top Up</a></li>
                     <li><a href="shopping-list.php">Shopping List</a></li>
                     <li><a href="logout-proses.php">Log Out</a></li>
                 </div>
@@ -219,50 +224,100 @@
           </div>
           <div class="col-md-9">
             <h2 class="font-weight-bold" style="text-align: center;">Happy Shopping</h2>
-            <table id=tableadmin class="table table-bordered" cellpadding="5" cellspacing="0" width="100%">
-                <tr style="background-color:#4285f4;color:white;text-align:center;">
-                    <th class="font-weight-bold">No</th>
-                    <th class="font-weight-bold">Id Barang</th>
-                    <th class="font-weight-bold">Nama Barang</th>
-                    <th class="font-weight-bold">Jumlah barang</th>
-                    <th class="font-weight-bold">Harga</th>
-                    <th> </th>
-                </tr>
+            <div class="table-responsive-md">
+                <table id=tableadmin class="table table-bordered" cellpadding="5" cellspacing="0" width="100%">
+                    <tr style="background-color:#4285f4;color:white;text-align:center;">
+                        <th class="font-weight-bold">No</th>
+                        <th class="font-weight-bold">Id Barang</th>
+                        <th class="font-weight-bold">Nama Barang</th>
+                        <th class="font-weight-bold">Jumlah barang</th>
+                        <th class="font-weight-bold">Harga</th>
+                        <th> </th>
+                    </tr>
 
-                <?php
-                include('koneksi.php');
+                    <?php
+                    include('koneksi.php');
 
-                $query ="SELECT * FROM transaksi where idpembeli = '$id' and sessionpembeli = '$s' ";
-                $result=mysqli_query($conn,$query);
+                    $halaman = 5;
+                    $pages = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
+                    $mulai = ($pages>1) ? ($pages * $halaman) - $halaman : 0;
+                    $sql = "SELECT * FROM transaksi where idpembeli = '$id' and sessionpembeli = '$s' LIMIT $mulai, $halaman";
+                    $result1 = mysqli_query($conn,"SELECT * FROM transaksi where idpembeli = '$id' and sessionpembeli = '$s'");
+                    $no = $mulai + 1;
 
-                if(mysqli_num_rows($result) == 0){
-          
-                    echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
+                    if($result=mysqli_query($conn,$sql))
+                    {
+                        $total = mysqli_num_rows($result1);
+                        $pages = ceil($total/$halaman);
+                        if(mysqli_num_rows(mysqli_query($conn,$sql)) != 0)
+                        {
 
-                }else{
-                    $no = 1;
-                    while($data = mysqli_fetch_assoc($result)){
-
-                        echo '<tr style="text-align:center;">';
-                        echo '<td>'.$no.'</td>';
-                        echo '<td>'.$data['idbarang'].'</td>';
-                        echo '<td>'.$data['namabarang'].'</td>';
-                        echo '<td>'.$data['jumlahbarang'].'</td>';
-                        echo '<td>'.$data['totalharga'].'</td>';
-                        echo '<td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#showtransaksi" data-id="'.$data['idtransaksi'].'">
-                        Edit</button><a href="hapus-transaksi.php?id='.$data['idtransaksi'].'&jumlah='.$data['jumlahbarang'].'&idbarang='.$data['idbarang'].'" onclick="return confirm(\'Yakin?\')"><button type="button" class="btn btn-danger btn-sm">Hapus</button></a></td>';
-                        echo '</tr>';
-                        $_SESSION['idtransaksi'][$no]=$data['idtransaksi'];
-                        $_SESSION['idbarang'][$no]=$data['idbarang'];
-                        $_SESSION['jumlahbarang'][$no]=$data['jumlahbarang'];
-                        $_SESSION['max']=$no;
-                        $no++;
-                        $_SESSION['sessionpembeli']=$data['sessionpembeli'];
+                            while($data = mysqli_fetch_assoc($result)){
+                                    echo '<tr style="text-align:center;">';
+                                    echo '<td>'.$no.'</td>';
+                                    echo '<td>'.$data['idbarang'].'</td>';
+                                    echo '<td>'.$data['namabarang'].'</td>';
+                                    echo '<td>'.$data['jumlahbarang'].'</td>';
+                                    echo '<td>'.$data['totalharga'].'</td>';
+                                    echo '<td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#showtransaksi" data-id="'.$data['idtransaksi'].'">
+                                    Edit</button><a href="hapus-transaksi.php?id='.$data['idtransaksi'].'&jumlah='.$data['jumlahbarang'].'&idbarang='.$data['idbarang'].'" onclick="return confirm(\'Yakin?\')"><button type="button" class="btn btn-danger btn-sm">Hapus</button></a></td>';
+                                    echo '</tr>';
+                                    $_SESSION['idtransaksi'][$no]=$data['idtransaksi'];
+                                    $_SESSION['idbarang'][$no]=$data['idbarang'];
+                                    $_SESSION['jumlahbarang'][$no]=$data['jumlahbarang'];
+                                    $_SESSION['max']=$no;
+                                    $no++;
+                                    $_SESSION['sessionpembeli']=$data['sessionpembeli'];
+                            }
+                        }
+                        else
+                        {
+                            echo '<tr><td colspan="5">Tidak ada data!</td><tr>';
+                        }
                     }
 
-                }
-                ?>
-            </table>
+                    // $query ="SELECT * FROM transaksi where idpembeli = '$id' and sessionpembeli = '$s' ";
+                    // $result=mysqli_query($conn,$query);
+
+                    // if(mysqli_num_rows($result) == 0){
+            
+                    //     echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
+
+                    // }else{
+                    //     $no = 1;
+                    //     while($data = mysqli_fetch_assoc($result)){
+
+                    //         echo '<tr style="text-align:center;">';
+                    //         echo '<td>'.$no.'</td>';
+                    //         echo '<td>'.$data['idbarang'].'</td>';
+                    //         echo '<td>'.$data['namabarang'].'</td>';
+                    //         echo '<td>'.$data['jumlahbarang'].'</td>';
+                    //         echo '<td>'.$data['totalharga'].'</td>';
+                    //         echo '<td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#showtransaksi" data-id="'.$data['idtransaksi'].'">
+                    //         Edit</button><a href="hapus-transaksi.php?id='.$data['idtransaksi'].'&jumlah='.$data['jumlahbarang'].'&idbarang='.$data['idbarang'].'" onclick="return confirm(\'Yakin?\')"><button type="button" class="btn btn-danger btn-sm">Hapus</button></a></td>';
+                    //         echo '</tr>';
+                    //         $_SESSION['idtransaksi'][$no]=$data['idtransaksi'];
+                    //         $_SESSION['idbarang'][$no]=$data['idbarang'];
+                    //         $_SESSION['jumlahbarang'][$no]=$data['jumlahbarang'];
+                    //         $_SESSION['max']=$no;
+                    //         $no++;
+                    //         $_SESSION['sessionpembeli']=$data['sessionpembeli'];
+                    //     }
+
+                    // }
+                    ?>
+                </table>
+                <div class="col-md-12">
+                <nav aria-label="Page navigation example">
+                <ul class="pagination" style="margin-left:320px">
+                <?php for ($i=1; $i<=$pages ; $i++){ ?>
+                  <li class="page-item"><a class="page-link text-white bg-primary" href="?barang&halaman=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+
+                  <?php } ?>
+                </ul>
+                </nav>
+                </div>
+            </div>
             <br>
             <br>
             <br>

@@ -206,90 +206,47 @@
                 <?php
 
                     include('../../koneksi.php');
+            
 
-                    $sql = "SELECT * FROM barang WHERE kategori='PeralatanRT' ORDER BY idbarang ASC";
-                    $result=mysqli_query($conn,$sql);
+                    $halaman = 6;
+                    $pages = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
+                    $mulai = ($pages>1) ? ($pages * $halaman) - $halaman : 0;
+                    $sql = "SELECT * FROM barang WHERE kategori='PeralatanRT' LIMIT $mulai, $halaman";
+                    $result1 = mysqli_query($conn,"SELECT * FROM barang WHERE kategori='PeralatanRT'");
+                    $no = $mulai + 1;
 
-                    if(mysqli_num_rows($result) == 0){
-                        echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
+                    if($result=mysqli_query($conn,$sql))
+                    {
+                        $total = mysqli_num_rows($result1);
+                        $pages = ceil($total/$halaman);
+                        if(mysqli_num_rows(mysqli_query($conn,$sql)) != 0)
+                        {
 
-                    }else{
-                        $no = 1;
-                        while($data = mysqli_fetch_assoc($result)){
-                            echo '<div class="card col-md-3 mx-1 p-3">';
-                            echo '<img src="../../image/'.$data['image_name'].'" class="img-display" />'; 
-                            echo '<p class="text-center lead">'.$data['namabarang'].'</p>';
-                            echo '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#'.$data['idbarang'].'">Info</button>';
-                            echo '</div>';
-                            $no++;
-
+                            while($data = mysqli_fetch_assoc($result)){
+                                echo '<div class="card col-md-3 mx-1 p-3">';
+                                echo '<img src="../../image/'.$data['image_name'].'" class="img-display" />'; 
+                                echo '<p class="text-center lead">'.$data['namabarang'].'</p>';
+                                echo '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#'.$data['idbarang'].'">Info</button>';
+                                echo '</div>';
+                                $no++;
+                            }
                         }
-
+                        else
+                        {
+                            echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
+                        }
                     }
                 ?>
-                    <!-- <div class="card col-md-3 mx-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Ultramilk.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Ultra Milk Coklat</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ultraProduk">
-                            Info
-                        </button>
-                    </div>
+                <div class="col-md-12">
+                    <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                    <?php for ($i=1; $i<=$pages ; $i++){ ?>
+                    <li class="page-item"><a class="page-link text-white bg-primary" href="?barang&halaman=<?php echo $i; ?>"><?php echo $i; ?></a></li>
 
-                    <div class="card col-md-3 mx-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Indomilk.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Indomilk</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#indomilkProduk">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Indomilk Kaleng.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Indomilk Kaleng</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#kalengProduk">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Cimory.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Cimory</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cimoryProduk">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Makanan Ringan/Indomilk buah.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Indomilk Pisang</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#indomilkPisang">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Kratingdaeng.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Kratingdaeng</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#kratingdaengProduk">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/marjan.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Sirup Marjan</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#marjanProduk">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/teh botol.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Teh Botol</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tehBotolProduk">
-                            Info
-                       </button>
-                    </div> -->
+                    <?php } ?>
+                    </ul>
+                    </nav>
+                </div>
                 </div>
             </div>
         </div>

@@ -53,6 +53,7 @@ require 'encrypt-decrypt.php'
                     
                 </ul>
                 <span>  <a href="shopping-list.php"><img id="shop-chart" src="img/shop-chart.png" class="img-display mx-2" style="width:30px;height:30px;" alt="shop-logo"></a></span>
+                <span style="font-size: 18px; color:white;">Saldo :<?php echo$_SESSION['saldo']?></span>
                 <ul class="nav navbar-nav navbar-right">
                 <li id="profiledrop" class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -63,7 +64,9 @@ require 'encrypt-decrypt.php'
                     font-size: 18px;">Home</span></a>
                     <a class="dropdown-item" href="profile.php"><img src="img/user-logo.png" class="img-display mx-2" style="width:30px;height:30px;" alt="user-logo"><span style="margin-left: 45px;
                     font-size: 18px;">Profile</span></a>
-                    <a class="dropdown-item" href="shopping-list.php"><img id="shop-chart" src="img/shoplist.png" class="img-display mx-2" style="width:28px;height:30px;" alt="shop-chart"><span style="margin-left: 45px;
+                    <a class="dropdown-item" href="topup.php"><img src="img/topup.png" class="img-display mx-2" style="width:30px;height:30px;" alt="user-logo"><span style="margin-left: 45px;
+                    font-size: 18px;">Top-up</span></a>
+                    <a class="dropdown-item" href="shopping-list.php"><img id="topup" src="img/shoplist.png" class="img-display mx-2" style="width:28px;height:30px;" alt="shop-chart"><span style="margin-left: 45px;
                     font-size: 18px;">Shopping List</span></a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="logout-proses.php"><img id="logout-logo" src="img/logoutlogo.png" class="img-display mx-2" style="width:36px;height:30px;" alt="logout-logo"><span style="margin-left: 40px;
@@ -138,7 +141,7 @@ require 'encrypt-decrypt.php'
         </div>
     </nav>
 
-    <nav id="sidebar" style="height:570px">
+    <nav id="sidebar" style="height:640px">
         <div class="container">
             <div class="menu-sidebar">
                 <div class="menu-title">
@@ -146,8 +149,10 @@ require 'encrypt-decrypt.php'
                 </div>
                 <hr>
                 <div class="menu-content-sidebar">
+                    <li><a class="disabled" href="#">Saldo :<?php echo$_SESSION['saldo']?></a></li>
                     <li><a href="after-login.php">Home</a></li>
                     <li><a href="profile.php">Profile</a></li>
+                    <li><a href="topup.php">Top Up</a></li>
                     <li><a href="shopping-list.php">Shopping List</a></li>
                     <li><a href="logout-proses.php">Log Out</a></li>
                 </div>
@@ -235,32 +240,92 @@ require 'encrypt-decrypt.php'
                     include('koneksi.php');
                     $idpembeli=$_SESSION['id'];
 
-                    $query ="SELECT * FROM topup WHERE idpembeli=$idpembeli ORDER BY idtopup ASC";
-                    $result=mysqli_query($conn,$query);
+                    $halaman = 5;
+                    $pages = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
+                    $mulai = ($pages>1) ? ($pages * $halaman) - $halaman : 0;
+                    $sql = "SELECT * FROM topup WHERE idpembeli=$idpembeli LIMIT $mulai, $halaman";
+                    $result1 = mysqli_query($conn,"SELECT * FROM topup WHERE idpembeli=$idpembeli");
+                    $no = $mulai + 1;
 
-                    if(mysqli_num_rows($result) == 0){
-                        echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
+                    if($result=mysqli_query($conn,$sql))
+                    {
+                        $total = mysqli_num_rows($result1);
+                        $pages = ceil($total/$halaman);
+                        if(mysqli_num_rows(mysqli_query($conn,$sql)) != 0)
+                        {
 
-                    }else{
-                        $no = 1;
-                        while($data = mysqli_fetch_assoc($result)){
-
-                            echo '<tr style="text-align:center;">';
-                            echo '<td>'.$no.'</td>';
-                            echo '<td>'.$data['idtopup'].'</td>';
-                            echo '<td>'.$data['topup'].'</td>';
-                            echo '<td>'.$data['bank'].'</td>';
-                            echo '<td>'.$data['verifikasi'].'</td>';
-                            echo '<td><button type="button" class="btn btn-warning btn-sm " data-toggle="modal" data-target="#konfirmasitopup" data-id="'.$data['idtopup'].'">
-                            Konfirmasi</button></td>';
-                            echo '</tr>';
-                            $no++;
-
+                            while($data = mysqli_fetch_assoc($result)){
+                                echo '<tr style="text-align:center;">';
+                                    echo '<td>'.$no.'</td>';
+                                    echo '<td>'.$data['idtopup'].'</td>';
+                                    echo '<td>'.$data['topup'].'</td>';
+                                    echo '<td>'.$data['bank'].'</td>';
+                                    echo '<td>'.$data['verifikasi'].'</td>';
+                                    if($data['verifikasi']== 'UNCONFIRMED')
+                                    {
+                                        echo '<td><button type="button" class="btn btn-warning btn-sm " data-toggle="modal" data-target="#konfirmasitopup" data-id="'.$data['idtopup'].'">
+                                        Konfirmasi</button></td>'; 
+                                    }
+                                    else
+                                    {
+                                        echo '<td><button type="button" class="btn btn-warning btn-sm disabled " data-toggle="modal" data-target="#konfirmasitopup" data-id="'.$data['idtopup'].'">
+                                        Konfirmasi</button></td>'; 
+                                    }
+                                    echo '</tr>';
+                                    $no++;
+                            }
                         }
-
+                        else
+                        {
+                            echo '<tr><td colspan="6">Tidak ada data!</td><tr>';
+                        }
                     }
+
+
+                    // $query ="SELECT * FROM topup WHERE idpembeli=$idpembeli ORDER BY idtopup ASC";
+                    // $result=mysqli_query($conn,$query);
+
+                    // if(mysqli_num_rows($result) == 0){
+                    //     echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
+
+                    // }else{
+                    //     $no = 1;
+                    //     while($data = mysqli_fetch_assoc($result)){
+
+                    //         echo '<tr style="text-align:center;">';
+                    //         echo '<td>'.$no.'</td>';
+                    //         echo '<td>'.$data['idtopup'].'</td>';
+                    //         echo '<td>'.$data['topup'].'</td>';
+                    //         echo '<td>'.$data['bank'].'</td>';
+                    //         echo '<td>'.$data['verifikasi'].'</td>';
+                    //         if($data['verifikasi']== 'UNCONFIRMED')
+                    //         {
+                    //             echo '<td><button type="button" class="btn btn-warning btn-sm " data-toggle="modal" data-target="#konfirmasitopup" data-id="'.$data['idtopup'].'">
+                    //             Konfirmasi</button></td>'; 
+                    //         }
+                    //         else
+                    //         {
+                    //             echo '<td><button type="button" class="btn btn-warning btn-sm disabled " data-toggle="modal" data-target="#konfirmasitopup" data-id="'.$data['idtopup'].'">
+                    //             Konfirmasi</button></td>'; 
+                    //         }
+                    //         echo '</tr>';
+                    //         $no++;
+
+                    //     }
+
+                    // }
                     ?>
                 </table>
+                <div class="col-md-12">
+                <nav aria-label="Page navigation example">
+                <ul class="pagination" style="margin-left:320px">
+                <?php for ($i=1; $i<=$pages ; $i++){ ?>
+                  <li class="page-item"><a class="page-link text-white bg-primary" href="?barang&halaman=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+
+                  <?php } ?>
+                </ul>
+                </nav>
+                </div>
             </div>
           </div>
         </div>

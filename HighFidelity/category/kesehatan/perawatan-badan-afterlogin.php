@@ -51,6 +51,7 @@
                     
                 </ul>
                 <span>  <a href="../../shopping-list.php"><img id="shop-chart" src="../../img/shop-chart.png" class="img-display mx-2" style="width:30px;height:30px;" alt="shop-logo"></a></span>
+                <span style="font-size: 18px; color:white;">Saldo :<?php echo$_SESSION['saldo']?></span>
                 <ul class="nav navbar-nav navbar-right">
                 <li id="profiledrop" class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -61,6 +62,8 @@
                     font-size: 18px;">Home</span></a>
                     <a class="dropdown-item" href="../../profile.php"><img src="../../img/user-logo.png" class="img-display mx-2" style="width:30px;height:30px;" alt="user-logo"><span style="margin-left: 45px;
                     font-size: 18px;">Profile</span></a>
+                    <a class="dropdown-item" href="../../topup.php"><img src="../../img/topup.png" class="img-display mx-2" style="width:30px;height:30px;" alt="user-logo"><span style="margin-left: 45px;
+                    font-size: 18px;">Top-up</span></a>
                     <a class="dropdown-item" href="../../shopping-list.php"><img id="shop-chart" src="../../img/shoplist.png" class="img-display mx-2" style="width:28px;height:30px;" alt="shop-chart"><span style="margin-left: 45px;
                     font-size: 18px;">Shopping List</span></a>
                     <div class="dropdown-divider"></div>
@@ -137,7 +140,7 @@
         </div>
     </nav>
 
-    <nav id="sidebar" style="height:570px">
+    <nav id="sidebar" style="height:640px">
         <div class="container">
             <div class="menu-sidebar">
                 <div class="menu-title">
@@ -145,8 +148,10 @@
                 </div>
                 <hr>
                 <div class="menu-content-sidebar">
+                    <li><a class="disabled" href="#">Saldo :<?php echo$_SESSION['saldo']?></a></li>
                     <li><a href="../../after-login.php">Home</a></li>
                     <li><a href="../../profile.php">Profile</a></li>
+                    <li><a href="../../topup.php">Top Up</a></li>
                     <li><a href="../../shopping-list.php">Shopping List</a></li>
                     <li><a href="../../logout-proses.php">Log Out</a></li>
                 </div>
@@ -214,91 +219,45 @@
 
                     include('../../koneksi.php');
 
-                    $sql = "SELECT * FROM barang WHERE kategori='PerawatanBadan' ORDER BY idbarang ASC";
-                    $result=mysqli_query($conn,$sql);
+                    $halaman = 6;
+                    $pages = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
+                    $mulai = ($pages>1) ? ($pages * $halaman) - $halaman : 0;
+                    $sql = "SELECT * FROM barang WHERE kategori='PerawatanBadan' LIMIT $mulai, $halaman";
+                    $result1 = mysqli_query($conn,"SELECT * FROM barang WHERE kategori='PerawatanBadan'");
+                    $no = $mulai + 1;
 
-                    if(mysqli_num_rows($result) == 0){
-                        echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
+                    if($result=mysqli_query($conn,$sql))
+                    {
+                        $total = mysqli_num_rows($result1);
+                        $pages = ceil($total/$halaman);
+                        if(mysqli_num_rows(mysqli_query($conn,$sql)) != 0)
+                        {
 
-                    }else{
-                        $no = 1;
-                        while($data = mysqli_fetch_assoc($result)){
-                            echo '<div class="card col-md-3 mx-1 p-3">';
-                            // echo '<img src="'.base64_encode($data['foto']).'" alt="foto-bahan" class="img-display">';
-                            // echo '<img src="data:image/jpeg;base64,'.base64_encode($data['foto'] ).'" class="img-display"/>';
-                            echo '<img src="../../image/'.$data['image_name'].'" class="img-display" />'; 
-                            echo '<p class="text-center lead">'.$data['namabarang'].'</p>';
-                            echo '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#'.$data['idbarang'].'">Info</button>';
-                            echo '</div>';
-                            $no++;
-
+                            while($data = mysqli_fetch_assoc($result)){
+                                echo '<div class="card col-md-3 mx-1 p-3">';
+                                echo '<img src="../../image/'.$data['image_name'].'" class="img-display" />'; 
+                                echo '<p class="text-center lead">'.$data['namabarang'].'</p>';
+                                echo '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#'.$data['idbarang'].'">Info</button>';
+                                echo '</div>';
+                                $no++;
+                            }
                         }
-
+                        else
+                        {
+                            echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
+                        }
                     }
                 ?>
-                    <!-- <div class="card col-md-3 mx-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Ultramilk.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Ultra Milk Coklat</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ultraProduk">
-                            Info
-                        </button>
-                    </div>
+                <div class="col-md-12">
+                    <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                    <?php for ($i=1; $i<=$pages ; $i++){ ?>
+                    <li class="page-item"><a class="page-link text-white bg-primary" href="?barang&halaman=<?php echo $i; ?>"><?php echo $i; ?></a></li>
 
-                    <div class="card col-md-3 mx-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Indomilk.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Indomilk</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#indomilkProduk">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Indomilk Kaleng.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Indomilk Kaleng</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#kalengProduk">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Cimory.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Cimory</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cimoryProduk">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Makanan Ringan/Indomilk buah.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Indomilk Pisang</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#indomilkPisang">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/Kratingdaeng.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Kratingdaeng</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#kratingdaengProduk">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/marjan.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Sirup Marjan</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#marjanProduk">
-                            Info
-                        </button>
-                    </div>
-
-                    <div class="card col-md-3 mx-1 my-1 p-3">
-                        <img src="../../img/Edited/Minuman Ringan/teh botol.jpg" alt="foto-bahan" class="img-display">
-                        <p class="text-center lead">Teh Botol</p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tehBotolProduk">
-                            Info
-                        </button>
-                    </div> -->
+                    <?php } ?>
+                    </ul>
+                    </nav>
+                </div>
                 </div>
             </div>
         </div>

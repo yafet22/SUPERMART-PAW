@@ -172,29 +172,46 @@
 
                     include('../../koneksi.php');
 
-                    $sql = "SELECT * FROM barang WHERE kategori='PeralatanKebersihan' ORDER BY idbarang ASC";
-                    $result=mysqli_query($conn,$sql);
+                    $halaman = 6;
+                    $pages = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
+                    $mulai = ($pages>1) ? ($pages * $halaman) - $halaman : 0;
+                    $sql = "SELECT * FROM barang WHERE kategori='PeralatanKebersihan' LIMIT $mulai, $halaman";
+                    $result1 = mysqli_query($conn,"SELECT * FROM barang WHERE kategori='PeralatanKebersihan'");
+                    $no = $mulai + 1;
 
-                    if(mysqli_num_rows($result) == 0){
-                        echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
+                    if($result=mysqli_query($conn,$sql))
+                    {
+                        $total = mysqli_num_rows($result1);
+                        $pages = ceil($total/$halaman);
+                        if(mysqli_num_rows(mysqli_query($conn,$sql)) != 0)
+                        {
 
-                    }else{
-                        $no = 1;
-                        while($data = mysqli_fetch_assoc($result)){
-                            echo '<div class="card col-md-3 mx-1 p-3">';
-                            // echo '<img src="'.base64_encode($data['foto']).'" alt="foto-bahan" class="img-display">';
-                            // echo '<img src="data:image/jpeg;base64,'.base64_encode($data['foto'] ).'" class="img-display"/>';
-                            echo '<img src="../../image/'.$data['image_name'].'" class="img-display" />'; 
-                            echo '<p class="text-center lead">'.$data['namabarang'].'</p>';
-                            echo '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#'.$data['idbarang'].'">Info</button>';
-                            echo '</div>';
-                            $no++;
-
+                            while($data = mysqli_fetch_assoc($result)){
+                                    echo '<div class="card col-md-3 mx-1 p-3">';
+                                    echo '<img src="../../image/'.$data['image_name'].'" class="img-display" />'; 
+                                    echo '<p class="text-center lead">'.$data['namabarang'].'</p>';
+                                    echo '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#'.$data['idbarang'].'">Info</button>';
+                                    echo '</div>';
+                                    $no++;
+                            }
                         }
-
+                        else
+                        {
+                            echo '<tr><td colspan="6">Tidak ada data!</td></tr>';
+                        }
                     }
+
                 ?>
-                   
+                <div class="col-md-12">
+                    <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                    <?php for ($i=1; $i<=$pages ; $i++){ ?>
+                    <li class="page-item"><a class="page-link text-white bg-primary" href="?barang&halaman=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+
+                    <?php } ?>
+                    </ul>
+                    </nav>
+                </div> 
                 </div>
             </div>
         </div>
